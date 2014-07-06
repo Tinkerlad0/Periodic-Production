@@ -1,0 +1,16 @@
+[
+{
+  "modid": tnkchem,
+  "name": "Periodic Production",
+  "description": "A redevelopment of the mining and production methods of minecraft",
+  "version": "@VERSION@",
+  "mcversion": "@MCVERSION@",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tinkerlad"],
+  "credits": "The Forge and FML guys, for making this possible",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
