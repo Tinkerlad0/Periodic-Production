@@ -2,7 +2,8 @@ package com.tinkerlad.chemistry.utils;
 
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
-import com.tinkerlad.chemistry.item.ItemElementBase;
+import com.tinkerlad.chemistry.item.element.ItemElementBase;
+import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 
 import java.util.HashMap;
@@ -13,6 +14,7 @@ public class ElementTypeConverter {
 	public static Map<Element, ItemElementBase> baseItemMap = new HashMap<Element, ItemElementBase>();
 	public static Map<Element, OreElementBase> oreMap = new HashMap<Element, OreElementBase>();
 	public static Map<Element, BlockElementBase> blockPureMap = new HashMap<Element, BlockElementBase>();
+	public static Map<Element, ItemElementIngot> ingotMap = new HashMap<Element, ItemElementIngot>();
 
 	public ItemElementBase getBaseItemFromElement(Element element) {
 		return baseItemMap.get(element);
@@ -26,11 +28,21 @@ public class ElementTypeConverter {
 		return blockPureMap.get(element);
 	}
 
+	public ItemElementIngot getIngotFromElement(Element element) { return ingotMap.get(element);}
+
 	public boolean addElementBaseItem(Element element, ItemElementBase baseItem) {
 		if (baseItemMap.containsKey(element)) {
 			return false;
 		}
 		baseItemMap.put(element, baseItem);
+		return true;
+	}
+
+	public boolean addElementIngot(Element element, ItemElementIngot itemElementIngot) {
+		if (ingotMap.containsKey(element)) {
+			return false;
+		}
+		ingotMap.put(element, itemElementIngot);
 		return true;
 	}
 

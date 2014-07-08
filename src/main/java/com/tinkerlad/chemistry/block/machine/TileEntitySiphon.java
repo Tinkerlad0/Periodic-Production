@@ -1,8 +1,8 @@
 package com.tinkerlad.chemistry.block.machine;
 
-import com.tinkerlad.chemistry.item.ItemElementBase;
-import com.tinkerlad.chemistry.reference.recipes.RecipeSiphon;
-import com.tinkerlad.chemistry.reference.recipes.RecipesSiphon;
+import com.tinkerlad.chemistry.item.element.ItemElementBase;
+import com.tinkerlad.chemistry.reference.recipes.backend.RecipeSiphon;
+import com.tinkerlad.chemistry.reference.recipes.backend.RecipesSiphon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;

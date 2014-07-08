@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.item;
+package com.tinkerlad.chemistry.item.element;
 
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
@@ -11,20 +11,16 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-public class ItemElementBase extends Item {
+public class ItemElementIngot extends Item {
 
 	public Element ELEMENT;
 
-	public ItemElementBase(Element element) {
+	public ItemElementIngot(Element element) {
 		super();
 		this.ELEMENT = element;
-		this.setUnlocalizedName(element.NAME);
+		this.setUnlocalizedName("ingot_" + element.NAME);
 		this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
-		if (element.STATE == Element.State.SOLID) {
-			this.setTextureName(Chemistry.MODID + ":dust");
-		} else {
-			this.setTextureName(Chemistry.MODID + ":phial");
-		}
+		this.setTextureName(Chemistry.MODID + ":ingot");
 	}
 
 	@Override
@@ -33,6 +29,7 @@ public class ItemElementBase extends Item {
 		return ELEMENT.COLOR;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean useExtraInformation) {
 		info.add(ELEMENT.SYMBOL);

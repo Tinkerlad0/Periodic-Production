@@ -4,14 +4,17 @@ import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.block.BlockList;
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
-import com.tinkerlad.chemistry.item.ItemElementBase;
 import com.tinkerlad.chemistry.item.ItemList;
+import com.tinkerlad.chemistry.item.element.ItemElementBase;
+import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.logging.LogHelper;
+import com.tinkerlad.chemistry.reference.recipes.backend.RecipesSiphon;
 import com.tinkerlad.chemistry.rendering.PhialItemRender;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.MinecraftForgeClient;
 import org.apache.logging.log4j.Level;
 
@@ -82,7 +85,19 @@ public class Register {
 				if (obj instanceof Item) {
 					LogHelper.log(Level.INFO, "----Registering " + field.getName());
 					GameRegistry.registerItem((Item) obj, annotation.itemName());
+
+					if (obj instanceof ItemElementIngot) {
+						Chemistry.converter.addElementIngot(((ItemElementIngot) obj).ELEMENT, (ItemElementIngot) obj);
+					}
+
 					if (obj instanceof ItemElementBase) {
+						if (!(Chemistry.converter.getOreFromElement(((ItemElementBase) obj).ELEMENT) == null)) {
+							ItemStack output = new ItemStack((ItemElementBase) obj);
+							ItemStack input1 = new ItemStack(Chemistry.converter.getOreFromElement(((ItemElementBase)
+									                                                                        obj).ELEMENT));
+							ItemStack input2 = new ItemStack(ItemList.CATALYST_BASIC);
+							RecipesSiphon.getInstance().addRecipe(output, input1, input2);
+						}
 						boolean baseItemAdd = Chemistry.converter.addElementBaseItem(((ItemElementBase) obj).ELEMENT,
 								                                                            (ItemElementBase) obj);
 						ItemElementBase itemElementBase = (ItemElementBase) obj;

@@ -4,6 +4,9 @@ import com.tinkerlad.chemistry.block.BlockList;
 import com.tinkerlad.chemistry.block.machine.TileEntitySiphon;
 import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.logging.LogHelper;
+import com.tinkerlad.chemistry.reference.ElementList;
+import com.tinkerlad.chemistry.reference.ElementMaterials;
+import com.tinkerlad.chemistry.reference.ElementTools;
 import com.tinkerlad.chemistry.registry.Register;
 import com.tinkerlad.chemistry.rendering.gui.GUIHandler;
 import com.tinkerlad.chemistry.utils.ElementTypeConverter;
@@ -23,8 +26,11 @@ public class Chemistry {
 	public static final BlockList blockList = new BlockList();
 	@Instance(MODID)
 	public static Chemistry instance;
+	public static ElementList elementList = new ElementList();
 	public static ItemList itemList = new ItemList();
+	public static ElementMaterials elementMaterials = new ElementMaterials();
 	public static ElementTypeConverter converter = new ElementTypeConverter();
+	public static ElementTools elementTools = new ElementTools();
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -33,6 +39,10 @@ public class Chemistry {
 
 		Register.registerBlocks();
 		Register.registerItems();
+
+		elementMaterials.initMaterials();
+		elementTools.initPickaxes();
+		elementTools.initSwords();
 	}
 
 	@EventHandler

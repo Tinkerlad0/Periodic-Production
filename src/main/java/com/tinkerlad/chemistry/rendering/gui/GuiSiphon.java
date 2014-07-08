@@ -21,17 +21,20 @@ public class GuiSiphon extends GuiContainer {
 	}
 
 	@Override
-	protected void drawGuiContainerForegroundLayer(int x, int y) {
-		String containerName = StatCollector.translateToLocal(tileEntitySiphon.getInventoryName());
-		fontRendererObj.drawString(containerName, xSize / 2 - fontRendererObj.getStringWidth(containerName) / 2, 6, 4210752);
-		fontRendererObj.drawString(StatCollector.translateToLocal("container.inventory"), 8, ySize - 96 + 2, 4210752);
-		System.out.println("OPEN SIPHON!!!");
+	public void drawScreen(int par1, int par2, float par3) {
+		super.drawScreen(par1, par2, par3);
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) {
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+	public void drawGuiContainerForegroundLayer(int x, int y) {
+		String containerName = StatCollector.translateToLocal(tileEntitySiphon.getInventoryName());
+		fontRendererObj.drawString(containerName, xSize / 2 - fontRendererObj.getStringWidth(containerName) / 2, 6, 4210752);
+		fontRendererObj.drawString(StatCollector.translateToLocal("container.inventory"), 8, ySize - 96 + 2, 4210752);
+	}
 
+	@Override
+	public void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) {
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.mc.getTextureManager().bindTexture(new ResourceLocation(Chemistry.MODID, "textures/gui/siphon.png"));
 		int xStart = (width - xSize) / 2;
 		int yStart = (height - ySize) / 2;

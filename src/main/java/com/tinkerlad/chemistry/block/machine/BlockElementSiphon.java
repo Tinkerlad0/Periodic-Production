@@ -71,4 +71,9 @@ public class BlockElementSiphon extends BlockMachine implements ITileEntityProvi
 
 		return super.getLightValue(world, x, y, z);
 	}
+
+	@Override
+	public boolean hasTileEntity(int metadata) {
+		return true;
+	}
 }

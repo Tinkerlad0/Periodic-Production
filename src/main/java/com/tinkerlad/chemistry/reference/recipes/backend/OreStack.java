@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.reference.recipes;
+package com.tinkerlad.chemistry.reference.recipes.backend;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;

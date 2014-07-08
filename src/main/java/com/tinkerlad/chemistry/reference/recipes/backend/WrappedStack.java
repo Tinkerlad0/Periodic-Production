@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.reference.recipes;
+package com.tinkerlad.chemistry.reference.recipes.backend;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;

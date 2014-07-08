@@ -1,6 +1,6 @@
 package com.tinkerlad.chemistry.rendering;
 
-import com.tinkerlad.chemistry.item.ItemElementBase;
+import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -17,10 +17,7 @@ public class PhialItemRender implements IItemRenderer {
 	@Override
 	public boolean handleRenderType(ItemStack itemStack, ItemRenderType type) {
 		Item item = itemStack.getItem();
-		if (item instanceof ItemElementBase && type == ItemRenderType.INVENTORY) {
-			return true;
-		}
-		return false;
+		return item instanceof ItemElementBase && type == ItemRenderType.INVENTORY;
 	}
 
 	@Override

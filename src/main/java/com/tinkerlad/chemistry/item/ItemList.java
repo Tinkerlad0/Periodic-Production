@@ -1,10 +1,19 @@
 package com.tinkerlad.chemistry.item;
 
+import com.tinkerlad.chemistry.item.alloy.ItemAlloy;
+import com.tinkerlad.chemistry.item.element.ItemElementBase;
+import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.registry.RegisterItem;
 
 public class ItemList {
+
+	@RegisterItem(itemName = "debug")
+	public static ItemDebug DEBUG = new ItemDebug();
+
+	@RegisterItem(itemName = "basicCatalyst")
+	public static ItemGeneric CATALYST_BASIC = new ItemGeneric("catalyst", 0x0000FF);
 
 	//Gas Elements
 
@@ -125,4 +134,88 @@ public class ItemList {
 	//Alloys xD
 	@RegisterItem(itemName = "sodiumChloride")
 	public static ItemAlloy ALLOY_NACL = new ItemAlloy(AlloyList.NaCl);
+
+
+	//Ingots
+
+	@RegisterItem(itemName = "ingot_lithium")
+	public static ItemElementIngot INGOT_LITHIUM = new ItemElementIngot(ElementList.LITHIUM);
+
+	@RegisterItem(itemName = "ingot_beryllium")
+	public static ItemElementIngot INGOT_BERYLLIUM = new ItemElementIngot(ElementList.BERYLLIUM);
+
+	@RegisterItem(itemName = "ingot_boron")
+	public static ItemElementIngot INGOT_BORON = new ItemElementIngot(ElementList.BORON);
+
+	@RegisterItem(itemName = "ingot_carbon")
+	public static ItemElementIngot INGOT_CARBON = new ItemElementIngot(ElementList.CARBON);
+
+	@RegisterItem(itemName = "ingot_sodium")
+	public static ItemElementIngot INGOT_SODIUM = new ItemElementIngot(ElementList.SODIUM);
+
+	@RegisterItem(itemName = "ingot_magnesium")
+	public static ItemElementIngot INGOT_MAGNESIUM = new ItemElementIngot(ElementList.MAGNESIUM);
+
+	@RegisterItem(itemName = "ingot_aluminium")
+	public static ItemElementIngot INGOT_ALUMINIUM = new ItemElementIngot(ElementList.ALUMINIUM);
+
+	@RegisterItem(itemName = "ingot_silicon")
+	public static ItemElementIngot INGOT_SILICON = new ItemElementIngot(ElementList.SILICON);
+
+	@RegisterItem(itemName = "ingot_phosphorus")
+	public static ItemElementIngot INGOT_PHOSPHORUS = new ItemElementIngot(ElementList.PHOSPHORUS);
+
+	@RegisterItem(itemName = "ingot_sulfur")
+	public static ItemElementIngot INGOT_SULFUR = new ItemElementIngot(ElementList.SULFUR);
+
+	@RegisterItem(itemName = "ingot_potassium")
+	public static ItemElementIngot INGOT_POTASSIUM = new ItemElementIngot(ElementList.POTASSIUM);
+
+	@RegisterItem(itemName = "ingot_calcium")
+	public static ItemElementIngot INGOT_CALCIUM = new ItemElementIngot(ElementList.CALCIUM);
+
+	@RegisterItem(itemName = "ingot_scandium")
+	public static ItemElementIngot INGOT_SCANDIUM = new ItemElementIngot(ElementList.SCANDIUM);
+
+	@RegisterItem(itemName = "ingot_titanium")
+	public static ItemElementIngot INGOT_TITANIUM = new ItemElementIngot(ElementList.TITANIUM);
+
+	@RegisterItem(itemName = "ingot_vanadium")
+	public static ItemElementIngot INGOT_VANADIUM = new ItemElementIngot(ElementList.VANADIUM);
+
+	@RegisterItem(itemName = "ingot_chromium")
+	public static ItemElementIngot INGOT_CHROMIUM = new ItemElementIngot(ElementList.CHROMIUM);
+
+	@RegisterItem(itemName = "ingot_Manganese")
+	public static ItemElementIngot INGOT_MANGANESE = new ItemElementIngot(ElementList.MANGANESE);
+
+	@RegisterItem(itemName = "ingot_Iron")
+	public static ItemElementIngot INGOT_IRON = new ItemElementIngot(ElementList.IRON);
+
+	@RegisterItem(itemName = "ingot_Cobalt")
+	public static ItemElementIngot INGOT_COBALT = new ItemElementIngot(ElementList.COBALT);
+
+	@RegisterItem(itemName = "ingot_Nickel")
+	public static ItemElementIngot INGOT_NICKEL = new ItemElementIngot(ElementList.NICKEL);
+
+	@RegisterItem(itemName = "ingot_Copper")
+	public static ItemElementIngot INGOT_COPPER = new ItemElementIngot(ElementList.COPPER);
+
+	@RegisterItem(itemName = "ingot_Zinc")
+	public static ItemElementIngot INGOT_ZINC = new ItemElementIngot(ElementList.ZINC);
+
+	@RegisterItem(itemName = "ingot_Gallium")
+	public static ItemElementIngot INGOT_GALLIUM = new ItemElementIngot(ElementList.GALLIUM);
+
+	@RegisterItem(itemName = "ingot_Germanium")
+	public static ItemElementIngot INGOT_GERMANIUM = new ItemElementIngot(ElementList.GERMANIUM);
+
+	@RegisterItem(itemName = "ingot_Arsenic")
+	public static ItemElementIngot INGOT_ARSENIC = new ItemElementIngot(ElementList.ARSENIC);
+
+	@RegisterItem(itemName = "ingot_Selenium")
+	public static ItemElementIngot INGOT_SELENIUM = new ItemElementIngot(ElementList.SELENIUM);
+
+	@RegisterItem(itemName = "ingot_Rubidium")
+	public static ItemElementIngot INGOT_RUBIDIUM = new ItemElementIngot(ElementList.RUBIDIUM);
 }
