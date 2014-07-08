@@ -2,7 +2,7 @@ package com.tinkerlad.chemistry.item;
 
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
-import com.tinkerlad.chemistry.reference.dataTypes.Element;
+import com.tinkerlad.chemistry.reference.dataTypes.Alloy;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,16 +11,16 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-public class ItemElementBase extends Item {
+public class ItemAlloy extends Item {
 
-	public Element ELEMENT;
+	public Alloy ALLOY;
 
-	public ItemElementBase(Element element) {
+	public ItemAlloy(Alloy alloy) {
 		super();
-		this.ELEMENT = element;
-		this.setUnlocalizedName(element.NAME);
-		this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
-		if (element.STATE == Element.State.SOLID) {
+		this.ALLOY = alloy;
+		this.setUnlocalizedName(ALLOY.getNAME());
+		this.setCreativeTab(CreativeTab.ALLOYS_TAB);
+		if (ALLOY.getSTATE() == Alloy.State.SOLID) {
 			this.setTextureName(Chemistry.MODID + ":dust");
 		} else {
 			this.setTextureName(Chemistry.MODID + ":phial");
@@ -30,11 +30,11 @@ public class ItemElementBase extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
-		return ELEMENT.COLOR;
+		return ALLOY.getCOLOR();
 	}
 
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List info, boolean useExtraInformation) {
-		info.add(ELEMENT.SYMBOL);
+		info.add(ALLOY.getChemicalFormula());
 	}
 }

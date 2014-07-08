@@ -2,10 +2,19 @@ package com.tinkerlad.chemistry.block;
 
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
+import com.tinkerlad.chemistry.block.machine.BlockElementSiphon;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.registry.RegisterBlock;
 
 public class BlockList {
+
+	//Machines
+
+	@RegisterBlock(blockName = "machineSiphon")
+	public static BlockElementSiphon MACHINE_SIPHON = new BlockElementSiphon();
+
+
+//Elements
 
 	@RegisterBlock(blockName = "oreLithium")
 	public static OreElementBase ORE_LITHIUM = new OreElementBase(ElementList.LITHIUM);

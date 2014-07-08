@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface RegisterBlock {
+public @interface RegisterAlloy {
 
-	String blockName() default "[defaultBlock]";
+	String alloyName() default "[defaultAlloy]";
 }

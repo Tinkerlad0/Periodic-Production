@@ -7,10 +7,12 @@ import com.tinkerlad.chemistry.block.element.OreElementBase;
 import com.tinkerlad.chemistry.item.ItemElementBase;
 import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.logging.LogHelper;
+import com.tinkerlad.chemistry.rendering.PhialItemRender;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.MinecraftForgeClient;
 import org.apache.logging.log4j.Level;
 
 import java.lang.reflect.Field;
@@ -83,6 +85,8 @@ public class Register {
 					if (obj instanceof ItemElementBase) {
 						boolean baseItemAdd = Chemistry.converter.addElementBaseItem(((ItemElementBase) obj).ELEMENT,
 								                                                            (ItemElementBase) obj);
+						ItemElementBase itemElementBase = (ItemElementBase) obj;
+						MinecraftForgeClient.registerItemRenderer(itemElementBase, new PhialItemRender());
 
 						if (baseItemAdd) {
 							LogHelper.log(Level.INFO, "----" + field.getName() + " added as base item for " + (

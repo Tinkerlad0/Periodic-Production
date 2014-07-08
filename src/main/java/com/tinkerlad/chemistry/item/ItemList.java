@@ -1,11 +1,45 @@
 package com.tinkerlad.chemistry.item;
 
+import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.registry.RegisterItem;
 
 public class ItemList {
 
-	//Start of with all solid elements
+	//Gas Elements
+
+	@RegisterItem(itemName = "hydrogen")
+	public static ItemElementBase DUST_HYDROGEN = new ItemElementBase(ElementList.HYDROGEN);
+
+	@RegisterItem(itemName = "helium")
+	public static ItemElementBase DUST_HELIUM = new ItemElementBase(ElementList.HELIUM);
+
+	@RegisterItem(itemName = "nitrogen")
+	public static ItemElementBase DUST_NITROGEN = new ItemElementBase(ElementList.NITROGEN);
+
+	@RegisterItem(itemName = "oxygen")
+	public static ItemElementBase DUST_OXYGEN = new ItemElementBase(ElementList.OXYGEN);
+
+	@RegisterItem(itemName = "fluorine")
+	public static ItemElementBase DUST_FLUORINE = new ItemElementBase(ElementList.FLUORINE);
+
+	@RegisterItem(itemName = "neon")
+	public static ItemElementBase DUST_NEON = new ItemElementBase(ElementList.NEON);
+
+	@RegisterItem(itemName = "chlorine")
+	public static ItemElementBase DUST_CHLORINE = new ItemElementBase(ElementList.CHLORINE);
+
+	@RegisterItem(itemName = "argon")
+	public static ItemElementBase DUST_ARGON = new ItemElementBase(ElementList.ARGON);
+
+	@RegisterItem(itemName = "bromine")
+	public static ItemElementBase DUST_BROMINE = new ItemElementBase(ElementList.BROMINE);
+
+	@RegisterItem(itemName = "krypton")
+	public static ItemElementBase DUST_KRYPTON = new ItemElementBase(ElementList.KRYPTON);
+
+
+	//all solid elements
 
 	@RegisterItem(itemName = "lithium")
 	public static ItemElementBase DUST_LITHIUM = new ItemElementBase(ElementList.LITHIUM);
@@ -87,4 +121,8 @@ public class ItemList {
 
 	@RegisterItem(itemName = "Rubidium")
 	public static ItemElementBase DUST_RUBIDIUM = new ItemElementBase(ElementList.RUBIDIUM);
+
+	//Alloys xD
+	@RegisterItem(itemName = "sodiumChloride")
+	public static ItemAlloy ALLOY_NACL = new ItemAlloy(AlloyList.NaCl);
 }
