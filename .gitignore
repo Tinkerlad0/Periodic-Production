@@ -1,11 +1,4 @@
-/*
-!/.gitignore
-!/src
-!/gradle
-!/gradlew
-!/gradlew.bat
-!/README.md
-!/License.txt
-!/forge*.*
-!/build.properties
-!/build.gradle
+/build
+/eclipse
+/out
+/run
