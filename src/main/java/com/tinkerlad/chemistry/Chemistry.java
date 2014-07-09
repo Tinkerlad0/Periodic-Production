@@ -7,6 +7,7 @@ import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.reference.ElementMaterials;
 import com.tinkerlad.chemistry.reference.ElementTools;
+import com.tinkerlad.chemistry.registry.DynamicLocalisations;
 import com.tinkerlad.chemistry.registry.Register;
 import com.tinkerlad.chemistry.rendering.gui.GUIHandler;
 import com.tinkerlad.chemistry.utils.ElementTypeConverter;
@@ -31,6 +32,7 @@ public class Chemistry {
 	public static ElementMaterials elementMaterials = new ElementMaterials();
 	public static ElementTypeConverter converter = new ElementTypeConverter();
 	public static ElementTools elementTools = new ElementTools();
+	public static DynamicLocalisations localiser = new DynamicLocalisations();
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -43,6 +45,11 @@ public class Chemistry {
 		elementMaterials.initMaterials();
 		elementTools.initPickaxes();
 		elementTools.initSwords();
+		elementTools.initAxes();
+		elementTools.initHoes();
+		elementTools.initShovels();
+
+		localiser.registerLocalisations();
 	}
 
 	@EventHandler

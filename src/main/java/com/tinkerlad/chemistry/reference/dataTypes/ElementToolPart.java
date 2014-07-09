@@ -11,7 +11,11 @@ public class ElementToolPart {
 	}
 
 	public String getName() {
-		return edge.NAME + " tipped " + core.NAME;
+		if (!(edge == core)) {
+			return edge.NAME + " tipped " + core.NAME;
+		} else {
+			return core.NAME;
+		}
 	}
 
 	public String getUnlocalisedName() {return edge.NAME + core.NAME;}
