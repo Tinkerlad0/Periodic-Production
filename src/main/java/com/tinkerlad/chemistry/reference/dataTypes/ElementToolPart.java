@@ -22,6 +22,14 @@ public class ElementToolPart {
 
 	public int getColor() {return (int) ((2 * edge.COLOR + core.COLOR) / 3);}
 
+	public Element getEdge() {
+		return edge;
+	}
+
+	public Element getCore() {
+		return core;
+	}
+
 	public int getMiningLevel() {
 		switch (edge.HARDNESS) {
 			case NA:

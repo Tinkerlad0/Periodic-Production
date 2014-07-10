@@ -18,6 +18,7 @@ public class ItemElementSword extends ItemSword {
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_sword");
 		setTextureName(Chemistry.MODID + ":sword");
 		TOOLPART = toolPart;
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Sword");
 	}
 
 	@Override

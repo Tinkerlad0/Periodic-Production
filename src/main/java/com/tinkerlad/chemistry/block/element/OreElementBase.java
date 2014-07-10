@@ -5,12 +5,9 @@ import com.tinkerlad.chemistry.creativetab.CreativeTab;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
-import java.util.Random;
 
 public class OreElementBase extends Block {
 
@@ -23,11 +20,7 @@ public class OreElementBase extends Block {
 		this.setBlockTextureName("minecraft" + ":" + "stone");
 		this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
 		this.setHardness(ELEMENT.DENSITY);
-	}
-
-	@Override
-	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
-		return Chemistry.converter.getBaseItemFromElement(ELEMENT);
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), element.NAME + " Ore");
 	}
 
 	@Override
@@ -64,15 +57,6 @@ public class OreElementBase extends Block {
 				return false;
 		}
 		return false;
-	}
-
-	@Override
-	public int quantityDropped(int meta, int fortune, Random random) {
-		int drops = 1;
-		if (fortune >= 1) {
-			drops += random.nextInt(3 * fortune);
-		}
-		return drops;
 	}
 
 	@Override

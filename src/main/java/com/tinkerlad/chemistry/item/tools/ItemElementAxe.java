@@ -18,6 +18,7 @@ public class ItemElementAxe extends ItemAxe {
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_axe");
 		setTextureName(Chemistry.MODID + ":axe");
 		TOOLPART = toolPart;
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Axe");
 	}
 
 	@Override

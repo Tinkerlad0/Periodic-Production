@@ -2,6 +2,9 @@ package com.tinkerlad.chemistry.item;
 
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
+import com.tinkerlad.chemistry.item.tools.ItemElementSword;
+import com.tinkerlad.chemistry.logging.LogHelper;
+import com.tinkerlad.chemistry.reference.dataTypes.ElementToolPart;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,8 +13,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
+import org.apache.logging.log4j.Level;
 
 import java.util.List;
+import java.util.Map;
 
 public class ItemDebug extends Item {
 
@@ -37,6 +42,19 @@ public class ItemDebug extends Item {
 		} else {
 			player.addChatComponentMessage(new ChatComponentText("null"));
 		}
+
+
+		Map<ElementToolPart, ItemElementSword> swordMap = Chemistry.elementTools.swordMap;
+
+		for (Map.Entry<ElementToolPart, ItemElementSword> entry : swordMap.entrySet()) {
+			LogHelper.log(Level.INFO, entry.getValue().getUnlocalizedName() + " - " + entry.getValue()
+					                                                                          .getAttributeModifiers
+							                                                                           (new ItemStack
+									                                                                            (entry
+											                                                                             .getValue())));
+		}
+
+
 		return true;
 	}
 }

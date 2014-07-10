@@ -41,8 +41,8 @@ public class ElementMaterials {
 						                                                         Chemistry.elementList,
 						                                                         field2.getName());
 
-				if (obj1 instanceof Element && obj2 instanceof Element) {
-					Element edge = (Element) obj1;
+
+				Element edge = (Element) obj1;
 					Element core = (Element) obj2;
 					ElementToolPart toolPart = new ElementToolPart(edge, core);
 					toolPartList.add(toolPart);
@@ -56,7 +56,6 @@ public class ElementMaterials {
 				}
 			}
 		}
-	}
 
 	public List<ElementToolPart> getToolPartList() {
 		return toolPartList;

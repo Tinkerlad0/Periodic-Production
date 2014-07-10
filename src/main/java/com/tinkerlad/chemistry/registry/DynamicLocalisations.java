@@ -12,11 +12,8 @@ public class DynamicLocalisations {
 		LanguageRegistry.instance().injectLanguage("en_US", localisations);
 	}
 
-	public void addItemLocalisation(String itemName, String localisation) {
-		localisations.put(itemName, localisation);
-	}
-
-	public void addBlockLocalisation(String blockName, String localisation) {
-		localisations.put(blockName, localisation);
+	public void addLocalisation(String itemName, String localisation) {
+		localisations.put(itemName + ".name",
+				                 localisation);
 	}
 }

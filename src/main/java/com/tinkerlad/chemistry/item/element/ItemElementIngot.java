@@ -21,6 +21,7 @@ public class ItemElementIngot extends Item {
 		this.setUnlocalizedName("ingot_" + element.NAME);
 		this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
 		this.setTextureName(Chemistry.MODID + ":ingot");
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), element.NAME + " Ingot");
 	}
 
 	@Override

@@ -18,6 +18,7 @@ public class ItemElementHoe extends ItemHoe {
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_hoe");
 		setTextureName(Chemistry.MODID + ":hoe");
 		TOOLPART = toolPart;
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Hoe");
 	}
 
 	@Override

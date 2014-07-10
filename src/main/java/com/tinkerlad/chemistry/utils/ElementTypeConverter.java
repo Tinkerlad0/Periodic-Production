@@ -5,6 +5,7 @@ import com.tinkerlad.chemistry.block.element.OreElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
+import com.tinkerlad.chemistry.reference.dataTypes.ElementToolPart;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +16,7 @@ public class ElementTypeConverter {
 	public static Map<Element, OreElementBase> oreMap = new HashMap<Element, OreElementBase>();
 	public static Map<Element, BlockElementBase> blockPureMap = new HashMap<Element, BlockElementBase>();
 	public static Map<Element, ItemElementIngot> ingotMap = new HashMap<Element, ItemElementIngot>();
+	public static Map<Element, ElementToolPart> toolPartMap = new HashMap<Element, ElementToolPart>();
 
 	public ItemElementBase getBaseItemFromElement(Element element) {
 		return baseItemMap.get(element);

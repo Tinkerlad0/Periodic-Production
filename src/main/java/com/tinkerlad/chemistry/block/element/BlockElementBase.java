@@ -17,6 +17,7 @@ public class BlockElementBase extends Block {
 		setBlockName(ELEMENT.NAME + "Block");
 		setBlockTextureName(Chemistry.MODID + ":block");
 		setCreativeTab(CreativeTab.ELEMENTS_TAB);
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), element.NAME + " Block");
 	}
 
 	@Override

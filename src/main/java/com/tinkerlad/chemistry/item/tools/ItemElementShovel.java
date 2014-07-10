@@ -18,6 +18,7 @@ public class ItemElementShovel extends ItemSpade {
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_shovel");
 		setTextureName(Chemistry.MODID + ":shovel");
 		TOOLPART = toolPart;
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Shovel");
 	}
 
 	@Override

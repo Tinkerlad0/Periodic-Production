@@ -25,6 +25,8 @@ public class ItemAlloy extends Item {
 		} else {
 			this.setTextureName(Chemistry.MODID + ":phial");
 		}
+
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), alloy.getNAME());
 	}
 
 	@Override

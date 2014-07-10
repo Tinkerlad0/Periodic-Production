@@ -34,6 +34,7 @@ public class BlockList {
 	@RegisterBlock(blockName = "oreMagnesium")
 	public static OreElementBase ORE_MAGNESIUM = new OreElementBase(ElementList.MAGNESIUM);
 
+	//@RegisterOreGen(veinsPerChunk = 4)
 	@RegisterBlock(blockName = "oreAluminium")
 	public static OreElementBase ORE_ALUMINIUM = new OreElementBase(ElementList.ALUMINIUM);
 

@@ -24,6 +24,7 @@ public class ItemGeneric extends Item {
 		setUnlocalizedName(itemName);
 		setTextureName(Chemistry.MODID + ":" + itemName);
 		Color = colour;
+		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), itemName.toLowerCase());
 	}
 
 	@Override

@@ -16,6 +16,7 @@ public class Alloy {
 		this.STATE = STATE;
 		this.COLOR = COLOR;
 		this.COMPONENTS = components;
+		this.NAME = name;
 	}
 
 	public Alloy(CompoundType COMPOUND_TYPE, State STATE, List<AlloyComponent> components, String name) {
@@ -29,6 +30,7 @@ public class Alloy {
 			count++;
 		}
 		this.COLOR = colour / count;
+		this.NAME = name;
 	}
 
 	public String getNAME() {
@@ -48,8 +50,10 @@ public class Alloy {
 	public String getChemicalFormula() {
 		String formula = "";
 		for (AlloyComponent component : COMPONENTS) {
-			formula += component.ELEMENT.SYMBOL;
-			formula += component.AMOUNT;
+			formula.concat(component.ELEMENT.SYMBOL);
+			if (!(component.AMOUNT == 1)) {
+				formula.concat(Integer.toString(component.AMOUNT));
+			}
 		}
 
 		return formula;
@@ -57,13 +61,13 @@ public class Alloy {
 
 	public float getHardness() {
 
-		float hardness = 0F;
+		double hardness = 0;
 		int count = 0;
 		for (AlloyComponent component : COMPONENTS) {
 			count += component.AMOUNT;
 			hardness += (component.ELEMENT.HARDNESS.getValue() * component.AMOUNT * component.ELEMENT.DENSITY);
 		}
-		return (hardness / count);
+		return (float) (hardness / count);
 	}
 
 	public float getSharpness() {
@@ -71,13 +75,13 @@ public class Alloy {
 	}
 
 	public float getDensity() {
-		float density = 0F;
+		double density = 0F;
 		int count = 0;
 		for (AlloyComponent component : COMPONENTS) {
 			density += component.AMOUNT * component.ELEMENT.DENSITY;
 			count += component.AMOUNT;
 		}
-		return ((density / count) * COMPOUND_TYPE.getDensityModifier());
+		return (float) ((density / count) * COMPOUND_TYPE.getDensityModifier());
 	}
 
 	public int getDurability() {

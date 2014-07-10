@@ -13,8 +13,8 @@ import net.minecraft.tileentity.TileEntityFurnace;
 
 public class ContainerSiphon extends Container {
 
-	private final int PLAYER_INVENTORY_ROWS = 3;
-	private final int PLAYER_INVENTORY_COLUMNS = 9;
+	private static final int PLAYER_INVENTORY_ROWS = 3;
+	private static final int PLAYER_INVENTORY_COLUMNS = 9;
 	private TileEntitySiphon tileEntitySiphon;
 	private int lastDeviceCookTime;
 	private int lastFuelBurnTime;
