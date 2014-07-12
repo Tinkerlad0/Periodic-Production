@@ -1,6 +1,8 @@
 package com.tinkerlad.chemistry.reference.recipes;
 
 import com.tinkerlad.chemistry.Chemistry;
+import com.tinkerlad.chemistry.block.BlockList;
+import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
@@ -12,6 +14,11 @@ import java.lang.reflect.Field;
 public class ElementCommonRecipes {
 
 	public static void init() {
+
+		GameRegistry.addShapedRecipe(new ItemStack(BlockList.MACHINE_SIPHON), "XYX", "YZY", "XYX", 'Z',
+				                            ItemList.DUST_SILICON, 'Y', ItemList.INGOT_LITHIUM, 'X',
+				                            ItemList.INGOT_IRON);
+
 		for (Field field : Chemistry.elementList.getClass().getDeclaredFields()) {
 			Object obj = ObfuscationReflectionHelper.getPrivateValue(ElementList.class, Chemistry.elementList,
 					                                                        field.getName());

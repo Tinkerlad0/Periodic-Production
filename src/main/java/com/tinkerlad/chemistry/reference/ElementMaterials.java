@@ -43,19 +43,21 @@ public class ElementMaterials {
 
 
 				Element edge = (Element) obj1;
-					Element core = (Element) obj2;
-					ElementToolPart toolPart = new ElementToolPart(edge, core);
-					toolPartList.add(toolPart);
-					materialMap.put(toolPart, EnumHelper.addToolMaterial(toolPart.getName(),
-							                                                    toolPart.getMiningLevel(),
-							                                                    toolPart.getDurability(),
-							                                                    toolPart.getMineSpeed(),
-							                                                    toolPart.getDamageDealt(),
-							                                                    toolPart.getEnchantability()));
+				Element core = (Element) obj2;
+				ElementToolPart toolPart = new ElementToolPart(edge, core);
+				toolPartList.add(toolPart);
+				materialMap.put(toolPart, EnumHelper.addToolMaterial(toolPart.getName(),
+						                                                    toolPart.getMiningLevel(),
+						                                                    toolPart.getDurability(),
+						                                                    toolPart.getMineSpeed(),
+						                                                    toolPart.getDamageDealt(),
+						                                                    toolPart.getEnchantability()));
+				if (Chemistry.configHandler.VERBOSE) {
 					LogHelper.log(Level.INFO, "Created Tool Material " + toolPart.getName());
 				}
 			}
 		}
+	}
 
 	public List<ElementToolPart> getToolPartList() {
 		return toolPartList;

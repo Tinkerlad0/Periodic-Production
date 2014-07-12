@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface RegisterOreGen {
 
-	int veinsPerChunk() default 2;
+	double partsPerMillion() default 0.00002;
 }

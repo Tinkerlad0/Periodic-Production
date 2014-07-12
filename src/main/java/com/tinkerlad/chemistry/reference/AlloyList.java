@@ -13,4 +13,6 @@ public class AlloyList {
 							                                                                         1)
 			                                          ), "Salt"
 	);
+
+	protected AlloyList() {}
 }

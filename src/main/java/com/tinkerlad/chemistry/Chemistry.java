@@ -2,6 +2,7 @@ package com.tinkerlad.chemistry;
 
 import com.tinkerlad.chemistry.block.BlockList;
 import com.tinkerlad.chemistry.block.machine.TileEntitySiphon;
+import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.reference.ElementList;
@@ -22,7 +23,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import static cpw.mods.fml.common.Mod.EventHandler;
 import static cpw.mods.fml.common.Mod.Instance;
 
-@Mod(modid = Chemistry.MODID, name = "Periodic Production", version = "@VERSION@")
+@Mod(modid = Chemistry.MODID, name = "Periodic Production", version = "@VERSION@",
+		    guiFactory = "com.tinkerlad.chemistry.gui.GuiFactory")
 public class Chemistry {
 
 	public static final String MODID = "tnkchem";
@@ -34,6 +36,7 @@ public class Chemistry {
 	public static final ElementMaterials elementMaterials = new ElementMaterials();
 	public static final ElementTypeConverter converter = new ElementTypeConverter();
 	public static final ElementTools elementTools = new ElementTools();
+	public static ConfigHandler configHandler = new ConfigHandler();
 	@Instance(MODID)
 	public static Chemistry instance;
 
@@ -41,6 +44,8 @@ public class Chemistry {
 	public void preInit(FMLPreInitializationEvent event) {
 
 		LogHelper.logger = event.getModLog();
+
+		configHandler.preInit(event.getSuggestedConfigurationFile());
 
 		Register.registerBlocks();
 		Register.registerItems();

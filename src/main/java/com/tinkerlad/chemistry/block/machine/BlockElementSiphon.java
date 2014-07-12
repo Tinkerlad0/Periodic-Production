@@ -33,11 +33,12 @@ public class BlockElementSiphon extends BlockMachine implements ITileEntityProvi
 				world.spawnParticle("flame", (double) x + 0.5F, (double) y + 0.33F, (double) z + 0.825F, 0.0D, 0.0D,
 						                   0.0D);
 
-				world.spawnParticle("smoke", (double) x + 0.5F, (double) y + 0.7F, (double) z + 0.0F, 0.0D, 0.05D,
+				String smoke = "smoke";
+				world.spawnParticle(smoke, (double) x + 0.5F, (double) y + 0.7F, (double) z + 0.0F, 0.0D, 0.05D,
 						                   0.0D);
-				world.spawnParticle("smoke", (double) x + 0.5F, (double) y + 0.7F, (double) z + 1.0F, 0.0D, 0.05D, 0.0D);
-				world.spawnParticle("smoke", (double) x + 0.0F, (double) y + 0.7F, (double) z + 0.5F, 0.0D, 0.05D, 0.0D);
-				world.spawnParticle("smoke", (double) x + 1.0F, (double) y + 0.7F, (double) z + 0.5F, 0.0D, 0.05D, 0.0D);
+				world.spawnParticle(smoke, (double) x + 0.5F, (double) y + 0.7F, (double) z + 1.0F, 0.0D, 0.05D, 0.0D);
+				world.spawnParticle(smoke, (double) x + 0.0F, (double) y + 0.7F, (double) z + 0.5F, 0.0D, 0.05D, 0.0D);
+				world.spawnParticle(smoke, (double) x + 1.0F, (double) y + 0.7F, (double) z + 0.5F, 0.0D, 0.05D, 0.0D);
 			}
 		}
 	}

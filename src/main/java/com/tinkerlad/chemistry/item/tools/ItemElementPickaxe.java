@@ -1,7 +1,6 @@
 package com.tinkerlad.chemistry.item.tools;
 
 import com.tinkerlad.chemistry.Chemistry;
-import com.tinkerlad.chemistry.creativetab.CreativeTab;
 import com.tinkerlad.chemistry.reference.dataTypes.ElementToolPart;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,7 +13,7 @@ public class ItemElementPickaxe extends ItemPickaxe {
 
 	public ItemElementPickaxe(ElementToolPart toolPart) {
 		super(Chemistry.elementMaterials.getMaterialFromToolPart(toolPart));
-		setCreativeTab(CreativeTab.ELEMENTS_TAB);
+		setCreativeTab(null);
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_pick");
 		setTextureName(Chemistry.MODID + ":pick");
 		TOOLPART = toolPart;

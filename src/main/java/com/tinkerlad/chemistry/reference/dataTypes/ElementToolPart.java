@@ -62,7 +62,8 @@ public class ElementToolPart {
 	}
 
 	public float getDamageDealt() {
-		return edge.HARDNESS.getValue() * ((2 * edge.DENSITY + core.DENSITY) / 3);
+		return (edge.HARDNESS.getValue() * ((2 * edge.DENSITY + core.DENSITY) / 3) / 5);
+		//Divide by Five for balance reasons
 	}
 
 	public int getEnchantability() {

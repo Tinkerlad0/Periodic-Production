@@ -19,7 +19,7 @@ import java.util.Random;
 
 public class OreGen implements IWorldGenerator {
 
-	Map<Block, Integer> oresToGen = new HashMap<Block, Integer>();
+	Map<Block, Double> oresToGen = new HashMap<Block, Double>();
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
@@ -40,8 +40,8 @@ public class OreGen implements IWorldGenerator {
 		}
 	}
 
-	public void addOreToSpawn(Block block, int chancesToSpawn) {
-		if (block != null && chancesToSpawn > 0) {
+	public void addOreToSpawn(Block block, double chancesToSpawn) {
+		if (block != null) {
 			oresToGen.put(block, chancesToSpawn);
 		}
 	}
@@ -49,9 +49,15 @@ public class OreGen implements IWorldGenerator {
 	public void doOreSpawn(World world, Random random, int blockXPos, int blockZPos,
 	                       int maxVeinSize) {
 
-		for (Map.Entry<Block, Integer> oreEntry : oresToGen.entrySet()) {
+		for (Map.Entry<Block, Double> oreEntry : oresToGen.entrySet()) {
 			Block ore = oreEntry.getKey();
-			int chancesToSpawn = oreEntry.getValue();
+			double chancesToSpawn = oreEntry.getValue();
+			if (chancesToSpawn < 1) {
+				chancesToSpawn = random.nextDouble() <= chancesToSpawn ? 1 : 0;
+			} else {
+				chancesToSpawn = (int) Math.rint(chancesToSpawn);
+			}
+
 			for (int j = 0; j < chancesToSpawn; j++) {
 				int posX = blockXPos + random.nextInt(16);
 				int posY = 2 + random.nextInt(218);
@@ -66,12 +72,14 @@ public class OreGen implements IWorldGenerator {
 			if (field.isAnnotationPresent(RegisterOreGen.class)) {
 				RegisterOreGen annotation = field.getAnnotation(RegisterOreGen.class);
 				field.setAccessible(true);
-				Object obj = ObfuscationReflectionHelper.getPrivateValue(OreGen.class, Chemistry.oreGen,
+				Object obj = ObfuscationReflectionHelper.getPrivateValue(BlockList.class, Chemistry.blockList,
 						                                                        field.getName());
 				if (obj instanceof Block) {
-					LogHelper.log(Level.INFO, "Adding " + ((Block) obj).getLocalizedName() + " added to world " +
-							                          "generation in " + "overworld");
-					addOreToSpawn((Block) obj, annotation.veinsPerChunk());
+					if (Chemistry.configHandler.DEBUG) {
+						LogHelper.log(Level.INFO, ((Block) obj).getLocalizedName() + " added to world " +
+								                          "generation in overworld");
+					}
+					addOreToSpawn((Block) obj, annotation.partsPerMillion() * 350);
 				}
 			}
 		}
