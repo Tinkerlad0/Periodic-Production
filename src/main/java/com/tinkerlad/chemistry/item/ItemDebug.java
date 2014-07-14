@@ -2,6 +2,7 @@ package com.tinkerlad.chemistry.item;
 
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -37,15 +38,18 @@ public class ItemDebug extends Item {
 //			player.addChatComponentMessage(new ChatComponentText("null"));
 //		}
 
-		for (int i = -25; i <= 25; i++) {
-			for (int j = 0; j <= 25; j++) {
-				for (int k = -25; k <= 25; k++) {
+		for (int i = -10; i <= 10; i++) {
+			for (int j = 0; j <= 15; j++) {
+				for (int k = -10; k <= 10; k++) {
 					if ((world.getBlock(x + i, y - j, z + k) == Blocks.stone) ||
 							    (world.getBlock(x + i, y - j, z + k) == Blocks.sand ||
 									     (world.getBlock(x + i, y - j, z + k) == Blocks.gravel)) ||
 							    (world.getBlock(x + i, y - j, z + k) == Blocks.grass) ||
+							    (world.getBlock(x + i, y - j, z + k) == Blocks.sandstone) ||
 							    (world.getBlock(x + i, y - j, z + k) == Blocks.dirt)) {
-						world.setBlockToAir(x + i, y - j, z + k);
+						FMLCommonHandler.instance().getMinecraftServerInstance().worldServerForDimension(0)
+								.setBlockToAir(x + i, y - j, z + k);
+						//world.setBlockToAir(x+1,y-j,z+k);
 					}
 				}
 			}

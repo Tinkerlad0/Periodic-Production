@@ -14,6 +14,7 @@ import com.tinkerlad.chemistry.registry.Register;
 import com.tinkerlad.chemistry.rendering.gui.GUIHandler;
 import com.tinkerlad.chemistry.utils.ElementTypeConverter;
 import com.tinkerlad.chemistry.world.OreGen;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -36,7 +37,6 @@ public class Chemistry {
 	public static final ElementMaterials elementMaterials = new ElementMaterials();
 	public static final ElementTypeConverter converter = new ElementTypeConverter();
 	public static final ElementTools elementTools = new ElementTools();
-	public static ConfigHandler configHandler = new ConfigHandler();
 	@Instance(MODID)
 	public static Chemistry instance;
 
@@ -45,7 +45,8 @@ public class Chemistry {
 
 		LogHelper.logger = event.getModLog();
 
-		configHandler.preInit(event.getSuggestedConfigurationFile());
+		ConfigHandler.preInit(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(ConfigHandler.class);
 
 		Register.registerBlocks();
 		Register.registerItems();

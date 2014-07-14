@@ -2,6 +2,7 @@ package com.tinkerlad.chemistry.world;
 
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.block.BlockList;
+import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.registry.RegisterOreGen;
 import cpw.mods.fml.common.IWorldGenerator;
@@ -57,12 +58,14 @@ public class OreGen implements IWorldGenerator {
 			} else {
 				chancesToSpawn = (int) Math.rint(chancesToSpawn);
 			}
-
+			if (ConfigHandler.VERBOSE) {LogHelper.log(Level.INFO, "Ore Genning " + ore.getLocalizedName());}
+			WorldGenMinable genMinable = new WorldGenMinable(ore, maxVeinSize);
 			for (int j = 0; j < chancesToSpawn; j++) {
 				int posX = blockXPos + random.nextInt(16);
-				int posY = 2 + random.nextInt(218);
+				int posY = 2 + random.nextInt(100);
 				int posZ = blockZPos + random.nextInt(16);
-				new WorldGenMinable(ore, maxVeinSize).generate(world, random, posX, posY, posZ);
+				genMinable.generate(world, random, posX, posY, posZ);
+				System.out.println("Genning " + ore.getLocalizedName() + " at " + posX + " " + posY + " " + posZ);
 			}
 		}
 	}
@@ -75,7 +78,7 @@ public class OreGen implements IWorldGenerator {
 				Object obj = ObfuscationReflectionHelper.getPrivateValue(BlockList.class, Chemistry.blockList,
 						                                                        field.getName());
 				if (obj instanceof Block) {
-					if (Chemistry.configHandler.DEBUG) {
+					if (ConfigHandler.DEBUG) {
 						LogHelper.log(Level.INFO, ((Block) obj).getLocalizedName() + " added to world " +
 								                          "generation in overworld");
 					}

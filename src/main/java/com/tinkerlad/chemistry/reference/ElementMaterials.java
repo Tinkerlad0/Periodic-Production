@@ -1,6 +1,7 @@
 package com.tinkerlad.chemistry.reference;
 
 import com.tinkerlad.chemistry.Chemistry;
+import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import com.tinkerlad.chemistry.reference.dataTypes.ElementToolPart;
@@ -52,7 +53,7 @@ public class ElementMaterials {
 						                                                    toolPart.getMineSpeed(),
 						                                                    toolPart.getDamageDealt(),
 						                                                    toolPart.getEnchantability()));
-				if (Chemistry.configHandler.VERBOSE) {
+				if (ConfigHandler.VERBOSE) {
 					LogHelper.log(Level.INFO, "Created Tool Material " + toolPart.getName());
 				}
 			}

@@ -4,6 +4,7 @@ import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.block.BlockList;
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
+import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
@@ -24,7 +25,7 @@ public class Register {
 
 	public static void registerBlocks() {
 
-		if (Chemistry.configHandler.DEBUG) {LogHelper.log(Level.INFO, "Beginning Block Registration");}
+		if (ConfigHandler.DEBUG) {LogHelper.log(Level.INFO, "Beginning Block Registration");}
 
 		for (Field field : BlockList.class.getDeclaredFields()) {
 			if (field.isAnnotationPresent(RegisterBlock.class)) {
@@ -34,7 +35,7 @@ public class Register {
 						                                                        field.getName());
 
 				if (obj instanceof Block) {
-					if (Chemistry.configHandler.VERBOSE) {
+					if (ConfigHandler.VERBOSE) {
 						LogHelper.log(Level.INFO, "---Registering " + field.getName());
 					}
 					GameRegistry.registerBlock((Block) obj, annotation.blockName());
@@ -43,7 +44,7 @@ public class Register {
 								                                                  (OreElementBase) obj);
 
 						if (oreAdd) {
-							if (Chemistry.configHandler.VERBOSE) {
+							if (ConfigHandler.VERBOSE) {
 								LogHelper.log(Level.INFO, "----" + field.getName() + " " +
 										                          "added as ore for " + (
 												                                                (OreElementBase)
@@ -61,7 +62,7 @@ public class Register {
 								                                                        (BlockElementBase) obj);
 
 						if (oreAdd) {
-							if (Chemistry.configHandler.VERBOSE) {
+							if (ConfigHandler.VERBOSE) {
 								LogHelper.log(Level.INFO, "----" + field.getName() + " " +
 										                          "added as ore for " + ((BlockElementBase)
 												                                                 obj)
@@ -77,12 +78,12 @@ public class Register {
 				}
 			}
 		}
-		if (Chemistry.configHandler.DEBUG) {LogHelper.log(Level.INFO, "Block Registration complete.");}
+		if (ConfigHandler.DEBUG) {LogHelper.log(Level.INFO, "Block Registration complete.");}
 	}
 
 	public static void registerItems() {
 
-		if (Chemistry.configHandler.DEBUG) {LogHelper.log(Level.INFO, "Beginning Item Registration");}
+		if (ConfigHandler.DEBUG) {LogHelper.log(Level.INFO, "Beginning Item Registration");}
 
 		for (Field field : ItemList.class.getDeclaredFields()) {
 			if (field.isAnnotationPresent(RegisterItem.class)) {
@@ -92,7 +93,7 @@ public class Register {
 						                                                        field.getName());
 
 				if (obj instanceof Item) {
-					if (Chemistry.configHandler.VERBOSE) {
+					if (ConfigHandler.VERBOSE) {
 						LogHelper.log(Level.INFO, "----Registering " + field.getName());
 					}
 					GameRegistry.registerItem((Item) obj, annotation.itemName());
@@ -115,7 +116,7 @@ public class Register {
 						MinecraftForgeClient.registerItemRenderer(itemElementBase, new PhialItemRender());
 
 						if (baseItemAdd) {
-							if (Chemistry.configHandler.VERBOSE) {
+							if (ConfigHandler.VERBOSE) {
 								LogHelper.log(Level.INFO, "----" + field.getName() + " " +
 										                          "added as base item for " + (
 												                                                      (ItemElementBase)
@@ -133,6 +134,6 @@ public class Register {
 			}
 		}
 
-		if (Chemistry.configHandler.DEBUG) {LogHelper.log(Level.INFO, "Item Registration Complete");}
+		if (ConfigHandler.DEBUG) {LogHelper.log(Level.INFO, "Item Registration Complete");}
 	}
 }
