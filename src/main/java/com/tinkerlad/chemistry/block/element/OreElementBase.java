@@ -6,10 +6,12 @@ import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class OreElementBase extends Block {
@@ -28,7 +30,7 @@ public class OreElementBase extends Block {
 
 	@Override
 	public Item getItemDropped(int p_149650_1_, Random random, int p_149650_3_) {
-		if (random.nextInt(200) == 0) {
+		if (random.nextInt(50) == 0) {
 			return Chemistry.converter.getBaseItemFromElement(ELEMENT);
 		} else {
 			return Item.getItemFromBlock(this);
@@ -69,6 +71,18 @@ public class OreElementBase extends Block {
 				return false;
 		}
 		return false;
+	}
+
+	@Override
+	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
+		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
+		drops.clear();
+		drops.add(new ItemStack(Chemistry.converter.getOreFromElement(ELEMENT)));
+		if (Chemistry.RANDOM.nextInt(40 / fortune) == 0 && ELEMENT.STATE != Element.State.GAS) {
+			drops.add(new ItemStack(Chemistry.converter.getBaseItemFromElement(ELEMENT)));
+		}
+
+		return drops;
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.block.machine;
+package com.tinkerlad.chemistry.block.machine.siphon;
 
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import cpw.mods.fml.relauncher.Side;

@@ -1,6 +1,7 @@
-package com.tinkerlad.chemistry.block.machine;
+package com.tinkerlad.chemistry.block.machine.siphon;
 
 import com.tinkerlad.chemistry.Chemistry;
+import com.tinkerlad.chemistry.block.machine.BlockMachine;
 import com.tinkerlad.chemistry.reference.GuiID;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -18,7 +19,26 @@ public class BlockElementSiphon extends BlockMachine implements ITileEntityProvi
 		super(Material.anvil);
 		this.setHardness(5.0f);
 		this.setBlockName("elementSiphon");
+		this.setBlockTextureName(Chemistry.MODID + ":siphon");
 	}
+
+//	@Override
+//	public boolean renderAsNormalBlock()
+//	{
+//		return false;
+//	}
+//
+//	@Override
+//	public int getRenderType()
+//	{
+//		return RenderingRegistry.getNextAvailableRenderId();
+//	}
+//
+//	@Override
+//	public boolean isOpaqueCube()
+//	{
+//		return false;
+//	}
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int metaData) {

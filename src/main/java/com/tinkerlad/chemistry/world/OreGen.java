@@ -20,7 +20,7 @@ import java.util.Random;
 
 public class OreGen implements IWorldGenerator {
 
-	Map<Block, Double> oresToGen = new HashMap<Block, Double>();
+	public static Map<Block, Double> oresToGen = new HashMap<Block, Double>();
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
@@ -30,7 +30,7 @@ public class OreGen implements IWorldGenerator {
 				break;
 			case 0:
 				//Surface
-				doOreSpawn(world, random, chunkX, chunkZ, 6);
+				doOreSpawn(world, random, chunkX << 4, chunkZ << 4, 6);
 				break;
 			case 1:
 				//End
@@ -43,7 +43,11 @@ public class OreGen implements IWorldGenerator {
 
 	public void addOreToSpawn(Block block, double chancesToSpawn) {
 		if (block != null) {
+			if (chancesToSpawn < 3D) {
+				chancesToSpawn = 3;
+			}
 			oresToGen.put(block, chancesToSpawn);
+			LogHelper.info(block.getLocalizedName() + " " + chancesToSpawn);
 		}
 	}
 
@@ -53,24 +57,18 @@ public class OreGen implements IWorldGenerator {
 		for (Map.Entry<Block, Double> oreEntry : oresToGen.entrySet()) {
 			Block ore = oreEntry.getKey();
 			double chancesToSpawn = oreEntry.getValue();
-			if (chancesToSpawn < 1) {
-				chancesToSpawn = random.nextDouble() <= chancesToSpawn ? 1 : 0;
-			} else {
-				chancesToSpawn = (int) Math.rint(chancesToSpawn);
-			}
 			if (ConfigHandler.VERBOSE) {LogHelper.log(Level.INFO, "Ore Genning " + ore.getLocalizedName());}
 			WorldGenMinable genMinable = new WorldGenMinable(ore, maxVeinSize);
-			for (int j = 0; j < chancesToSpawn; j++) {
+			for (int j = 0; j < (int) chancesToSpawn; j++) {
 				int posX = blockXPos + random.nextInt(16);
 				int posY = 2 + random.nextInt(100);
 				int posZ = blockZPos + random.nextInt(16);
 				genMinable.generate(world, random, posX, posY, posZ);
-				System.out.println("Genning " + ore.getLocalizedName() + " at " + posX + " " + posY + " " + posZ);
 			}
 		}
 	}
 
-	public void getDefaultOres() {
+	public void populateDefaultOres() {
 		for (Field field : BlockList.class.getDeclaredFields()) {
 			if (field.isAnnotationPresent(RegisterOreGen.class)) {
 				RegisterOreGen annotation = field.getAnnotation(RegisterOreGen.class);
@@ -79,8 +77,8 @@ public class OreGen implements IWorldGenerator {
 						                                                        field.getName());
 				if (obj instanceof Block) {
 					if (ConfigHandler.DEBUG) {
-						LogHelper.log(Level.INFO, ((Block) obj).getLocalizedName() + " added to world " +
-								                          "generation in overworld");
+						LogHelper.info(((Block) obj).getLocalizedName() + " added to world " +
+								               "generation in overworld");
 					}
 					addOreToSpawn((Block) obj, annotation.partsPerMillion() * 350);
 				}

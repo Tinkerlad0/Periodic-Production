@@ -1,8 +1,8 @@
 package com.tinkerlad.chemistry.rendering.gui;
 
 import com.tinkerlad.chemistry.Chemistry;
-import com.tinkerlad.chemistry.block.machine.ContainerSiphon;
-import com.tinkerlad.chemistry.block.machine.TileEntitySiphon;
+import com.tinkerlad.chemistry.block.machine.siphon.ContainerSiphon;
+import com.tinkerlad.chemistry.block.machine.siphon.TileEntitySiphon;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;

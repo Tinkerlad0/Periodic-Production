@@ -1,10 +1,11 @@
 package com.tinkerlad.chemistry;
 
 import com.tinkerlad.chemistry.block.BlockList;
-import com.tinkerlad.chemistry.block.machine.TileEntitySiphon;
+import com.tinkerlad.chemistry.block.machine.siphon.TileEntitySiphon;
 import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.logging.LogHelper;
+import com.tinkerlad.chemistry.proxies.CommonProxy;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.reference.ElementMaterials;
 import com.tinkerlad.chemistry.reference.ElementTools;
@@ -16,10 +17,13 @@ import com.tinkerlad.chemistry.utils.ElementTypeConverter;
 import com.tinkerlad.chemistry.world.OreGen;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+
+import java.util.Random;
 
 import static cpw.mods.fml.common.Mod.EventHandler;
 import static cpw.mods.fml.common.Mod.Instance;
@@ -39,6 +43,13 @@ public class Chemistry {
 	public static final ElementTools elementTools = new ElementTools();
 	@Instance(MODID)
 	public static Chemistry instance;
+
+	public static Random RANDOM = new Random();
+
+	@SidedProxy(clientSide = "com.tinkerlad.chemistry.proxies.ClientProxy", serverSide = "com.tinkerlad.chemistry" +
+			                                                                                     ".proxies" +
+			                                                                                     ".CommonProxy")
+	public static CommonProxy proxy;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -60,7 +71,7 @@ public class Chemistry {
 
 		ElementCommonRecipes.init();
 
-		oreGen.getDefaultOres();
+		oreGen.populateDefaultOres();
 
 		GameRegistry.registerWorldGenerator(oreGen, 0);
 
@@ -73,5 +84,3 @@ public class Chemistry {
 		GameRegistry.registerTileEntity(TileEntitySiphon.class, "tile.siphon");
 	}
 }
-
-

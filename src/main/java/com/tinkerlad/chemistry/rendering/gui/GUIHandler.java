@@ -1,7 +1,7 @@
 package com.tinkerlad.chemistry.rendering.gui;
 
-import com.tinkerlad.chemistry.block.machine.ContainerSiphon;
-import com.tinkerlad.chemistry.block.machine.TileEntitySiphon;
+import com.tinkerlad.chemistry.block.machine.siphon.ContainerSiphon;
+import com.tinkerlad.chemistry.block.machine.siphon.TileEntitySiphon;
 import com.tinkerlad.chemistry.reference.GuiID;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;

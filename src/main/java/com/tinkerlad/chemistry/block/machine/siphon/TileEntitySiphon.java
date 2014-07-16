@@ -1,5 +1,6 @@
-package com.tinkerlad.chemistry.block.machine;
+package com.tinkerlad.chemistry.block.machine.siphon;
 
+import com.tinkerlad.chemistry.block.machine.TileEntityMachine;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.reference.recipes.backend.RecipeSiphon;
 import com.tinkerlad.chemistry.reference.recipes.backend.RecipesSiphon;
@@ -137,7 +138,7 @@ public class TileEntitySiphon extends TileEntityMachine implements ISidedInvento
 
 	@Override
 	public String getInventoryName() {
-		return this.hasCustomName() ? this.getCustomName() : "Siphon";
+		return this.hasCustomName() ? this.getCustomName() : "Element Siphon";
 	}
 
 	@Override

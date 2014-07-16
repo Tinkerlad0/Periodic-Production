@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.block.machine;
+package com.tinkerlad.chemistry.block.machine.siphon;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.entity.player.EntityPlayer;
