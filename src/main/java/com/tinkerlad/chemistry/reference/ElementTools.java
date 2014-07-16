@@ -57,10 +57,11 @@ public class ElementTools {
 		for (ElementToolPart toolPart : Chemistry.elementMaterials.getToolPartList()) {
 			ItemElementAxe axe = new ItemElementAxe(toolPart);
 			axeMap.put(toolPart, axe);
-//			GameRegistry.addShapedRecipe(new ItemStack(axe), "XY", "XZ ", " Z ", 'X', getItemForCrafting(toolPart.getEdge()), 'Y',
-//					                            getItemForCrafting(toolPart.getCore()), 'Z', Items.stick);
-//			GameRegistry.addShapedRecipe(new ItemStack(axe), " YX", " ZX", " Z ", 'X', getItemForCrafting(toolPart.getEdge()), 'Y',
-//					                            getItemForCrafting(toolPart.getCore()), 'Z', Items.stick);
+			GameRegistry.addShapedRecipe(new ItemStack(axe), "XY ", "XZ ", " Z ", 'X',
+					                            getItemForCrafting(toolPart.getEdge()), 'Y',
+					                            getItemForCrafting(toolPart.getCore()), 'Z', Items.stick);
+			GameRegistry.addShapedRecipe(new ItemStack(axe), " YX", " ZX", " Z ", 'X', getItemForCrafting(toolPart.getEdge()), 'Y',
+					                            getItemForCrafting(toolPart.getCore()), 'Z', Items.stick);
 			GameRegistry.registerItem(axe, axe.getUnlocalizedName());
 		}
 	}
@@ -69,8 +70,9 @@ public class ElementTools {
 		for (ElementToolPart toolPart : Chemistry.elementMaterials.getToolPartList()) {
 			ItemElementShovel shovel = new ItemElementShovel(toolPart);
 			shovelMap.put(toolPart, shovel);
-			//GameRegistry.addShapedRecipe(new ItemStack(shovel),"Y"," Z ", " Z ", 'X',getItemForCrafting(toolPart.getEdge()),'Y',
-			//		                            getItemForCrafting(toolPart.getCore()),'Z', Items.stick);
+			GameRegistry.addShapedRecipe(new ItemStack(shovel), " X ", " Y ", " Z ", 'X',
+					                            getItemForCrafting(toolPart.getEdge()), 'Y',
+					                            getItemForCrafting(toolPart.getCore()), 'Z', Items.stick);
 			GameRegistry.registerItem(shovel, shovel.getUnlocalizedName());
 		}
 	}

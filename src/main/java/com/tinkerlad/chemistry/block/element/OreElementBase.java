@@ -5,14 +5,12 @@ import com.tinkerlad.chemistry.creativetab.CreativeTab;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class OreElementBase extends Block {
 
@@ -26,15 +24,6 @@ public class OreElementBase extends Block {
 		this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
 		this.setHardness(ELEMENT.DENSITY);
 		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), element.NAME + " Ore");
-	}
-
-	@Override
-	public Item getItemDropped(int p_149650_1_, Random random, int p_149650_3_) {
-		if (random.nextInt(50) == 0) {
-			return Chemistry.converter.getBaseItemFromElement(ELEMENT);
-		} else {
-			return Item.getItemFromBlock(this);
-		}
 	}
 
 	@Override
@@ -78,7 +67,8 @@ public class OreElementBase extends Block {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 		drops.clear();
 		drops.add(new ItemStack(Chemistry.converter.getOreFromElement(ELEMENT)));
-		if (Chemistry.RANDOM.nextInt(40 / fortune) == 0 && ELEMENT.STATE != Element.State.GAS) {
+		if (Chemistry.RANDOM.nextInt(40 / (fortune > 1 ? fortune - 1 : 1)) == 0 && ELEMENT.STATE != Element.State.GAS
+				    && metadata == 1) {
 			drops.add(new ItemStack(Chemistry.converter.getBaseItemFromElement(ELEMENT)));
 		}
 

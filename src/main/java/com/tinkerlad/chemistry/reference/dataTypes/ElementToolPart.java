@@ -31,22 +31,7 @@ public class ElementToolPart {
 	}
 
 	public int getMiningLevel() {
-		switch (edge.HARDNESS) {
-			case NA:
-				return 0;
-			case LOW:
-				return 1;
-
-			case MEDIUM:
-				return 2;
-
-			case HIGH:
-				return 3;
-
-			case EXTREME:
-				return 4;
-		}
-		return 0;
+		return edge.HARDNESS.getValue();
 	}
 
 	public int getDurability() {
@@ -57,8 +42,8 @@ public class ElementToolPart {
 	}
 
 	public float getMineSpeed() {
-		float value = edge.HARDNESS.getValue() - ((2 * edge.DENSITY + core.DENSITY) / 3);
-		return value > 0 ? value : 0.3F;
+		float value = edge.HARDNESS.getValue() * ((2 * edge.DENSITY + core.DENSITY) / 3);
+		return value > 0 ? value : 1F;
 	}
 
 	public float getDamageDealt() {

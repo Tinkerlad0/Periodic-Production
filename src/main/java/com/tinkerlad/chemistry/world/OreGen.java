@@ -8,6 +8,7 @@ import com.tinkerlad.chemistry.registry.RegisterOreGen;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -58,7 +59,7 @@ public class OreGen implements IWorldGenerator {
 			Block ore = oreEntry.getKey();
 			double chancesToSpawn = oreEntry.getValue();
 			if (ConfigHandler.VERBOSE) {LogHelper.log(Level.INFO, "Ore Genning " + ore.getLocalizedName());}
-			WorldGenMinable genMinable = new WorldGenMinable(ore, maxVeinSize);
+			WorldGenMinable genMinable = new WorldGenMinable(ore, 1, maxVeinSize, Blocks.stone);
 			for (int j = 0; j < (int) chancesToSpawn; j++) {
 				int posX = blockXPos + random.nextInt(16);
 				int posY = 2 + random.nextInt(100);
