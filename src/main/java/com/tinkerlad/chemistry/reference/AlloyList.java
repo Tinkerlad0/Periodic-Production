@@ -11,8 +11,14 @@ public class AlloyList {
 			                                          Arrays.asList(new AlloyComponent(ElementList.SODIUM, 1),
 					                                                       new AlloyComponent(ElementList.CHLORINE,
 							                                                                         1)
-			                                          ), "Salt"
+			                                          ), "Table Salt"
 	);
 
-	protected AlloyList() {}
+	public static final Alloy HCl = new Alloy(Alloy.CompoundType.ACID, Alloy.State.LIQUID, 0xFFFFFF,
+			                                         Arrays.asList(new AlloyComponent(ElementList.HYDROGEN, 1),
+					                                                      new AlloyComponent(ElementList.CHLORINE,
+							                                                                        1)
+			                                         ),
+			                                         "Hydrochloric Acid"
+	);
 }

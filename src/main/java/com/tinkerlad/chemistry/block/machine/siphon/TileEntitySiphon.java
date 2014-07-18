@@ -2,8 +2,8 @@ package com.tinkerlad.chemistry.block.machine.siphon;
 
 import com.tinkerlad.chemistry.block.machine.TileEntityMachine;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
-import com.tinkerlad.chemistry.reference.recipes.backend.RecipeSiphon;
-import com.tinkerlad.chemistry.reference.recipes.backend.RecipesSiphon;
+import com.tinkerlad.chemistry.recipe.backend.RecipeSiphon;
+import com.tinkerlad.chemistry.recipe.backend.RecipesSiphon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -189,7 +189,7 @@ public class TileEntitySiphon extends TileEntityMachine implements ISidedInvento
 		boolean isBurning = this.deviceCookTime > 0;
 		boolean sendUpdate = false;
 
-		// If the Aludel still has burn time, decrement it
+		// If still has burn time, decrement it
 		if (this.deviceCookTime > 0) {
 			this.deviceCookTime--;
 		}

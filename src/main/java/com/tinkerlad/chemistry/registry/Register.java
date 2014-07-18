@@ -9,7 +9,7 @@ import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.logging.LogHelper;
-import com.tinkerlad.chemistry.reference.recipes.backend.RecipesSiphon;
+import com.tinkerlad.chemistry.recipe.backend.RecipesSiphon;
 import com.tinkerlad.chemistry.rendering.PhialItemRender;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -133,7 +133,6 @@ public class Register {
 				}
 			}
 		}
-
 		if (ConfigHandler.DEBUG) {LogHelper.log(Level.INFO, "Item Registration Complete");}
 	}
 }

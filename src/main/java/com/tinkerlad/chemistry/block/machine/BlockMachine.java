@@ -19,6 +19,10 @@ public class BlockMachine extends Block {
 		this.setCreativeTab(CreativeTab.MACHINE_TAB);
 	}
 
+	public TileEntity createNewTileEntity(World world, int metaData) {
+		return null;
+	}
+
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
 		dropInventory(world, x, y, z);

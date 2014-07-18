@@ -2,6 +2,7 @@ package com.tinkerlad.chemistry.block;
 
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
+import com.tinkerlad.chemistry.block.machine.alloyMaker.BlockAlloyMaker;
 import com.tinkerlad.chemistry.block.machine.siphon.BlockElementSiphon;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.registry.RegisterBlock;
@@ -13,6 +14,9 @@ public class BlockList {
 
 	@RegisterBlock(blockName = "machineSiphon")
 	public static BlockElementSiphon MACHINE_SIPHON = new BlockElementSiphon();
+
+	@RegisterBlock(blockName = "machineALloyMaker")
+	public static BlockAlloyMaker MACHINE_ALLOY_MAKER = new BlockAlloyMaker();
 
 	//Elements
 	@RegisterOreGen(partsPerMillion = 0.00002)

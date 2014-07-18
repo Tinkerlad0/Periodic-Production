@@ -29,6 +29,10 @@ public class ItemAlloy extends Item {
 		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), alloy.getNAME());
 	}
 
+	public Alloy getALLOY() {
+		return ALLOY;
+	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {

@@ -5,7 +5,10 @@ import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
+import com.tinkerlad.chemistry.registry.RegisterAlloy;
 import com.tinkerlad.chemistry.registry.RegisterItem;
+
+import static com.tinkerlad.chemistry.registry.RegisterAlloy.CraftingType;
 
 public class ItemList {
 
@@ -131,11 +134,6 @@ public class ItemList {
 	@RegisterItem(itemName = "Rubidium")
 	public static ItemElementBase DUST_RUBIDIUM = new ItemElementBase(ElementList.RUBIDIUM);
 
-	//Alloys xD
-	@RegisterItem(itemName = "sodiumChloride")
-	public static ItemAlloy ALLOY_NACL = new ItemAlloy(AlloyList.NaCl);
-
-
 	//Ingots
 
 	@RegisterItem(itemName = "ingot_lithium")
@@ -218,4 +216,9 @@ public class ItemList {
 
 	@RegisterItem(itemName = "ingot_Rubidium")
 	public static ItemElementIngot INGOT_RUBIDIUM = new ItemElementIngot(ElementList.RUBIDIUM);
+
+	//Alloys xD
+	@RegisterAlloy(type = CraftingType.Shapeless)
+	@RegisterItem(itemName = "sodiumChloride")
+	public static ItemAlloy ALLOY_NACL = new ItemAlloy(AlloyList.NaCl);
 }

@@ -10,4 +10,10 @@ import java.lang.annotation.Target;
 public @interface RegisterAlloy {
 
 	String alloyName() default "[defaultAlloy]";
+
+	CraftingType type() default CraftingType.Shapeless;
+
+	enum CraftingType {
+		Shapeless, Shaped
+	}
 }

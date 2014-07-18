@@ -10,7 +10,7 @@ public class ChemistryConfigGui extends GuiConfig {
 
 	public ChemistryConfigGui(GuiScreen parent) {
 		super(parent, new ConfigElement(ConfigHandler.configuration.getCategory(Configuration
-				                                                                                  .CATEGORY_GENERAL))
+				                                                                        .CATEGORY_GENERAL))
 				              .getChildElements(), "TestMod", true, true, ChemistryConfigGui.getAbridgedConfigPath
 						                                                                             (ConfigHandler.configuration.toString()));
 	}

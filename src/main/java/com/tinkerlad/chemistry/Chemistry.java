@@ -1,19 +1,21 @@
 package com.tinkerlad.chemistry;
 
 import com.tinkerlad.chemistry.block.BlockList;
+import com.tinkerlad.chemistry.block.machine.alloyMaker.TileEntityAlloyMaker;
 import com.tinkerlad.chemistry.block.machine.siphon.TileEntitySiphon;
 import com.tinkerlad.chemistry.config.ConfigHandler;
+import com.tinkerlad.chemistry.gui.GUIHandler;
 import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.proxies.CommonProxy;
+import com.tinkerlad.chemistry.recipe.Recipes;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.reference.ElementMaterials;
 import com.tinkerlad.chemistry.reference.ElementTools;
-import com.tinkerlad.chemistry.reference.recipes.ElementCommonRecipes;
 import com.tinkerlad.chemistry.registry.DynamicLocalisations;
 import com.tinkerlad.chemistry.registry.Register;
-import com.tinkerlad.chemistry.rendering.gui.GUIHandler;
 import com.tinkerlad.chemistry.utils.ElementTypeConverter;
+import com.tinkerlad.chemistry.utils.Ticker;
 import com.tinkerlad.chemistry.world.OreGen;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -45,6 +47,7 @@ public class Chemistry {
 	public static Chemistry instance;
 
 	public static Random RANDOM = new Random();
+	public static Ticker ticker;
 
 	@SidedProxy(clientSide = "com.tinkerlad.chemistry.proxies.ClientProxy", serverSide = "com.tinkerlad.chemistry" +
 			                                                                                     ".proxies" +
@@ -59,6 +62,8 @@ public class Chemistry {
 		ConfigHandler.preInit(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(ConfigHandler.class);
 
+		ticker = new Ticker();
+
 		Register.registerBlocks();
 		Register.registerItems();
 
@@ -69,7 +74,7 @@ public class Chemistry {
 		elementTools.initHoes();
 		elementTools.initShovels();
 
-		ElementCommonRecipes.init();
+		Recipes.initRecipes();
 
 		oreGen.populateDefaultOres();
 
@@ -82,5 +87,7 @@ public class Chemistry {
 	public void init(FMLInitializationEvent event) {
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandler());
 		GameRegistry.registerTileEntity(TileEntitySiphon.class, "tile.siphon");
+		GameRegistry.registerTileEntity(TileEntityAlloyMaker.class, "tile.alloy_maker");
+		proxy.registerRenderers();
 	}
 }
