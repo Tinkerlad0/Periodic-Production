@@ -15,7 +15,7 @@ public class CreativeTab {
 	public static final CreativeTabs ALLOYS_TAB = new CreativeTabs("PPAlloy") {
 		@Override
 		public Item getTabIconItem() {
-			return ItemList.ALLOY_NACL;
+			return ItemList.DUST_FeC;
 		}
 	};
 

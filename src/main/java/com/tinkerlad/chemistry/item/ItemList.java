@@ -220,5 +220,13 @@ public class ItemList {
 	//Alloys xD
 	@RegisterAlloy(type = CraftingType.Shapeless)
 	@RegisterItem(itemName = "sodiumChloride")
-	public static ItemAlloy ALLOY_NACL = new ItemAlloy(AlloyList.NaCl);
+	public static ItemAlloy DUST_NACL = new ItemAlloy(AlloyList.NaCl);
+
+	@RegisterAlloy(type = CraftingType.Shapeless)
+	@RegisterItem(itemName = "hydrochloricAcid")
+	public static ItemAlloy DUST_HCl = new ItemAlloy(AlloyList.HCl);
+
+	@RegisterAlloy(type = CraftingType.Shapeless)
+	@RegisterItem(itemName = "carbonSteel")
+	public static ItemAlloy DUST_FeC = new ItemAlloy(AlloyList.FeC);
 }

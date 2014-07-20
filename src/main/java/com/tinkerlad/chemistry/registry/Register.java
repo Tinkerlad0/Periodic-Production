@@ -10,7 +10,7 @@ import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.recipe.backend.RecipesSiphon;
-import com.tinkerlad.chemistry.rendering.PhialItemRender;
+import com.tinkerlad.chemistry.rendering.ItemRenderer;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -113,7 +113,7 @@ public class Register {
 						boolean baseItemAdd = Chemistry.converter.addElementBaseItem(((ItemElementBase) obj).ELEMENT,
 								                                                            (ItemElementBase) obj);
 						ItemElementBase itemElementBase = (ItemElementBase) obj;
-						MinecraftForgeClient.registerItemRenderer(itemElementBase, new PhialItemRender());
+						MinecraftForgeClient.registerItemRenderer(itemElementBase, new ItemRenderer());
 
 						if (baseItemAdd) {
 							if (ConfigHandler.VERBOSE) {
