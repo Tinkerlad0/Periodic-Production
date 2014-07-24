@@ -14,18 +14,19 @@ import java.util.List;
 public class ItemAlloy extends Item {
 
 	public Alloy ALLOY;
+	public String NAME;
 
-	public ItemAlloy(Alloy alloy) {
+	public ItemAlloy(Alloy alloy, String name) {
 		super();
 		this.ALLOY = alloy;
-		this.setUnlocalizedName(ALLOY.getNAME());
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(CreativeTab.ALLOYS_TAB);
 		if (ALLOY.getSTATE() == Alloy.State.SOLID) {
 			this.setTextureName(Chemistry.MODID + ":dust");
 		} else {
 			this.setTextureName(Chemistry.MODID + ":phial");
 		}
-
+		this.NAME = name;
 		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), alloy.getNAME());
 	}
 

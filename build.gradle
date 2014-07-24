@@ -16,7 +16,6 @@ buildscript {
     }
 }
 
-apply plugin: 'curseforge'
 apply plugin: 'forge'
 
 ext.configFile = file "build.properties"
@@ -41,7 +40,7 @@ minecraft {
     replace "@VERSION@", "${config.mod_version}.${System.getenv("BUILD_NUMBER") ?: "dev"}"
 }
 
-version = "${config.minecraft_version}-${config.mod_version}.${System.getenv("BUILD_NUMBER") ?: "dev"}"
+version = "${config.minecraft_version}-${config.mod_version}.${System.getenv("DRONE") ? System.getenv("DRONE_BUILD_NUMBER") : "dev"}"
 
 processResources
         {
@@ -62,12 +61,3 @@ processResources
                 exclude 'mcmod.info'
             }
         }
-
-curse {
-    apiKey = config.curseforge_key //http://minecraft.curseforge.com/my-api-tokens
-    projectId = "222384"
-    releaseType = "alpha"
-
-
-    artifact = project.file(project.buildDir.absolutePath + "build/libs/tnkchem-${config.minecraft_version}-${config.mod_version}" + ".${System.getenv("BUILD_NUMBER") ?: "dev"}")
-}

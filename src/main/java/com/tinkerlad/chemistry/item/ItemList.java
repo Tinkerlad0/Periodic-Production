@@ -220,21 +220,21 @@ public class ItemList {
 	//Alloys xD
 	@RegisterAlloy(type = CraftingType.Shapeless)
 	@RegisterItem(itemName = "sodiumChloride")
-	public static ItemAlloy DUST_NACL = new ItemAlloy(AlloyList.NaCl);
+	public static ItemAlloy DUST_NACL = new ItemAlloy(AlloyList.NaCl, "sodiumChloride");
 
 	@RegisterAlloy(type = CraftingType.Shapeless)
 	@RegisterItem(itemName = "hydrochloricAcid")
-	public static ItemAlloy DUST_HCl = new ItemAlloy(AlloyList.HCl);
+	public static ItemAlloy DUST_HCl = new ItemAlloy(AlloyList.HCl, "hydrochloricAcid");
 
 	@RegisterAlloy(type = CraftingType.Shapeless)
 	@RegisterItem(itemName = "carbonSteel")
-	public static ItemAlloy DUST_FeC = new ItemAlloy(AlloyList.FeC);
+	public static ItemAlloy DUST_FeC = new ItemAlloy(AlloyList.FeC, "carbonSteel");
 
 	@RegisterAlloy(type = CraftingType.Shapeless)
 	@RegisterItem(itemName = "potassiumNitrate")
-	public static ItemAlloy DUST_KNO3 = new ItemAlloy(AlloyList.KNO3);
+	public static ItemAlloy DUST_KNO3 = new ItemAlloy(AlloyList.KNO3, "potassiumNitrate");
 
 	@RegisterAlloy(type = CraftingType.Shapeless)
 	@RegisterItem(itemName = "glucose")
-	public static ItemAlloy DUST_C6H12O6 = new ItemAlloy(AlloyList.C6H12O6);
+	public static ItemAlloy DUST_C6H12O6 = new ItemAlloy(AlloyList.C6H12O6, "glucose");
 }

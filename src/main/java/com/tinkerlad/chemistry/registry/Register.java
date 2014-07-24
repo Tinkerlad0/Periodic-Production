@@ -6,6 +6,7 @@ import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
 import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.item.ItemList;
+import com.tinkerlad.chemistry.item.alloy.ItemAlloy;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.logging.LogHelper;
@@ -100,6 +101,10 @@ public class Register {
 
 					if (obj instanceof ItemElementIngot) {
 						Chemistry.converter.addElementIngot(((ItemElementIngot) obj).ELEMENT, (ItemElementIngot) obj);
+					}
+					LogHelper.info(((Item) obj).getUnlocalizedName());
+					if (obj instanceof ItemAlloy) {
+						LogHelper.error(((ItemAlloy) obj).getUnlocalizedName() + " as " + ((ItemAlloy) obj).ALLOY.getNAME());
 					}
 
 					if (obj instanceof ItemElementBase) {
