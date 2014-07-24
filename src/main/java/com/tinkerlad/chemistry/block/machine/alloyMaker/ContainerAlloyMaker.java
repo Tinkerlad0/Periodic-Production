@@ -110,7 +110,6 @@ public class ContainerAlloyMaker extends Container {
 
 		for (int i = 0; i < this.craftMatrix.getSizeInventory(); ++i) {
 			ItemStack itemstack1 = this.craftMatrix.getStackInSlot(i);
-			int decAmount = 1;
 			if (itemstack1 != null) {
 				List recipeList = AlloyCraftingManager.getInstance().getRecipeList();
 				for (Object obj : recipeList) {

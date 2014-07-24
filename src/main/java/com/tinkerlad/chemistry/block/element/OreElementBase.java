@@ -5,12 +5,17 @@ import com.tinkerlad.chemistry.creativetab.CreativeTab;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fluids.BlockFluidBase;
+import net.minecraftforge.fluids.BlockFluidClassic;
+import net.minecraftforge.fluids.BlockFluidFinite;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class OreElementBase extends Block {
 
@@ -24,6 +29,27 @@ public class OreElementBase extends Block {
 		this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
 		this.setHardness(ELEMENT.DENSITY);
 		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), element.NAME + " Ore");
+		setTickRandomly(true);
+	}
+
+	@Override
+	public void updateTick(World world, int x, int y, int z, Random random) {
+		super.updateTick(world, x, y, z, random);
+		for (int i = -1; i <= 1; i++) {
+			for (int j = -1; j <= 1; j++) {
+				for (int k = -1; k <= 1; k++) {
+					if (world.getBlock(x + i, y + j, z + k) instanceof BlockFluidFinite) {
+						fluidContacted(world, x, y, z, random);
+					}
+					if (world.getBlock(x + i, y + j, z + k) instanceof BlockFluidClassic) {
+						fluidContacted(world, x, y, z, random);
+					}
+					if (world.getBlock(x + i, y + j, z + k) instanceof BlockFluidBase) {
+						fluidContacted(world, x, y, z, random);
+					}
+				}
+			}
+		}
 	}
 
 	@Override
@@ -81,5 +107,10 @@ public class OreElementBase extends Block {
 			world.createExplosion(explosion.exploder, x, y, z, 1.5F * ELEMENT.SERIES, ELEMENT.SERIES > 4);
 			world.setBlockToAir(x, y, z);
 		}
+	}
+
+	protected void fluidContacted(World world, int x, int y, int z, Random random) {
+		world.setBlockToAir(x, y, z);
+		world.createExplosion((Entity) null, x, y, z, random.nextFloat() * 2, true);
 	}
 }

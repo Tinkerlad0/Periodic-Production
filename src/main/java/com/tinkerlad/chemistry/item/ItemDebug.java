@@ -38,6 +38,7 @@ public class ItemDebug extends Item {
 //			player.addChatComponentMessage(new ChatComponentText("null"));
 //		}
 
+
 		for (int i = -10; i <= 10; i++) {
 			for (int j = 0; j <= 15; j++) {
 				for (int k = -10; k <= 10; k++) {

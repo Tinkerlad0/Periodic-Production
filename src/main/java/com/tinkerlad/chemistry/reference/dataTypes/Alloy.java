@@ -1,5 +1,7 @@
 package com.tinkerlad.chemistry.reference.dataTypes;
 
+import com.tinkerlad.chemistry.utils.Utils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,10 +38,8 @@ public class Alloy {
 	public String getNAME() {
 		if (NAME == null) {
 			return getChemicalFormula();
-		} else if (NAME.length() > 0) {
-			return NAME;
 		} else {
-			return getChemicalFormula();
+			return NAME;
 		}
 	}
 
@@ -50,9 +50,9 @@ public class Alloy {
 	public String getChemicalFormula() {
 		String formula = "";
 		for (AlloyComponent component : COMPONENTS) {
-			formula.concat(component.ELEMENT.SYMBOL);
+			formula += (component.ELEMENT.SYMBOL);
 			if (!(component.AMOUNT == 1)) {
-				formula.concat(Integer.toString(component.AMOUNT));
+				formula += Utils.getSubScriptNumber(component.AMOUNT);
 			}
 		}
 

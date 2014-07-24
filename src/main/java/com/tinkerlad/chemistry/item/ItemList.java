@@ -229,4 +229,12 @@ public class ItemList {
 	@RegisterAlloy(type = CraftingType.Shapeless)
 	@RegisterItem(itemName = "carbonSteel")
 	public static ItemAlloy DUST_FeC = new ItemAlloy(AlloyList.FeC);
+
+	@RegisterAlloy(type = CraftingType.Shapeless)
+	@RegisterItem(itemName = "potassiumNitrate")
+	public static ItemAlloy DUST_KNO3 = new ItemAlloy(AlloyList.KNO3);
+
+	@RegisterAlloy(type = CraftingType.Shapeless)
+	@RegisterItem(itemName = "glucose")
+	public static ItemAlloy DUST_C6H12O6 = new ItemAlloy(AlloyList.C6H12O6);
 }
