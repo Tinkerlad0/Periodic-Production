@@ -12,12 +12,12 @@ public class ItemElementPickaxe extends ItemPickaxe {
 	protected ElementToolPart TOOLPART;
 
 	public ItemElementPickaxe(ElementToolPart toolPart) {
-		super(Chemistry.elementMaterials.getMaterialFromToolPart(toolPart));
+		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
 		setCreativeTab(null);
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_pick");
 		setTextureName(Chemistry.MODID + ":pick");
 		TOOLPART = toolPart;
-		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Pickaxe");
+		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Pickaxe");
 	}
 
 	@Override

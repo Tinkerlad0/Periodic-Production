@@ -32,14 +32,14 @@ public class ElementMaterials {
 
 	public void initMaterials() {
 
-		for (Field field1 : Chemistry.elementList.getClass().getDeclaredFields()) {
+		for (Field field1 : Chemistry.ELEMENT_LIST.getClass().getDeclaredFields()) {
 			Object obj1 = ObfuscationReflectionHelper.getPrivateValue(ElementList.class,
-					                                                         Chemistry.elementList,
+					                                                         Chemistry.ELEMENT_LIST,
 					                                                         field1.getName());
-			for (Field field2 : Chemistry.elementList.getClass().getDeclaredFields()) {
+			for (Field field2 : Chemistry.ELEMENT_LIST.getClass().getDeclaredFields()) {
 
 				Object obj2 = ObfuscationReflectionHelper.getPrivateValue(ElementList.class,
-						                                                         Chemistry.elementList,
+						                                                         Chemistry.ELEMENT_LIST,
 						                                                         field2.getName());
 
 

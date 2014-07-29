@@ -4,10 +4,10 @@ public class Utils {
 
 	public static String getSubScriptNumber(int number) {
 		String subscript = "";
-		String[] input = new String[1];
+		String[] input = new String[2];
 		if (number > 9) {
-			input[0] = (Integer.toString(number));
-			input[1] = (Integer.toString(number));
+			input[0] = String.valueOf((Integer.toString(number)).charAt(0));
+			input[1] = String.valueOf((Integer.toString(number)).charAt(1));
 		} else {
 			input[0] = (Integer.toString(number));
 		}

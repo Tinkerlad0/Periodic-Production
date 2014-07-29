@@ -1,5 +1,6 @@
 package com.tinkerlad.chemistry.block.machine;
 
+import com.tinkerlad.chemistry.block.BlockGeneric;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,7 +13,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockMachine extends Block {
+public class BlockMachine extends BlockGeneric {
 
 	protected BlockMachine(Material material) {
 		super(material);

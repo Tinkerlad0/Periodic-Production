@@ -58,4 +58,6 @@ public class ElementList {
 	public static final Element KRYPTON = new Element("Krypton", "Kr", 3.8F, Type.NOBLE_GAS, 0xffffff, 4, 36);
 	public static final Element RUBIDIUM = new Element("Rubidium", "Rb", 1.5F, Type.ALKALINE_METAL, 0xDEDEDE, 5,
 			                                                  Hardness.NA, 37);
+
+	public static final Element LEAD = new Element("Lead", "Pb", 11.3F, Type.TRANSITION, 0xEBEBEB, 6, Hardness.LOW, 82);
 }

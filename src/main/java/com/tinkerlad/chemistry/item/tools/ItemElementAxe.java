@@ -12,12 +12,12 @@ public class ItemElementAxe extends ItemAxe {
 	protected ElementToolPart TOOLPART;
 
 	public ItemElementAxe(ElementToolPart toolPart) {
-		super(Chemistry.elementMaterials.getMaterialFromToolPart(toolPart));
+		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
 		setCreativeTab(null);
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_axe");
 		setTextureName(Chemistry.MODID + ":axe");
 		TOOLPART = toolPart;
-		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Axe");
+		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Axe");
 	}
 
 	@Override

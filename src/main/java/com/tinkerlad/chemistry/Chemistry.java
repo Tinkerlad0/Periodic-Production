@@ -6,15 +6,18 @@ import com.tinkerlad.chemistry.block.machine.siphon.TileEntitySiphon;
 import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.gui.GUIHandler;
 import com.tinkerlad.chemistry.item.ItemList;
+import com.tinkerlad.chemistry.logging.LogFile;
 import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.proxies.CommonProxy;
 import com.tinkerlad.chemistry.recipe.Recipes;
+import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.reference.ElementMaterials;
 import com.tinkerlad.chemistry.reference.ElementTools;
 import com.tinkerlad.chemistry.registry.DynamicLocalisations;
 import com.tinkerlad.chemistry.registry.Register;
-import com.tinkerlad.chemistry.utils.ElementTypeConverter;
+import com.tinkerlad.chemistry.registry.itemRegistries.AlloyRegistry;
+import com.tinkerlad.chemistry.registry.itemRegistries.ElementRegistry;
 import com.tinkerlad.chemistry.utils.Ticker;
 import com.tinkerlad.chemistry.world.OreGen;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -35,14 +38,16 @@ import static cpw.mods.fml.common.Mod.Instance;
 public class Chemistry {
 
 	public static final String MODID = "tnkchem";
-	public static final DynamicLocalisations localiser = new DynamicLocalisations();
-	public static final OreGen oreGen = new OreGen();
-	public static final BlockList blockList = new BlockList();
-	public static final ElementList elementList = new ElementList();
-	public static final ItemList itemList = new ItemList();
-	public static final ElementMaterials elementMaterials = new ElementMaterials();
-	public static final ElementTypeConverter converter = new ElementTypeConverter();
-	public static final ElementTools elementTools = new ElementTools();
+	public static final DynamicLocalisations LOCALISATIONS = new DynamicLocalisations();
+	public static final OreGen ORE_GEN = new OreGen();
+	public static final BlockList BLOCK_LIST = new BlockList();
+	public static final ElementList ELEMENT_LIST = new ElementList();
+	public static final ItemList ITEM_LIST = new ItemList();
+	public static final AlloyList ALLOY_LIST = new AlloyList();
+	public static final ElementMaterials ELEMENT_MATERIALS = new ElementMaterials();
+	public static final ElementRegistry ELEMENT_REGISTRY = new ElementRegistry();
+	public static final AlloyRegistry ALLOY_REGISTRY = new AlloyRegistry();
+	public static final ElementTools ELEMENT_TOOLS = new ElementTools();
 	@Instance(MODID)
 	public static Chemistry instance;
 
@@ -58,29 +63,24 @@ public class Chemistry {
 	public void preInit(FMLPreInitializationEvent event) {
 
 		LogHelper.logger = event.getModLog();
-
+		LogFile.init(event.getModConfigurationDirectory());
 		ConfigHandler.preInit(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(ConfigHandler.class);
 
 		ticker = new Ticker();
 
-		Register.registerBlocks();
-		Register.registerItems();
+		Register.initialise();
 
-		elementMaterials.initMaterials();
-		elementTools.initPickaxes();
-		elementTools.initSwords();
-		elementTools.initAxes();
-		elementTools.initHoes();
-		elementTools.initShovels();
+		ELEMENT_MATERIALS.initMaterials();
+		ELEMENT_TOOLS.initialiseTools();
 
 		Recipes.initRecipes();
 
-		oreGen.populateDefaultOres();
+		ORE_GEN.populateDefaultOres();
 
-		GameRegistry.registerWorldGenerator(oreGen, 0);
+		GameRegistry.registerWorldGenerator(ORE_GEN, 0);
 
-		localiser.registerLocalisations();
+		LOCALISATIONS.registerLocalisations();
 	}
 
 	@EventHandler

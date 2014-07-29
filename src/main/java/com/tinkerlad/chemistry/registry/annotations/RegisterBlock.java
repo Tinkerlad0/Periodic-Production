@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.registry;
+package com.tinkerlad.chemistry.registry.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface RegisterItem {
+public @interface RegisterBlock {
 
-	String itemName() default "[defaultItem]";
+	String blockName() default "[defaultBlock]";
 }

@@ -1,10 +1,14 @@
+2014-07-29 20:00:33 +1000 Tinkerlad0 
+
+	* Refreshed Alloy System to be more flexible in the future. Added AISI 12L14 Alloy (Future use in Rocket Nozzles) Added Potassium Nitrate and Glucose (Future use in SRBs) Added Solid Fuel Canisters (Future use in SRBs) (HEAD, master)
+
 2014-07-24 21:18:42 +1000 Tinkerlad0 
 
-	* Adding Automatic Changelogs. Also fixed up build.gradle (HEAD, master)
+	* Adding Automatic Changelogs. Also fixed up build.gradle (origin/master, origin/HEAD)
 
 2014-07-24 18:31:53 +1000 Tinkerlad0 
 
-	* Beginning to work towards rockets :) (origin/master, origin/HEAD)
+	* Beginning to work towards rockets :)
 
 2014-07-20 11:26:26 +1000 Tinkerlad0 
 

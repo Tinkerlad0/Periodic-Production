@@ -4,7 +4,7 @@ import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.block.BlockList;
 import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.logging.LogHelper;
-import com.tinkerlad.chemistry.registry.RegisterOreGen;
+import com.tinkerlad.chemistry.registry.annotations.RegisterOreGen;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import net.minecraft.block.Block;
@@ -44,8 +44,8 @@ public class OreGen implements IWorldGenerator {
 
 	public void addOreToSpawn(Block block, double chancesToSpawn) {
 		if (block != null) {
-			if (chancesToSpawn < 3D) {
-				chancesToSpawn = 3;
+			if (chancesToSpawn < 2D) {
+				chancesToSpawn = 1D;
 			}
 			oresToGen.put(block, chancesToSpawn);
 			LogHelper.info(block.getLocalizedName() + " " + chancesToSpawn);
@@ -74,7 +74,7 @@ public class OreGen implements IWorldGenerator {
 			if (field.isAnnotationPresent(RegisterOreGen.class)) {
 				RegisterOreGen annotation = field.getAnnotation(RegisterOreGen.class);
 				field.setAccessible(true);
-				Object obj = ObfuscationReflectionHelper.getPrivateValue(BlockList.class, Chemistry.blockList,
+				Object obj = ObfuscationReflectionHelper.getPrivateValue(BlockList.class, Chemistry.BLOCK_LIST,
 						                                                        field.getName());
 				if (obj instanceof Block) {
 					if (ConfigHandler.DEBUG) {

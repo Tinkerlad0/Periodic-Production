@@ -28,7 +28,7 @@ public class ItemElementBase extends Item {
 		} else {
 			this.setTextureName(Chemistry.MODID + ":phial");
 		}
-		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), element.NAME);
+		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), element.NAME);
 	}
 
 	@Override

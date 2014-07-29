@@ -12,12 +12,12 @@ public class ItemElementShovel extends ItemSpade {
 	protected ElementToolPart TOOLPART;
 
 	public ItemElementShovel(ElementToolPart toolPart) {
-		super(Chemistry.elementMaterials.getMaterialFromToolPart(toolPart));
+		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
 		setCreativeTab(null);
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_shovel");
 		setTextureName(Chemistry.MODID + ":shovel");
 		TOOLPART = toolPart;
-		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Shovel");
+		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Shovel");
 	}
 
 	@Override

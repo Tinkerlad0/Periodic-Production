@@ -1,9 +1,9 @@
 package com.tinkerlad.chemistry.block.element;
 
 import com.tinkerlad.chemistry.Chemistry;
+import com.tinkerlad.chemistry.block.BlockGeneric;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -17,7 +17,7 @@ import net.minecraftforge.fluids.BlockFluidFinite;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class OreElementBase extends Block {
+public class OreElementBase extends BlockGeneric {
 
 	public Element ELEMENT;
 
@@ -28,7 +28,7 @@ public class OreElementBase extends Block {
 		this.setBlockTextureName("minecraft" + ":" + "stone");
 		this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
 		this.setHardness(ELEMENT.DENSITY);
-		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), element.NAME + " Ore");
+		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), element.NAME + " Ore");
 		setTickRandomly(true);
 	}
 
@@ -92,10 +92,10 @@ public class OreElementBase extends Block {
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 		drops.clear();
-		drops.add(new ItemStack(Chemistry.converter.getOreFromElement(ELEMENT)));
+		drops.add(new ItemStack(Chemistry.ELEMENT_REGISTRY.getOreFromElement(ELEMENT)));
 		if (Chemistry.RANDOM.nextInt(40 / (fortune > 1 ? fortune - 1 : 1)) == 0 && ELEMENT.STATE != Element.State.GAS
 				    && metadata == 1) {
-			drops.add(new ItemStack(Chemistry.converter.getBaseItemFromElement(ELEMENT)));
+			drops.add(new ItemStack(Chemistry.ELEMENT_REGISTRY.getBaseItemFromElement(ELEMENT)));
 		}
 
 		return drops;

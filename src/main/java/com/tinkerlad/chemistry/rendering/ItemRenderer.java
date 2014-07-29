@@ -1,6 +1,6 @@
 package com.tinkerlad.chemistry.rendering;
 
-import com.tinkerlad.chemistry.item.alloy.ItemAlloy;
+import com.tinkerlad.chemistry.item.alloy.ItemAlloyDust;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import net.minecraft.client.Minecraft;
@@ -19,8 +19,8 @@ public class ItemRenderer implements IItemRenderer {
 	@Override
 	public boolean handleRenderType(ItemStack itemStack, ItemRenderType type) {
 		Item item = itemStack.getItem();
-		if ((item instanceof ItemElementIngot || item instanceof ItemElementBase || item instanceof ItemAlloy) && type
-				                                                                                                          == ItemRenderType.INVENTORY) {
+		if ((item instanceof ItemElementIngot || item instanceof ItemElementBase || item instanceof ItemAlloyDust) && type
+				                                                                                                              == ItemRenderType.INVENTORY) {
 			return true;
 		}
 
@@ -49,8 +49,8 @@ public class ItemRenderer implements IItemRenderer {
 		if (itemStack.getItem() instanceof ItemElementBase) {
 			ItemElementBase item = (ItemElementBase) itemStack.getItem();
 			text = item.ELEMENT.SYMBOL;
-		} else if (itemStack.getItem() instanceof ItemAlloy) {
-			ItemAlloy item = (ItemAlloy) itemStack.getItem();
+		} else if (itemStack.getItem() instanceof ItemAlloyDust) {
+			ItemAlloyDust item = (ItemAlloyDust) itemStack.getItem();
 			text = item.ALLOY.getChemicalFormula();
 		} else if (itemStack.getItem() instanceof ItemElementIngot) {
 			ItemElementIngot item = (ItemElementIngot) itemStack.getItem();

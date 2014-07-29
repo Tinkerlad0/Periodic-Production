@@ -1,21 +1,33 @@
 package com.tinkerlad.chemistry.block;
 
+import com.tinkerlad.chemistry.block.component.BlockCanister;
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.BlockAlloyMaker;
 import com.tinkerlad.chemistry.block.machine.siphon.BlockElementSiphon;
 import com.tinkerlad.chemistry.reference.ElementList;
-import com.tinkerlad.chemistry.registry.RegisterBlock;
-import com.tinkerlad.chemistry.registry.RegisterOreGen;
+import com.tinkerlad.chemistry.reference.Enums;
+import com.tinkerlad.chemistry.registry.annotations.RegisterBlock;
+import com.tinkerlad.chemistry.registry.annotations.RegisterOreGen;
 
 public class BlockList {
+
+	//Canisters
+	@RegisterBlock(blockName = "canisterEmpty")
+	public static BlockCanister CANISTER_EMPTY = new BlockCanister("canisterEmpty", Enums.FUEL_TYPE.EMPTY);
+
+	@RegisterBlock(blockName = "CANISTER_ZINC_SULFUR")
+	public static BlockCanister CANISTER_CANDY = new BlockCanister("CANISTER_ZINC_SULFUR", Enums.FUEL_TYPE.CANDY);
+
+	@RegisterBlock(blockName = "canisterZincSulphur")
+	public static BlockCanister CANISTER_ZINC_SULPHUR = new BlockCanister("canisterZincSulphur", Enums.FUEL_TYPE.ZINC_SULFUR);
 
 	//Machines
 
 	@RegisterBlock(blockName = "machineSiphon")
 	public static BlockElementSiphon MACHINE_SIPHON = new BlockElementSiphon();
 
-	@RegisterBlock(blockName = "machineALloyMaker")
+	@RegisterBlock(blockName = "machineAlloyMaker")
 	public static BlockAlloyMaker MACHINE_ALLOY_MAKER = new BlockAlloyMaker();
 
 	//Elements

@@ -1,14 +1,10 @@
 package com.tinkerlad.chemistry.item;
 
-import com.tinkerlad.chemistry.item.alloy.ItemAlloy;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
-import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
-import com.tinkerlad.chemistry.registry.RegisterAlloy;
-import com.tinkerlad.chemistry.registry.RegisterItem;
-
-import static com.tinkerlad.chemistry.registry.RegisterAlloy.CraftingType;
+import com.tinkerlad.chemistry.reference.Enums;
+import com.tinkerlad.chemistry.registry.annotations.RegisterItem;
 
 public class ItemList {
 
@@ -17,6 +13,16 @@ public class ItemList {
 
 	@RegisterItem(itemName = "basicCatalyst")
 	public static ItemGeneric CATALYST_BASIC = new ItemGeneric("catalyst", 0x0000FF);
+
+	@RegisterItem(itemName = "canisterEmptyItem")
+	public static ItemCanister CANISTER_EMPTY = new ItemCanister("canisterEmpty", Enums.FUEL_TYPE.EMPTY);
+
+	@RegisterItem(itemName = "canisterCandyItem")
+	public static ItemCanister CANISTER_CANDY = new ItemCanister("canisterCandy", Enums.FUEL_TYPE.CANDY);
+
+	@RegisterItem(itemName = "canisterZincSulphurItem")
+	public static ItemCanister CANISTER_ZINC_SULFUR = new ItemCanister("canisterZincSulfur", Enums.FUEL_TYPE.ZINC_SULFUR);
+
 
 	//Gas Elements
 
@@ -216,25 +222,4 @@ public class ItemList {
 
 	@RegisterItem(itemName = "ingot_Rubidium")
 	public static ItemElementIngot INGOT_RUBIDIUM = new ItemElementIngot(ElementList.RUBIDIUM);
-
-	//Alloys xD
-	@RegisterAlloy(type = CraftingType.Shapeless)
-	@RegisterItem(itemName = "sodiumChloride")
-	public static ItemAlloy DUST_NACL = new ItemAlloy(AlloyList.NaCl, "sodiumChloride");
-
-	@RegisterAlloy(type = CraftingType.Shapeless)
-	@RegisterItem(itemName = "hydrochloricAcid")
-	public static ItemAlloy DUST_HCl = new ItemAlloy(AlloyList.HCl, "hydrochloricAcid");
-
-	@RegisterAlloy(type = CraftingType.Shapeless)
-	@RegisterItem(itemName = "carbonSteel")
-	public static ItemAlloy DUST_FeC = new ItemAlloy(AlloyList.FeC, "carbonSteel");
-
-	@RegisterAlloy(type = CraftingType.Shapeless)
-	@RegisterItem(itemName = "potassiumNitrate")
-	public static ItemAlloy DUST_KNO3 = new ItemAlloy(AlloyList.KNO3, "potassiumNitrate");
-
-	@RegisterAlloy(type = CraftingType.Shapeless)
-	@RegisterItem(itemName = "glucose")
-	public static ItemAlloy DUST_C6H12O6 = new ItemAlloy(AlloyList.C6H12O6, "glucose");
 }

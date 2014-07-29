@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.utils;
+package com.tinkerlad.chemistry.registry.ItemRegistries;
 
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
@@ -10,7 +10,7 @@ import com.tinkerlad.chemistry.reference.dataTypes.ElementToolPart;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ElementTypeConverter {
+public class ElementRegistry {
 
 	public static Map<Element, ItemElementBase> baseItemMap = new HashMap<Element, ItemElementBase>();
 	public static Map<Element, OreElementBase> oreMap = new HashMap<Element, OreElementBase>();

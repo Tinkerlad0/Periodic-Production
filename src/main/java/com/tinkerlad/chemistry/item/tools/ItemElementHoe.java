@@ -12,12 +12,12 @@ public class ItemElementHoe extends ItemHoe {
 	protected ElementToolPart TOOLPART;
 
 	public ItemElementHoe(ElementToolPart toolPart) {
-		super(Chemistry.elementMaterials.getMaterialFromToolPart(toolPart));
+		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
 		setCreativeTab(null);
 		setUnlocalizedName(toolPart.getUnlocalisedName() + "_hoe");
 		setTextureName(Chemistry.MODID + ":hoe");
 		TOOLPART = toolPart;
-		Chemistry.localiser.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Hoe");
+		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Hoe");
 	}
 
 	@Override
