@@ -19,7 +19,7 @@ import com.tinkerlad.chemistry.reference.dataTypes.Alloy;
 import com.tinkerlad.chemistry.registry.annotations.RegisterAlloy;
 import com.tinkerlad.chemistry.registry.annotations.RegisterBlock;
 import com.tinkerlad.chemistry.registry.annotations.RegisterItem;
-import com.tinkerlad.chemistry.registry.itemRegistries.AlloyRegistry;
+import com.tinkerlad.chemistry.registry.itemRegistry.AlloyRegistry;
 import com.tinkerlad.chemistry.rendering.ItemRenderer;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
