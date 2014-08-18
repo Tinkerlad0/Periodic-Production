@@ -11,9 +11,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockLaunchpadBasic extends BlockGeneric implements ITileEntityProvider {
+public class BlockLaunchpadBase extends BlockGeneric implements ITileEntityProvider {
 
-	public BlockLaunchpadBasic() {
+	public BlockLaunchpadBase() {
 		super(Material.iron);
 		this.setBlockName("launchpadBasic");
 		this.setBlockTextureName(Chemistry.MODID + ":launchpad1");

@@ -1,7 +1,7 @@
 package com.tinkerlad.chemistry.gui;
 
-import com.tinkerlad.chemistry.block.launchpad.basic.ContainerLaunchpadBasic;
-import com.tinkerlad.chemistry.block.launchpad.basic.GuiLaunchpadBasic;
+import com.tinkerlad.chemistry.block.launchpad.basic.ContainerLaunchpadBase;
+import com.tinkerlad.chemistry.block.launchpad.basic.GuiLaunchpadBase;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.ContainerAlloyMaker;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.GuiAlloyMaker;
 import com.tinkerlad.chemistry.block.machine.rocketMaker.ContainerRocketMaker;
@@ -25,7 +25,7 @@ public class GUIHandler implements IGuiHandler {
 			case GuiID.ALLOY_MAKER:
 				return new ContainerAlloyMaker(player.inventory, world, x, y, z);
 			case GuiID.LAUNCHPAD_BASIC:
-				return new ContainerLaunchpadBasic(player.inventory, world, x, y, z);
+				return new ContainerLaunchpadBase(player.inventory, world, x, y, z);
 			case GuiID.ROCKET_MAKER:
 				return new ContainerRocketMaker(player.inventory, world, x, y, z);
 		}
@@ -42,7 +42,7 @@ public class GUIHandler implements IGuiHandler {
 			case GuiID.ALLOY_MAKER:
 				return new GuiAlloyMaker(player.inventory, world, x, y, z);
 			case GuiID.LAUNCHPAD_BASIC:
-				return new GuiLaunchpadBasic(player.inventory, world, x, y, z);
+				return new GuiLaunchpadBase(player.inventory, world, x, y, z);
 			case GuiID.ROCKET_MAKER:
 				return new GuiRocketMaker(player.inventory, world, x, y, z);
 		}

@@ -10,7 +10,7 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ContainerLaunchpadBasic extends Container {
+public class ContainerLaunchpadBase extends Container {
 
 	public IInventory craftMatrix;
 	private World worldObj;
@@ -18,7 +18,7 @@ public class ContainerLaunchpadBasic extends Container {
 	private int posY;
 	private int posZ;
 
-	public ContainerLaunchpadBasic(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
+	public ContainerLaunchpadBase(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
 		craftMatrix = new InventoryCrafting(this, 5, 5);
 		worldObj = world;
 		posX = i;

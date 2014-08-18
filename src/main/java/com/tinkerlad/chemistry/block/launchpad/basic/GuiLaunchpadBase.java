@@ -10,7 +10,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
-public class GuiLaunchpadBasic extends GuiContainer {
+public class GuiLaunchpadBase extends GuiContainer {
 
 	private ResourceLocation resourceLocation = new ResourceLocation(Chemistry.MODID, "textures/gui/launchpad.png");
 
@@ -18,8 +18,8 @@ public class GuiLaunchpadBasic extends GuiContainer {
 	private int x, y, z;
 	private boolean launched = false;
 
-	public GuiLaunchpadBasic(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
-		super(new ContainerLaunchpadBasic(inventoryplayer, world, i, j, k));
+	public GuiLaunchpadBase(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
+		super(new ContainerLaunchpadBase(inventoryplayer, world, i, j, k));
 		xSize = 176;
 		ySize = 187;
 		this.earth = world;

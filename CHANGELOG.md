@@ -1,10 +1,18 @@
+2014-08-18 22:27:32 +1000 Tinkerlad0 
+
+	* Fixing derpy git error :/ (HEAD, master)
+
+2014-08-18 22:18:30 +1000 Tinkerlad0 
+
+	* Basic Rocket Entity Begun.  - Basic Items implemented for crafting only. Effects planned. Launchpad Complete, pending completion of rocketry components. General Refactoring and clean-up work Working on NBT Rocket Crafting (origin/master, origin/HEAD)
+
 2014-07-29 20:15:37 +1000 Tinkerlad0 
 
-	* Refreshed Alloy System to be more flexible in the future. Added AISI 12L14 Alloy (Future use in Rocket Nozzles) Added Potassium Nitrate and Glucose (Future use in SRBs) Added Solid Fuel Canisters (Future use in SRBs) (HEAD, master)
+	* Refreshed Alloy System to be more flexible in the future. Added AISI 12L14 Alloy (Future use in Rocket Nozzles) Added Potassium Nitrate and Glucose (Future use in SRBs) Added Solid Fuel Canisters (Future use in SRBs)
 
 2014-07-29 20:00:33 +1000 Tinkerlad0 
 
-	* Refreshed Alloy System to be more flexible in the future. Added AISI 12L14 Alloy (Future use in Rocket Nozzles) Added Potassium Nitrate and Glucose (Future use in SRBs) Added Solid Fuel Canisters (Future use in SRBs) (origin/master, origin/HEAD)
+	* Refreshed Alloy System to be more flexible in the future. Added AISI 12L14 Alloy (Future use in Rocket Nozzles) Added Potassium Nitrate and Glucose (Future use in SRBs) Added Solid Fuel Canisters (Future use in SRBs)
 
 2014-07-24 21:18:42 +1000 Tinkerlad0 
 

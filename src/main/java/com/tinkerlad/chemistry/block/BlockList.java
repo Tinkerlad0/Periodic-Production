@@ -3,7 +3,7 @@ package com.tinkerlad.chemistry.block;
 import com.tinkerlad.chemistry.block.component.BlockCanister;
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
-import com.tinkerlad.chemistry.block.launchpad.basic.BlockLaunchpadBasic;
+import com.tinkerlad.chemistry.block.launchpad.basic.BlockLaunchpadBase;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.BlockAlloyMaker;
 import com.tinkerlad.chemistry.block.machine.rocketMaker.BlockRocketMaker;
 import com.tinkerlad.chemistry.block.machine.siphon.BlockElementSiphon;
@@ -15,7 +15,7 @@ import com.tinkerlad.chemistry.registry.annotations.RegisterOreGen;
 public class BlockList {
 
 	@RegisterBlock(blockName = "launchpadBasic")
-	public static BlockLaunchpadBasic LAUNCHPAD_BASIC = new BlockLaunchpadBasic();
+	public static BlockLaunchpadBase LAUNCHPAD_BASIC = new BlockLaunchpadBase();
 
 	@RegisterBlock(blockName = "rocketMaker")
 	public static BlockRocketMaker ROCKET_MAKER = new BlockRocketMaker();
