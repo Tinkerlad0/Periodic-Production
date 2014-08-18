@@ -1,7 +1,11 @@
 package com.tinkerlad.chemistry.gui;
 
+import com.tinkerlad.chemistry.block.launchpad.basic.ContainerLaunchpadBasic;
+import com.tinkerlad.chemistry.block.launchpad.basic.GuiLaunchpadBasic;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.ContainerAlloyMaker;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.GuiAlloyMaker;
+import com.tinkerlad.chemistry.block.machine.rocketMaker.ContainerRocketMaker;
+import com.tinkerlad.chemistry.block.machine.rocketMaker.GuiRocketMaker;
 import com.tinkerlad.chemistry.block.machine.siphon.ContainerSiphon;
 import com.tinkerlad.chemistry.block.machine.siphon.GuiSiphon;
 import com.tinkerlad.chemistry.block.machine.siphon.TileEntitySiphon;
@@ -20,6 +24,10 @@ public class GUIHandler implements IGuiHandler {
 				return new ContainerSiphon(player.inventory, tileEntitySiphon);
 			case GuiID.ALLOY_MAKER:
 				return new ContainerAlloyMaker(player.inventory, world, x, y, z);
+			case GuiID.LAUNCHPAD_BASIC:
+				return new ContainerLaunchpadBasic(player.inventory, world, x, y, z);
+			case GuiID.ROCKET_MAKER:
+				return new ContainerRocketMaker(player.inventory, world, x, y, z);
 		}
 
 		return null;
@@ -33,6 +41,10 @@ public class GUIHandler implements IGuiHandler {
 				return new GuiSiphon(player.inventory, tileEntitySiphon);
 			case GuiID.ALLOY_MAKER:
 				return new GuiAlloyMaker(player.inventory, world, x, y, z);
+			case GuiID.LAUNCHPAD_BASIC:
+				return new GuiLaunchpadBasic(player.inventory, world, x, y, z);
+			case GuiID.ROCKET_MAKER:
+				return new GuiRocketMaker(player.inventory, world, x, y, z);
 		}
 		return null;
 	}

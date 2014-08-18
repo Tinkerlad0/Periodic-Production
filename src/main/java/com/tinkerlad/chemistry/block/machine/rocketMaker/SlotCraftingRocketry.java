@@ -1,7 +1,7 @@
-package com.tinkerlad.chemistry.block.machine.alloyMaker;
+package com.tinkerlad.chemistry.block.machine.rocketMaker;
 
-import com.tinkerlad.chemistry.recipe.alloy.AlloyCraftingManager;
-import com.tinkerlad.chemistry.recipe.backend.ShapelessRecipes;
+import com.tinkerlad.chemistry.recipe.backend.ShapedRecipes;
+import com.tinkerlad.chemistry.recipe.rocketry.RocketCraftingManager;
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -13,7 +13,7 @@ import net.minecraftforge.event.entity.player.PlayerDestroyItemEvent;
 
 import java.util.List;
 
-public class SlotCraftingAlloy extends Slot {
+public class SlotCraftingRocketry extends Slot {
 
 	/**
 	 * The craft matrix inventory linked to this result slot.
@@ -29,8 +29,8 @@ public class SlotCraftingAlloy extends Slot {
 	 */
 	private int amountCrafted;
 
-	public SlotCraftingAlloy(EntityPlayer par1EntityPlayer, IInventory par2IInventory, IInventory par3IInventory,
-	                         int par4, int par5, int par6, World world) {
+	public SlotCraftingRocketry(EntityPlayer par1EntityPlayer, IInventory par2IInventory, IInventory par3IInventory,
+	                            int par4, int par5, int par6, World world) {
 		super(par3IInventory, par4, par5, par6);
 		this.thePlayer = par1EntityPlayer;
 		this.craftMatrix = par2IInventory;
@@ -62,12 +62,12 @@ public class SlotCraftingAlloy extends Slot {
 			ItemStack itemstack1 = this.craftMatrix.getStackInSlot(i);
 			int decAmount = 1;
 			if (itemstack1 != null) {
-				List recipeList = AlloyCraftingManager.getInstance().getRecipeList();
+				List recipeList = RocketCraftingManager.getInstance().getRecipeList();
 				for (Object obj : recipeList) {
-					if (obj instanceof ShapelessRecipes) {
-						ItemStack stack = ((ShapelessRecipes) obj).getRecipeOutput();
+					if (obj instanceof ShapedRecipes) {
+						ItemStack stack = ((ShapedRecipes) obj).getRecipeOutput();
 						if (stack.getItem() == par2ItemStack.getItem()) {
-							for (Object obj2 : ((ShapelessRecipes) obj).recipeItems) {
+							for (Object obj2 : ((ShapedRecipes) obj).recipeItems) {
 								if (obj2 instanceof ItemStack) {
 									if (((ItemStack) obj2).getItem() == itemstack1.getItem()) {
 										decAmount = ((ItemStack) obj2).stackSize;

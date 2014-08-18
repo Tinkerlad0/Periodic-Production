@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry.recipe.alloy;
+package com.tinkerlad.chemistry.recipe.backend;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;

@@ -6,6 +6,7 @@ import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.item.alloy.ItemAlloyDust;
 import com.tinkerlad.chemistry.recipe.alloy.AlloyCraftingManager;
 import com.tinkerlad.chemistry.recipe.backend.RecipesSiphon;
+import com.tinkerlad.chemistry.recipe.rocketry.RocketCraftingManager;
 import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.reference.dataTypes.AlloyComponent;
@@ -13,7 +14,9 @@ import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import com.tinkerlad.chemistry.registry.annotations.RegisterAlloy;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.lang.reflect.Field;
@@ -26,6 +29,7 @@ public class Recipes {
 		initElementCommonRecipes();
 		initGameRecipes();
 		initAlloyRecipes();
+		initRocketRecipes();
 	}
 
 	public static void initGameRecipes() {
@@ -47,6 +51,37 @@ public class Recipes {
 				                               new ItemStack(ItemList.CANISTER_EMPTY),
 				                               new ItemStack(ItemList.DUST_ZINC),
 				                               new ItemStack(ItemList.DUST_SULFUR));
+
+		GameRegistry.addShapedRecipe(new ItemStack(ItemList.NOSE_CONE), " I ", "I I", "III", 'I',
+				                            ItemList.INGOT_ALUMINIUM);
+
+		GameRegistry.addShapedRecipe(new ItemStack(ItemList.FIN), "I  ", "II ", " II", 'I', ItemList.INGOT_ALUMINIUM);
+
+		GameRegistry.addShapedRecipe(new ItemStack(ItemList.INVENTORY_MODULE), "IAI", "ACA", "IAI",
+				                            'I', ItemList.INGOT_IRON,
+				                            'A', ItemList.INGOT_ALUMINIUM,
+				                            'C', Item.getItemFromBlock(Blocks.chest));
+
+		GameRegistry.addShapelessRecipe(new ItemStack(ItemList.DEBUG), new ItemStack(Blocks.dirt));
+	}
+
+	public static void initRocketRecipes() {
+
+		GameRegistry.addShapedRecipe(new ItemStack(ItemList.ROCKET_BASIC), " N ", " I ", "FRF",
+				                            'N', ItemList.NOSE_CONE,
+				                            'I', ItemList.INVENTORY_MODULE,
+				                            'F', ItemList.FIN,
+				                            'R', ItemList.CANISTER_CANDY);
+
+
+		RocketCraftingManager.getInstance().addRecipe(new ItemStack(ItemList.ROCKET_BASIC),
+				                                             "  F",
+				                                             "NIB",
+				                                             "  F",
+				                                             'F', ItemList.FIN,
+				                                             'N', ItemList.NOSE_CONE,
+				                                             'I', ItemList.INVENTORY_MODULE,
+				                                             'B', ItemList.CANISTER_CANDY);
 	}
 
 	public static void initElementCommonRecipes() {
@@ -77,7 +112,6 @@ public class Recipes {
 	}
 
 	public static void initAlloyRecipes() {
-
 		for (Field field : ItemList.class.getDeclaredFields()) {
 			if (field.isAnnotationPresent(RegisterAlloy.class)) {
 				RegisterAlloy annotation = field.getAnnotation(RegisterAlloy.class);

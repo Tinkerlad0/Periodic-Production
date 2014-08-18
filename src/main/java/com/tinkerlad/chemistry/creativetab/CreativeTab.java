@@ -24,4 +24,11 @@ public class CreativeTab {
 			return ItemList.CANISTER_ZINC_SULFUR;
 		}
 	};
+
+	public static final CreativeTabs ROCKETRY_TAB = new CreativeTabs("PPRocketry") {
+		@Override
+		public Item getTabIconItem() {
+			return ItemList.CANISTER_ZINC_SULFUR;
+		}
+	};
 }

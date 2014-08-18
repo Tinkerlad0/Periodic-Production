@@ -1,39 +1,32 @@
-package com.tinkerlad.chemistry.block.machine.alloyMaker;
+package com.tinkerlad.chemistry.block.launchpad.basic;
 
 import com.tinkerlad.chemistry.Chemistry;
-import com.tinkerlad.chemistry.recipe.alloy.AlloyCraftingManager;
-import com.tinkerlad.chemistry.recipe.backend.ShapelessRecipes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.*;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import java.util.List;
+public class ContainerLaunchpadBasic extends Container {
 
-public class ContainerAlloyMaker extends Container {
-
-	public InventoryCrafting craftMatrix;
-	public IInventory craftResult;
+	public IInventory craftMatrix;
 	private World worldObj;
 	private int posX;
 	private int posY;
 	private int posZ;
 
-	public ContainerAlloyMaker(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
+	public ContainerLaunchpadBasic(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
 		craftMatrix = new InventoryCrafting(this, 5, 5);
-		craftResult = new InventoryCraftResult();
 		worldObj = world;
 		posX = i;
 		posY = j;
 		posZ = k;
-		this.addSlotToContainer(new SlotCraftingAlloy(inventoryplayer.player, craftMatrix, craftResult, 0, 134, 43,
-				                                             worldObj));
-		for (int l = 0; l < 5; l++) {
-			for (int k1 = 0; k1 < 5; k1++) {
-				this.addSlotToContainer(new Slot(craftMatrix, k1 + l * 5, 8 + k1 * 18, 7 + l * 18));
-			}
-		}
+
+		this.addSlotToContainer(new SlotLaunchpad(craftMatrix, 0, 80, 31));
+
 
 		for (int i1 = 0; i1 < 3; i1++) {
 			for (int l1 = 0; l1 < 9; l1++) {
@@ -98,42 +91,7 @@ public class ContainerAlloyMaker extends Container {
 	}
 
 	public void onCraftMatrixChanged(IInventory iinventory) {
-		ItemStack result = AlloyCraftingManager.getInstance().findMatchingRecipe(craftMatrix, worldObj);
 
-		if (result == null) {
-			craftResult.setInventorySlotContents(0, null);
-			return;
-		} else if (result.getItem() == null) {
-			craftResult.setInventorySlotContents(0, null);
-			return;
-		}
-
-		for (int i = 0; i < this.craftMatrix.getSizeInventory(); ++i) {
-			ItemStack itemstack1 = this.craftMatrix.getStackInSlot(i);
-			if (itemstack1 != null) {
-				List recipeList = AlloyCraftingManager.getInstance().getRecipeList();
-				for (Object obj : recipeList) {
-					if (obj instanceof ShapelessRecipes) {
-						ItemStack stack = ((ShapelessRecipes) obj).getRecipeOutput();
-						if (stack.getItem() == result.getItem()) {
-							for (Object obj2 : ((ShapelessRecipes) obj).recipeItems) {
-								if (obj2 instanceof ItemStack) {
-									if (((ItemStack) obj2).getItem() == itemstack1.getItem()) {
-										ItemStack desired = ((ItemStack) obj2);
-										ItemStack current = itemstack1;
-										if (current.stackSize >= desired.stackSize) {
-											craftResult.setInventorySlotContents(0, AlloyCraftingManager.getInstance().findMatchingRecipe(craftMatrix, worldObj));
-											return;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		craftResult.setInventorySlotContents(0, null);
 	}
 
 	public boolean canInteractWith(EntityPlayer entityplayer) {

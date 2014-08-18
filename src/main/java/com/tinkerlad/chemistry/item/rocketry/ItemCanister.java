@@ -1,7 +1,8 @@
-package com.tinkerlad.chemistry.item;
+package com.tinkerlad.chemistry.item.rocketry;
 
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.block.BlockList;
+import com.tinkerlad.chemistry.item.rocketry.base.BaseCanister;
 import com.tinkerlad.chemistry.reference.Enums;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -10,7 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemCanister extends ItemGeneric {
+public class ItemCanister extends BaseCanister {
 
 	Enums.FUEL_TYPE FUEL;
 

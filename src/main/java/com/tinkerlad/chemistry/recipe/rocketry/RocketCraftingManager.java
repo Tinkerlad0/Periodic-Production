@@ -1,8 +1,7 @@
-package com.tinkerlad.chemistry.recipe.alloy;
+package com.tinkerlad.chemistry.recipe.rocketry;
 
 import com.tinkerlad.chemistry.recipe.backend.RecipeSorter;
 import com.tinkerlad.chemistry.recipe.backend.ShapedRecipes;
-import com.tinkerlad.chemistry.recipe.backend.ShapelessRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
@@ -15,13 +14,13 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class AlloyCraftingManager {
+public class RocketCraftingManager {
 
 	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
-	private static final AlloyCraftingManager instance = new AlloyCraftingManager();
+	private static final RocketCraftingManager instance = new RocketCraftingManager();
 	private List recipes = new ArrayList();
 
-	private AlloyCraftingManager() {
+	private RocketCraftingManager() {
 		recipes = new ArrayList();
 
 		//This is where your recipes will go
@@ -30,7 +29,7 @@ public class AlloyCraftingManager {
 		System.out.println(this.recipes.size() + " recipes");
 	}
 
-	public static final AlloyCraftingManager getInstance() {
+	public static final RocketCraftingManager getInstance() {
 		return instance;
 	}
 
@@ -90,34 +89,6 @@ public class AlloyCraftingManager {
 		ShapedRecipes var17 = new ShapedRecipes(var5, var6, var15, par1ItemStack);
 		this.recipes.add(var17);
 		return var17;
-	}
-
-	public void addShapelessRecipe(ItemStack outputItemStack, List inputItemStacks) {
-		this.recipes.add(new ShapelessRecipes(outputItemStack, inputItemStacks));
-	}
-
-	public void addShapelessRecipe(ItemStack par1ItemStack, Object... par2ArrayOfObj) {
-		ArrayList list = new ArrayList();
-		Object[] objects = par2ArrayOfObj;
-		int length = par2ArrayOfObj.length;
-
-		for (int i = 0; i < length; ++i) {
-			Object object = objects[i];
-
-			if (object instanceof ItemStack) {
-				list.add(((ItemStack) object).copy());
-			} else if (object instanceof Item) {
-				list.add(new ItemStack((Item) object));
-			} else {
-				if (!(object instanceof Block)) {
-					throw new RuntimeException("Invalid shapeless recipe!");
-				}
-
-				list.add(new ItemStack((Block) object));
-			}
-		}
-
-		this.recipes.add(new ShapelessRecipes(par1ItemStack, list));
 	}
 
 	public ItemStack findMatchingRecipe(InventoryCrafting par1InventoryCrafting, World par2World) {

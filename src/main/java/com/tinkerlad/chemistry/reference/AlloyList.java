@@ -17,7 +17,7 @@ public class AlloyList {
 	public static final Alloy NaCl = new Alloy(IONIC, SOLID, 0xEEEEEF,
 			                                          Arrays.asList(new AlloyComponent(SODIUM, 1),
 					                                                       new AlloyComponent(CHLORINE, 1)),
-			                                          "Table Salt"
+			                                              "Table Salt"
 	);
 	@RegisterAlloy
 	public static final Alloy HCl = new Alloy(ACID, LIQUID, 0xFFFFFF,

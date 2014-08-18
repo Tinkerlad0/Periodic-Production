@@ -1,0 +1,22 @@
+The assetDir is deprecated!  Use runDir instead! runDir set to run/assets/..The assetDir is deprecated!  Use runDir instead! runDir set to run/assets/..
+
+****************************
+ Powered By MCP:            
+ http://mcp.ocean-labs.de/  
+ Searge, ProfMobius, Fesh0r,
+ R4wk, ZeuX, IngisKahn      
+ MCP Data version : unknown
+****************************
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Failed to notify model configuration listener.
+> org.gradle.plugins.ide.internal.IdeDependenciesExtractor.extractRepoFileDependencies(Lorg/gradle/api/artifacts/ConfigurationContainer;Ljava/util/Collection;Ljava/util/Collection;ZZ)Ljava/util/List;
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 20.968 secs
