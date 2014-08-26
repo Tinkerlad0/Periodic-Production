@@ -23,9 +23,10 @@ public class SlotRocketry extends Slot {
 	 */
 	@Override
 	public boolean isItemValid(ItemStack stack) {
+		boolean flag = false;
 		for (Item baseItem : validItems) {
-			return stack.getItem().getClass() == baseItem.getClass();
+			flag =  stack.getItem().getClass() == baseItem.getClass() ? true : flag;
 		}
-		return false;
+		return flag && stack.stackSize == 1;
 	}
 }

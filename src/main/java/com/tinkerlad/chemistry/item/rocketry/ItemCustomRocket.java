@@ -18,18 +18,6 @@ public class ItemCustomRocket extends ItemGeneric {
 	}
 
 	/**
-	 * Called when item is crafted/smelted. Used only by maps so far.
-	 */
-	@Override
-	public void onCreated(ItemStack stack, World world, EntityPlayer player) {
-		stack.stackTagCompound = new NBTTagCompound();
-		stack.stackTagCompound.setInteger("Stability", 0);
-		stack.stackTagCompound.setInteger("Thrust", 0);
-		stack.stackTagCompound.setInteger("Burn Time", 20);
-		stack.stackTagCompound.setInteger("Slots", 1);
-	}
-
-	/**
 	 * allows items to add custom lines of information to the mouseover description
 	 */
 	@Override
@@ -37,7 +25,7 @@ public class ItemCustomRocket extends ItemGeneric {
 		if (stack.stackTagCompound != null) {
 			int stability = stack.stackTagCompound.getInteger("Stability");
 			int thrust = stack.stackTagCompound.getInteger("Thrust");
-			int time = stack.stackTagCompound.getInteger("Burn Time");
+			int time = stack.stackTagCompound.getInteger("BurnTime");
 			int slots = stack.stackTagCompound.getInteger("Slots");
 			list.add("Stability: " + stability);
 			list.add("Thrust: " + thrust);

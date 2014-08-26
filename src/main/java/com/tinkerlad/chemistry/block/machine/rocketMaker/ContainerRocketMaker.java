@@ -11,6 +11,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
@@ -128,17 +129,22 @@ public class ContainerRocketMaker extends Container {
 
 	public void onCraftMatrixChanged(IInventory iinventory) {
 
-		if (!isValid()) { return; }
+		if (!isValid()) {
+			craftResult.setInventorySlotContents(0,null);
+			return;
+		}
 		int stability, thrust, time, slots;
 		stability = thrust = time = slots = 0;
 
 		for (int i = 0; i < craftMatrix.getSizeInventory(); i++) {
+			if(craftMatrix.getStackInSlot(i) == null)continue;
 			if (craftMatrix.getStackInSlot(i).getItem() instanceof BaseModule) {
 				stability += 2;
 				if (craftMatrix.getStackInSlot(i).getItem() == ItemList.INVENTORY_MODULE) {
 					slots += 1;
 				}
 			}
+
 
 			if (craftMatrix.getStackInSlot(i).getItem() instanceof BaseCanister) {
 				thrust += 50;
@@ -159,12 +165,14 @@ public class ContainerRocketMaker extends Container {
 			}
 		}
 
-		ItemStack result = new ItemStack(ItemList.CUSTOM_ROCKET);
+		craftResult.setInventorySlotContents(0, null);
 
+		ItemStack result = new ItemStack(ItemList.CUSTOM_ROCKET);
+		result.stackTagCompound = new NBTTagCompound();
 		result.stackTagCompound.setInteger("Stability", stability);
 		result.stackTagCompound.setInteger("Thrust", thrust);
-		result.stackTagCompound.setInteger("Stability", time);
-		result.stackTagCompound.setInteger("Stability", slots);
+		result.stackTagCompound.setInteger("BurnTime", time);
+		result.stackTagCompound.setInteger("Slots", slots);
 
 		craftResult.setInventorySlotContents(0, result);
 	}
@@ -195,6 +203,6 @@ public class ContainerRocketMaker extends Container {
 			}
 		}
 
-		return (fins == engine == nose == true);
+		return (fins && engine && nose);
 	}
 }

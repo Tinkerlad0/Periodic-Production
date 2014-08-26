@@ -7,16 +7,11 @@ The assetDir is deprecated!  Use runDir instead! runDir set to run/assets/..The 
  R4wk, ZeuX, IngisKahn      
  MCP Data version : unknown
 ****************************
+:ideaModule
+:ideaProject
+:ideaWorkspace
+:idea
 
-FAILURE: Build failed with an exception.
+BUILD SUCCESSFUL
 
-* What went wrong:
-Failed to notify model configuration listener.
-> org.gradle.plugins.ide.internal.IdeDependenciesExtractor.extractRepoFileDependencies(Lorg/gradle/api/artifacts/ConfigurationContainer;Ljava/util/Collection;Ljava/util/Collection;ZZ)Ljava/util/List;
-
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
-
-BUILD FAILED
-
-Total time: 20.968 secs
+Total time: 48.407 secs

@@ -54,10 +54,11 @@ public class GuiLaunchpadBase extends GuiContainer {
 	}
 
 	public void actionPerformed(GuiButton button) {
-		System.out.println("button = [" + button.id + "]");
+
 		switch (button.id) {
 			case 0:
 				if (launched) { break; }
+				System.out.println("Launched");
 				EntityBasicRocket rocket = new EntityBasicRocket(earth);
 				rocket.posX = x;
 				rocket.posY = y + 1;

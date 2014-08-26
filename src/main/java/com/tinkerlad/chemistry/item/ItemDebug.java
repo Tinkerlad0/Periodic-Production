@@ -47,8 +47,8 @@ public class ItemDebug extends Item {
 
 	public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 
-//		if (world.getTileEntity(x, y, z) != null) {
-//			TileEntity tileEntity = world.getTileEntity(x, y, z);
+//		if (world.getTileEntity(x, z, z) != null) {
+//			TileEntity tileEntity = world.getTileEntity(x, z, z);
 //			player.addChatComponentMessage(new ChatComponentText(tileEntity.toString()));
 //		} else {
 //			player.addChatComponentMessage(new ChatComponentText("null"));
@@ -69,15 +69,15 @@ public class ItemDebug extends Item {
 //		for (int i = -10; i <= 10; i++) {
 //			for (int j = 0; j <= 15; j++) {
 //				for (int k = -10; k <= 10; k++) {
-//					if ((world.getBlock(x + i, y - j, z + k) == Blocks.stone) ||
-//							    (world.getBlock(x + i, y - j, z + k) == Blocks.sand ||
-//									     (world.getBlock(x + i, y - j, z + k) == Blocks.gravel)) ||
-//							    (world.getBlock(x + i, y - j, z + k) == Blocks.grass) ||
-//							    (world.getBlock(x + i, y - j, z + k) == Blocks.sandstone) ||
-//							    (world.getBlock(x + i, y - j, z + k) == Blocks.dirt)) {
+//					if ((world.getBlock(x + i, z - j, z + k) == Blocks.stone) ||
+//							    (world.getBlock(x + i, z - j, z + k) == Blocks.sand ||
+//									     (world.getBlock(x + i, z - j, z + k) == Blocks.gravel)) ||
+//							    (world.getBlock(x + i, z - j, z + k) == Blocks.grass) ||
+//							    (world.getBlock(x + i, z - j, z + k) == Blocks.sandstone) ||
+//							    (world.getBlock(x + i, z - j, z + k) == Blocks.dirt)) {
 //						FMLCommonHandler.instance().getMinecraftServerInstance().worldServerForDimension(0)
-//								.setBlockToAir(x + i, y - j, z + k);
-//						//world.setBlockToAir(x+1,y-j,z+k);
+//								.setBlockToAir(x + i, z - j, z + k);
+//						//world.setBlockToAir(x+1,z-j,z+k);
 //					}
 //				}
 //			}
