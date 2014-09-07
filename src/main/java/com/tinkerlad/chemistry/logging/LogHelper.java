@@ -7,8 +7,7 @@ public class LogHelper {
 
     public static Logger logger;
 
-    @Deprecated
-    public static void log(Level level, String message) {
+    private static void log(Level level, String message) {
         logger.log(level, message);
     }
 

@@ -1,5 +1,6 @@
 package com.tinkerlad.chemistry.creativetab;
 
+import com.tinkerlad.chemistry.block.BlockList;
 import com.tinkerlad.chemistry.item.ItemList;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -16,21 +17,15 @@ public class CreativeTab {
     public static final CreativeTabs ALLOYS_TAB = new CreativeTabs("PPAlloy") {
         @Override
         public Item getTabIconItem() {
-            return ItemList.CATALYST_BASIC;
+            return ItemList.DUST_IRON;
         }
     };
 
     public static final CreativeTabs MACHINE_TAB = new CreativeTabs("PPMachine") {
         @Override
         public Item getTabIconItem() {
-            return ItemList.CANISTER_ZINC_SULFUR;
+            return Item.getItemFromBlock(BlockList.MACHINE_ALLOY_MAKER);
         }
     };
 
-    public static final CreativeTabs ROCKETRY_TAB = new CreativeTabs("PPRocketry") {
-        @Override
-        public Item getTabIconItem() {
-            return ItemList.CANISTER_ZINC_SULFUR;
-        }
-    };
 }

@@ -1,12 +1,8 @@
 package com.tinkerlad.chemistry;
 
 import com.tinkerlad.chemistry.block.BlockList;
-import com.tinkerlad.chemistry.block.launchpad.basic.TileEntityLaunchpadBasic;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.TileEntityAlloyMaker;
-import com.tinkerlad.chemistry.block.machine.rocketMaker.TileEntityRocketMaker;
-import com.tinkerlad.chemistry.block.machine.siphon.TileEntitySiphon;
 import com.tinkerlad.chemistry.config.ConfigHandler;
-import com.tinkerlad.chemistry.entity.EntityList;
 import com.tinkerlad.chemistry.gui.GUIHandler;
 import com.tinkerlad.chemistry.item.ItemList;
 import com.tinkerlad.chemistry.logging.LogFile;
@@ -15,8 +11,6 @@ import com.tinkerlad.chemistry.proxies.CommonProxy;
 import com.tinkerlad.chemistry.recipe.Recipes;
 import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
-import com.tinkerlad.chemistry.reference.ElementMaterials;
-import com.tinkerlad.chemistry.reference.ElementTools;
 import com.tinkerlad.chemistry.registry.DynamicLocalisations;
 import com.tinkerlad.chemistry.registry.Register;
 import com.tinkerlad.chemistry.registry.referenceRegistries.AlloyRegister;
@@ -30,7 +24,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -52,10 +45,8 @@ public class Chemistry {
     public static ElementList ELEMENT_LIST;
     public static ItemList ITEM_LIST;
     public static AlloyList ALLOY_LIST;
-    public static ElementMaterials ELEMENT_MATERIALS;
     public static ElementRegister ELEMENT_REGISTRY;
     public static AlloyRegister ALLOY_REGISTRY;
-    public static ElementTools ELEMENT_TOOLS;
 
     @Instance(MODID)
     public static Chemistry instance;
@@ -76,10 +67,8 @@ public class Chemistry {
         ELEMENT_LIST = new ElementList();
         ITEM_LIST = new ItemList();
         ALLOY_LIST = new AlloyList();
-        ELEMENT_MATERIALS = new ElementMaterials();
         ELEMENT_REGISTRY = new ElementRegister();
         ALLOY_REGISTRY = new AlloyRegister();
-        ELEMENT_TOOLS = new ElementTools();
 
         LogHelper.logger = event.getModLog();
         LogFile.init(event.getModConfigurationDirectory());
@@ -89,11 +78,6 @@ public class Chemistry {
         ticker = new Ticker();
 
         Register.initialise();
-
-        ELEMENT_MATERIALS.initMaterials();
-        ELEMENT_TOOLS.initialiseTools();
-
-        EntityList.init();
 
         Recipes.initRecipes();
 
@@ -107,20 +91,12 @@ public class Chemistry {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandler());
-        GameRegistry.registerTileEntity(TileEntitySiphon.class, "tile.siphon");
         GameRegistry.registerTileEntity(TileEntityAlloyMaker.class, "tile.alloy_maker");
-        GameRegistry.registerTileEntity(TileEntityLaunchpadBasic.class, "tile.launchpadBasic");
-        GameRegistry.registerTileEntity(TileEntityRocketMaker.class, "tile.rocket_maker");
         proxy.registerRenderers();
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         DevUtils.dumpBlockNames();
-    }
-
-    @EventHandler
-    public void serverStarting(FMLServerStartingEvent event) {
-
     }
 }

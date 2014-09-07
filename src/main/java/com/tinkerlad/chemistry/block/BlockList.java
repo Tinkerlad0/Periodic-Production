@@ -1,40 +1,15 @@
 package com.tinkerlad.chemistry.block;
 
-import com.tinkerlad.chemistry.block.component.BlockCanister;
 import com.tinkerlad.chemistry.block.element.BlockElementBase;
 import com.tinkerlad.chemistry.block.element.OreElementBase;
-import com.tinkerlad.chemistry.block.launchpad.basic.BlockLaunchpadBase;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.BlockAlloyMaker;
-import com.tinkerlad.chemistry.block.machine.rocketMaker.BlockRocketMaker;
-import com.tinkerlad.chemistry.block.machine.siphon.BlockElementSiphon;
 import com.tinkerlad.chemistry.reference.ElementList;
-import com.tinkerlad.chemistry.reference.Enums;
 import com.tinkerlad.chemistry.registry.annotations.RegisterBlock;
 import com.tinkerlad.chemistry.registry.annotations.RegisterOreGen;
 
 public class BlockList {
 
-    @RegisterBlock(blockName = "launchpadBasic")
-    public static BlockLaunchpadBase LAUNCHPAD_BASIC = new BlockLaunchpadBase();
-
-    @RegisterBlock(blockName = "rocketMaker")
-    public static BlockRocketMaker ROCKET_MAKER = new BlockRocketMaker();
-
-    //Canisters
-    @RegisterBlock(blockName = "canisterEmpty")
-    public static BlockCanister CANISTER_EMPTY = new BlockCanister("canisterEmpty", Enums.FUEL_TYPE.EMPTY);
-
-    @RegisterBlock(blockName = "canisterCandy")
-    public static BlockCanister CANISTER_CANDY = new BlockCanister("canisterCandy", Enums.FUEL_TYPE.CANDY);
-
-    @RegisterBlock(blockName = "canisterZincSulphur")
-    public static BlockCanister CANISTER_ZINC_SULPHUR = new BlockCanister("canisterZincSulphur", Enums.FUEL_TYPE.ZINC_SULFUR);
-
     //Machines
-
-    @RegisterBlock(blockName = "machineSiphon")
-    public static BlockElementSiphon MACHINE_SIPHON = new BlockElementSiphon();
-
     @RegisterBlock(blockName = "machineAlloyMaker")
     public static BlockAlloyMaker MACHINE_ALLOY_MAKER = new BlockAlloyMaker();
 

@@ -2,56 +2,13 @@ package com.tinkerlad.chemistry.item;
 
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
-import com.tinkerlad.chemistry.item.rocketry.*;
-import com.tinkerlad.chemistry.item.rocketry.base.BaseCanister;
-import com.tinkerlad.chemistry.item.rocketry.base.BaseFin;
-import com.tinkerlad.chemistry.item.rocketry.base.BaseModule;
 import com.tinkerlad.chemistry.reference.ElementList;
-import com.tinkerlad.chemistry.reference.Enums;
 import com.tinkerlad.chemistry.registry.annotations.RegisterItem;
 
 public class ItemList {
 
     @RegisterItem(itemName = "debug")
     public static ItemDebug DEBUG = new ItemDebug();
-
-    @RegisterItem(itemName = "baseCanister")
-    public static BaseCanister BASE_CANISTER = new BaseCanister("baseCanister");
-
-    @RegisterItem(itemName = "baseFin")
-    public static BaseFin BASE_FIN = new BaseFin("baseFin");
-
-    @RegisterItem(itemName = "baseModule")
-    public static BaseModule BASE_MODULE = new BaseModule("baseModule");
-
-    @RegisterItem(itemName = "basicCatalyst")
-    public static ItemGeneric CATALYST_BASIC = new ItemGeneric("catalyst", 0x0000FF);
-
-    @RegisterItem(itemName = "canisterEmptyItem")
-    public static ItemCanister CANISTER_EMPTY = new ItemCanister("canisterEmpty", Enums.FUEL_TYPE.EMPTY);
-
-    @RegisterItem(itemName = "canisterCandyItem")
-    public static ItemCanister CANISTER_CANDY = new ItemCanister("canisterCandy", Enums.FUEL_TYPE.CANDY);
-
-    @RegisterItem(itemName = "canisterZincSulphurItem")
-    public static ItemCanister CANISTER_ZINC_SULFUR = new ItemCanister("canisterZincSulfur", Enums.FUEL_TYPE.ZINC_SULFUR);
-
-    @RegisterItem(itemName = "noseCone")
-    public static ItemNoseCone NOSE_CONE = new ItemNoseCone("noseCone");
-
-    @RegisterItem(itemName = "fin")
-    public static ItemFin FIN = new ItemFin("fin");
-
-    @RegisterItem(itemName = "inventoryModule")
-    public static ItemInventoryCase INVENTORY_MODULE = new ItemInventoryCase("inventoryModule");
-
-    @RegisterItem(itemName = "customRocket")
-    public static ItemCustomRocket CUSTOM_ROCKET = new ItemCustomRocket();
-
-    //Rockets
-
-    @RegisterItem(itemName = "rocketBasic")
-    public static ItemBasicRocket ROCKET_BASIC = new ItemBasicRocket("rocketBasic");
 
     //Gas Elements
 

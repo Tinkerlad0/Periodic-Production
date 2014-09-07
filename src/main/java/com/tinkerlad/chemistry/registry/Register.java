@@ -13,7 +13,6 @@ import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.logging.LogFile;
 import com.tinkerlad.chemistry.logging.LogHelper;
-import com.tinkerlad.chemistry.recipe.backend.RecipesSiphon;
 import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.dataTypes.Alloy;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
@@ -31,7 +30,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.fluids.Fluid;
-import org.apache.logging.log4j.Level;
 
 import java.lang.reflect.Field;
 import java.util.Map;
@@ -64,7 +62,7 @@ public class Register {
     public static void registerBlocks() {
 
         if (ConfigHandler.DEBUG) {
-            LogHelper.log(Level.INFO, "Beginning Block Registration");
+            LogHelper.info("Beginning Block Registration");
         }
 
         for (Field field : BlockList.class.getDeclaredFields()) {
@@ -86,14 +84,14 @@ public class Register {
 
                         if (oreAdd) {
                             if (ConfigHandler.VERBOSE) {
-                                LogHelper.log(Level.INFO, "----" + field.getName() + " " +
+                                LogHelper.info("----" + field.getName() + " " +
                                         "added as ore for " + (
                                         (OreElementBase)
                                                 obj)
                                         .ELEMENT.NAME);
                             }
                         } else {
-                            LogHelper.log(Level.ERROR, "----" + field.getName() + " failed to add as ore for " + (
+                            LogHelper.info("----" + field.getName() + " failed to add as ore for " + (
                                     (OreElementBase)
                                             obj)
                                     .ELEMENT.NAME);
@@ -104,13 +102,13 @@ public class Register {
 
                         if (oreAdd) {
                             if (ConfigHandler.VERBOSE) {
-                                LogHelper.log(Level.INFO, "----" + field.getName() + " " +
+                                LogHelper.info("----" + field.getName() + " " +
                                         "added as ore for " + ((BlockElementBase)
                                         obj)
                                         .ELEMENT.NAME);
                             }
                         } else {
-                            LogHelper.log(Level.ERROR, "----" + field.getName() + " failed to add as ore for " + (
+                            LogHelper.error("----" + field.getName() + " failed to add as ore for " + (
                                     (BlockElementBase)
                                             obj)
                                     .ELEMENT.NAME);
@@ -120,14 +118,14 @@ public class Register {
             }
         }
         if (ConfigHandler.DEBUG) {
-            LogHelper.log(Level.INFO, "Block Registration complete.");
+            LogHelper.info("Block Registration complete.");
         }
     }
 
     public static void registerItems() {
 
         if (ConfigHandler.DEBUG) {
-            LogHelper.log(Level.INFO, "Beginning Item Registration");
+            LogHelper.info("Beginning Item Registration");
         }
 
         for (Field field : ItemList.class.getDeclaredFields()) {
@@ -153,13 +151,6 @@ public class Register {
                     }
 
                     if (obj instanceof ItemElementBase) {
-                        if (!(Chemistry.ELEMENT_REGISTRY.getOreFromElement(((ItemElementBase) obj).ELEMENT) == null)) {
-                            ItemStack output = new ItemStack((ItemElementBase) obj);
-                            ItemStack input1 = new ItemStack(Chemistry.ELEMENT_REGISTRY.getOreFromElement(((ItemElementBase)
-                                    obj).ELEMENT));
-                            ItemStack input2 = new ItemStack(ItemList.CATALYST_BASIC);
-                            RecipesSiphon.getInstance().addRecipe(output, input1, input2);
-                        }
                         boolean baseItemAdd = Chemistry.ELEMENT_REGISTRY.addElementBaseItem(((ItemElementBase) obj).ELEMENT,
                                 (ItemElementBase) obj);
                         ItemElementBase itemElementBase = (ItemElementBase) obj;
@@ -167,14 +158,14 @@ public class Register {
 
                         if (baseItemAdd) {
                             if (ConfigHandler.VERBOSE) {
-                                LogHelper.log(Level.INFO, "----" + field.getName() + " " +
+                                LogHelper.info("----" + field.getName() + " " +
                                         "added as base item for " + (
                                         (ItemElementBase)
                                                 obj)
                                         .ELEMENT.NAME);
                             }
                         } else {
-                            LogHelper.log(Level.ERROR, "----" + field.getName() + " failed to add as base item for " + (
+                            LogHelper.error("----" + field.getName() + " failed to add as base item for " + (
                                     (ItemElementBase)
                                             obj)
                                     .ELEMENT.NAME);
@@ -184,14 +175,14 @@ public class Register {
             }
         }
         if (ConfigHandler.DEBUG) {
-            LogHelper.log(Level.INFO, "Item Registration Complete");
+            LogHelper.info("Item Registration Complete");
         }
     }
 
     public static void registerAlloys() {
 
         if (ConfigHandler.DEBUG) {
-            LogHelper.log(Level.INFO, "Beginning Alloy Registration");
+            LogHelper.info("Beginning Alloy Registration");
         }
 
         for (Field field : AlloyList.class.getDeclaredFields()) {
@@ -211,7 +202,7 @@ public class Register {
                     }
                 }
                 if (ConfigHandler.DEBUG) {
-                    LogHelper.log(Level.INFO, "Alloy Registration Complete");
+                    LogHelper.info("Alloy Registration Complete");
                 }
             }
         }
