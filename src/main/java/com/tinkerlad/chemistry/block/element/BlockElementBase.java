@@ -9,19 +9,19 @@ import net.minecraft.world.IBlockAccess;
 
 public class BlockElementBase extends BlockGeneric {
 
-	public Element ELEMENT;
+    public Element ELEMENT;
 
-	public BlockElementBase(Element element) {
-		super(Material.iron);
-		ELEMENT = element;
-		setBlockName(ELEMENT.NAME + "Block");
-		setBlockTextureName(Chemistry.MODID + ":block");
-		setCreativeTab(CreativeTab.ELEMENTS_TAB);
-		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), element.NAME + " Block");
-	}
+    public BlockElementBase(Element element) {
+        super(Material.iron);
+        ELEMENT = element;
+        setBlockName(ELEMENT.NAME + "Block");
+        setBlockTextureName(Chemistry.MODID + ":block");
+        setCreativeTab(CreativeTab.ELEMENTS_TAB);
+        Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), element.NAME + " Block");
+    }
 
-	@Override
-	public int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_) {
-		return ELEMENT.COLOR;
-	}
+    @Override
+    public int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_) {
+        return ELEMENT.COLOR;
+    }
 }

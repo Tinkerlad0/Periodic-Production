@@ -9,27 +9,27 @@ import net.minecraft.item.ItemStack;
 
 public class ItemGeneric extends Item {
 
-	private int Color = 0xFFFFFF;
+    private int Color = 0xFFFFFF;
 
-	public ItemGeneric(String itemName) {
-		super();
-		setCreativeTab(CreativeTab.MACHINE_TAB);
-		setUnlocalizedName(itemName);
-		setTextureName(Chemistry.MODID + ":" + itemName);
-	}
+    public ItemGeneric(String itemName) {
+        super();
+        setCreativeTab(CreativeTab.MACHINE_TAB);
+        setUnlocalizedName(itemName);
+        setTextureName(Chemistry.MODID + ":" + itemName);
+    }
 
-	public ItemGeneric(String itemName, int colour) {
-		super();
-		setCreativeTab(CreativeTab.MACHINE_TAB);
-		setUnlocalizedName(itemName);
-		setTextureName(Chemistry.MODID + ":" + itemName);
-		Color = colour;
-		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), itemName.toLowerCase());
-	}
+    public ItemGeneric(String itemName, int colour) {
+        super();
+        setCreativeTab(CreativeTab.MACHINE_TAB);
+        setUnlocalizedName(itemName);
+        setTextureName(Chemistry.MODID + ":" + itemName);
+        Color = colour;
+        Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), itemName.toLowerCase());
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
-		return Color;
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
+        return Color;
+    }
 }

@@ -10,30 +10,30 @@ import org.lwjgl.opengl.GL11;
 
 public class GuiRocketMaker extends GuiContainer {
 
-	private ResourceLocation resourceLocation = new ResourceLocation(Chemistry.MODID, "textures/gui/rocket_maker.png");
+    private ResourceLocation resourceLocation = new ResourceLocation(Chemistry.MODID, "textures/gui/rocket_maker.png");
 
-	public GuiRocketMaker(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
-		super(new ContainerRocketMaker(inventoryplayer, world, i, j, k));
-		xSize = 176;
-		ySize = 187;
-	}
+    public GuiRocketMaker(InventoryPlayer inventoryplayer, World world, int i, int j, int k) {
+        super(new ContainerRocketMaker(inventoryplayer, world, i, j, k));
+        xSize = 176;
+        ySize = 187;
+    }
 
-	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("Rocket Crafting"), (this.ySize / 2) - 15, 5,
-				                               0x404040);
+    protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+        this.fontRendererObj.drawString(StatCollector.translateToLocal("Rocket Crafting"), (this.ySize / 2) - 15, 5,
+                0x404040);
 
-		//this.fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, this.ySize - 96 - 14, 0x404040);
-	}
+        //this.fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, this.ySize - 96 - 14, 0x404040);
+    }
 
-	protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		mc.renderEngine.bindTexture(resourceLocation);
-		int l = (width - xSize) / 2;
-		int i1 = (height - ySize) / 2;
-		drawTexturedModalRect(l, i1, 0, 0, xSize, ySize);
-	}
+    protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
+        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+        mc.renderEngine.bindTexture(resourceLocation);
+        int l = (width - xSize) / 2;
+        int i1 = (height - ySize) / 2;
+        drawTexturedModalRect(l, i1, 0, 0, xSize, ySize);
+    }
 
-	public void onGuiClosed() {
-		super.onGuiClosed();
-	}
+    public void onGuiClosed() {
+        super.onGuiClosed();
+    }
 }

@@ -9,10 +9,10 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy {
 
-	@Override
+    @Override
 
-	public void registerRenderers() {
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAlloyMaker.class, new TileEntityAlloyMakerRenderer());
-		RenderingRegistry.registerEntityRenderingHandler(EntityBasicRocket.class, new RenderBasicRocket());
-	}
+    public void registerRenderers() {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAlloyMaker.class, new TileEntityAlloyMakerRenderer());
+        RenderingRegistry.registerEntityRenderingHandler(EntityBasicRocket.class, new RenderBasicRocket());
+    }
 }

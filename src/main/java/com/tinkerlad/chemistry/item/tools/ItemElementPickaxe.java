@@ -9,20 +9,20 @@ import net.minecraft.item.ItemStack;
 
 public class ItemElementPickaxe extends ItemPickaxe {
 
-	protected ElementToolPart TOOLPART;
+    protected ElementToolPart TOOLPART;
 
-	public ItemElementPickaxe(ElementToolPart toolPart) {
-		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
-		setCreativeTab(null);
-		setUnlocalizedName(toolPart.getUnlocalisedName() + "_pick");
-		setTextureName(Chemistry.MODID + ":pick");
-		TOOLPART = toolPart;
-		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Pickaxe");
-	}
+    public ItemElementPickaxe(ElementToolPart toolPart) {
+        super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
+        setCreativeTab(null);
+        setUnlocalizedName(toolPart.getUnlocalisedName() + "_pick");
+        setTextureName(Chemistry.MODID + ":pick");
+        TOOLPART = toolPart;
+        Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Pickaxe");
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
-		return TOOLPART.getColor();
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
+        return TOOLPART.getColor();
+    }
 }

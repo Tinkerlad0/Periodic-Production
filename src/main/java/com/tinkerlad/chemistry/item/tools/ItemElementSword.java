@@ -9,20 +9,20 @@ import net.minecraft.item.ItemSword;
 
 public class ItemElementSword extends ItemSword {
 
-	protected ElementToolPart TOOLPART;
+    protected ElementToolPart TOOLPART;
 
-	public ItemElementSword(ElementToolPart toolPart) {
-		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
-		setCreativeTab(null);
-		setUnlocalizedName(toolPart.getUnlocalisedName() + "_sword");
-		setTextureName(Chemistry.MODID + ":sword");
-		TOOLPART = toolPart;
-		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Sword");
-	}
+    public ItemElementSword(ElementToolPart toolPart) {
+        super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
+        setCreativeTab(null);
+        setUnlocalizedName(toolPart.getUnlocalisedName() + "_sword");
+        setTextureName(Chemistry.MODID + ":sword");
+        TOOLPART = toolPart;
+        Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Sword");
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
-		return TOOLPART.getColor();
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
+        return TOOLPART.getColor();
+    }
 }

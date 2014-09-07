@@ -5,8 +5,8 @@ import com.tinkerlad.chemistry.item.rocketry.base.BaseFin;
 
 public class ItemFin extends BaseFin {
 
-	public ItemFin(String itemName) {
-		super(itemName);
-		this.setCreativeTab(CreativeTab.ROCKETRY_TAB);
-	}
+    public ItemFin(String itemName) {
+        super(itemName);
+        this.setCreativeTab(CreativeTab.ROCKETRY_TAB);
+    }
 }

@@ -9,28 +9,32 @@ import java.io.File;
 
 public class ConfigHandler {
 
-	public static Configuration configuration;
+    public static Configuration configuration;
 
-	public static boolean DEBUG = false;
-	public static boolean VERBOSE = false;
+    public static boolean DEBUG = false;
+    public static boolean VERBOSE = false;
 
-	public static void preInit(File suggestedConfigurationFile) {
-		configuration = new Configuration(suggestedConfigurationFile);
-		syncConfig();
-	}
+    public static void preInit(File suggestedConfigurationFile) {
+        configuration = new Configuration(suggestedConfigurationFile);
+        syncConfig();
+    }
 
-	public static void syncConfig() {
+    public static void syncConfig() {
 
-		DEBUG = configuration.getBoolean("Debug Mode", Configuration.CATEGORY_GENERAL, DEBUG,
-				                                "Output debug info to console?");
-		VERBOSE = configuration.getBoolean("Verbose Mode", Configuration.CATEGORY_GENERAL, VERBOSE,
-				                                  "Spam the console with info?");
+        DEBUG = configuration.getBoolean("Debug Mode", Configuration.CATEGORY_GENERAL, DEBUG,
+                "Output debug info to console?");
+        VERBOSE = configuration.getBoolean("Verbose Mode", Configuration.CATEGORY_GENERAL, VERBOSE,
+                "Spam the console with info?");
 
-		if (configuration.hasChanged()) {configuration.save();}
-	}
+        if (configuration.hasChanged()) {
+            configuration.save();
+        }
+    }
 
-	@SubscribeEvent
-	public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
-		if (eventArgs.modID.equals(Chemistry.MODID)) { syncConfig(); }
-	}
+    @SubscribeEvent
+    public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
+        if (eventArgs.modID.equals(Chemistry.MODID)) {
+            syncConfig();
+        }
+    }
 }

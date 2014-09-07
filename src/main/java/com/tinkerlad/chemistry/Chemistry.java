@@ -19,95 +19,108 @@ import com.tinkerlad.chemistry.reference.ElementMaterials;
 import com.tinkerlad.chemistry.reference.ElementTools;
 import com.tinkerlad.chemistry.registry.DynamicLocalisations;
 import com.tinkerlad.chemistry.registry.Register;
-import com.tinkerlad.chemistry.registry.itemRegistry.AlloyRegistry;
-import com.tinkerlad.chemistry.registry.itemRegistry.ElementRegistry;
+import com.tinkerlad.chemistry.registry.referenceRegistries.AlloyRegister;
+import com.tinkerlad.chemistry.registry.referenceRegistries.ElementRegister;
+import com.tinkerlad.chemistry.utils.DevUtils;
 import com.tinkerlad.chemistry.utils.Ticker;
 import com.tinkerlad.chemistry.world.OreGen;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+import java.io.File;
 import java.util.Random;
 
 import static cpw.mods.fml.common.Mod.EventHandler;
 import static cpw.mods.fml.common.Mod.Instance;
 
 @Mod(modid = Chemistry.MODID, name = "Periodic Production", version = "@VERSION@",
-		    guiFactory = "com.tinkerlad.chemistry.gui.GuiFactory")
+        guiFactory = "com.tinkerlad.chemistry.gui.GuiFactory")
 public class Chemistry {
 
-	public static final String MODID = "tnkchem";
-	public static DynamicLocalisations LOCALISATIONS;
-	public static OreGen ORE_GEN;
-	public static BlockList BLOCK_LIST;
-	public static ElementList ELEMENT_LIST;
-	public static ItemList ITEM_LIST;
-	public static AlloyList ALLOY_LIST;
-	public static ElementMaterials ELEMENT_MATERIALS;
-	public static ElementRegistry ELEMENT_REGISTRY;
-	public static AlloyRegistry ALLOY_REGISTRY;
-	public static ElementTools ELEMENT_TOOLS;
+    public static final String MODID = "tnkchem";
+    public static File CONFIGURATION_DIR;
+    public static DynamicLocalisations LOCALISATIONS;
+    public static OreGen ORE_GEN;
+    public static BlockList BLOCK_LIST;
+    public static ElementList ELEMENT_LIST;
+    public static ItemList ITEM_LIST;
+    public static AlloyList ALLOY_LIST;
+    public static ElementMaterials ELEMENT_MATERIALS;
+    public static ElementRegister ELEMENT_REGISTRY;
+    public static AlloyRegister ALLOY_REGISTRY;
+    public static ElementTools ELEMENT_TOOLS;
 
-	@Instance(MODID)
-	public static Chemistry instance;
+    @Instance(MODID)
+    public static Chemistry instance;
 
-	public static Random RANDOM = new Random();
-	public static Ticker ticker;
+    public static Random RANDOM = new Random();
+    public static Ticker ticker;
 
-	@SidedProxy(clientSide = "com.tinkerlad.chemistry.proxies.ClientProxy", serverSide = "com.tinkerlad.chemistry" +
-			                                                                                     ".proxies" +
-			                                                                                     ".CommonProxy")
-	public static CommonProxy proxy;
+    @SidedProxy(clientSide = "com.tinkerlad.chemistry.proxies.ClientProxy", serverSide = "com.tinkerlad.chemistry" + ".proxies" + ".CommonProxy")
+    public static CommonProxy proxy;
 
-	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
 
+        CONFIGURATION_DIR = event.getSuggestedConfigurationFile();
+        LOCALISATIONS = new DynamicLocalisations();
+        ORE_GEN = new OreGen();
+        BLOCK_LIST = new BlockList();
+        ELEMENT_LIST = new ElementList();
+        ITEM_LIST = new ItemList();
+        ALLOY_LIST = new AlloyList();
+        ELEMENT_MATERIALS = new ElementMaterials();
+        ELEMENT_REGISTRY = new ElementRegister();
+        ALLOY_REGISTRY = new AlloyRegister();
+        ELEMENT_TOOLS = new ElementTools();
 
-		LOCALISATIONS = new DynamicLocalisations();
-		ORE_GEN = new OreGen();
-		BLOCK_LIST = new BlockList();
-		ELEMENT_LIST = new ElementList();
-		ITEM_LIST = new ItemList();
-		ALLOY_LIST = new AlloyList();
-		ELEMENT_MATERIALS = new ElementMaterials();
-		ELEMENT_REGISTRY = new ElementRegistry();
-		ALLOY_REGISTRY = new AlloyRegistry();
-		ELEMENT_TOOLS = new ElementTools();
+        LogHelper.logger = event.getModLog();
+        LogFile.init(event.getModConfigurationDirectory());
+        ConfigHandler.preInit(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(ConfigHandler.class);
 
-		LogHelper.logger = event.getModLog();
-		LogFile.init(event.getModConfigurationDirectory());
-		ConfigHandler.preInit(event.getSuggestedConfigurationFile());
-		FMLCommonHandler.instance().bus().register(ConfigHandler.class);
+        ticker = new Ticker();
 
-		ticker = new Ticker();
+        Register.initialise();
 
-		Register.initialise();
+        ELEMENT_MATERIALS.initMaterials();
+        ELEMENT_TOOLS.initialiseTools();
 
-		ELEMENT_MATERIALS.initMaterials();
-		ELEMENT_TOOLS.initialiseTools();
+        EntityList.init();
 
-		EntityList.init();
+        Recipes.initRecipes();
 
-		Recipes.initRecipes();
+        ORE_GEN.populateDefaultOres();
 
-		ORE_GEN.populateDefaultOres();
+        GameRegistry.registerWorldGenerator(ORE_GEN, 0);
 
-		GameRegistry.registerWorldGenerator(ORE_GEN, 0);
+        LOCALISATIONS.registerLocalisations();
+    }
 
-		LOCALISATIONS.registerLocalisations();
-	}
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandler());
+        GameRegistry.registerTileEntity(TileEntitySiphon.class, "tile.siphon");
+        GameRegistry.registerTileEntity(TileEntityAlloyMaker.class, "tile.alloy_maker");
+        GameRegistry.registerTileEntity(TileEntityLaunchpadBasic.class, "tile.launchpadBasic");
+        GameRegistry.registerTileEntity(TileEntityRocketMaker.class, "tile.rocket_maker");
+        proxy.registerRenderers();
+    }
 
-	@EventHandler
-	public void init(FMLInitializationEvent event) {
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandler());
-		GameRegistry.registerTileEntity(TileEntitySiphon.class, "tile.siphon");
-		GameRegistry.registerTileEntity(TileEntityAlloyMaker.class, "tile.alloy_maker");
-		GameRegistry.registerTileEntity(TileEntityLaunchpadBasic.class, "tile.launchpadBasic");
-		GameRegistry.registerTileEntity(TileEntityRocketMaker.class, "tile.rocket_maker");
-		proxy.registerRenderers();
-	}
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        DevUtils.dumpBlockNames();
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event) {
+
+    }
 }

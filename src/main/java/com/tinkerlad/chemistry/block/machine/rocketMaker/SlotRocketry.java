@@ -9,24 +9,24 @@ import java.util.List;
 
 public class SlotRocketry extends Slot {
 
-	public List<Item> validItems;
+    public List<Item> validItems;
 
-	public SlotRocketry(IInventory par1IInventory, int par2, int par3, int par4, List<Item> items) {
-		super(par1IInventory, par2, par3, par4);
-		validItems = items;
-	}
+    public SlotRocketry(IInventory par1IInventory, int par2, int par3, int par4, List<Item> items) {
+        super(par1IInventory, par2, par3, par4);
+        validItems = items;
+    }
 
-	/**
-	 * Check if the stack is a valid item for this slot. Always true beside for the armor slots.
-	 *
-	 * @param stack
-	 */
-	@Override
-	public boolean isItemValid(ItemStack stack) {
-		boolean flag = false;
-		for (Item baseItem : validItems) {
-			flag =  stack.getItem().getClass() == baseItem.getClass() ? true : flag;
-		}
-		return flag && stack.stackSize == 1;
-	}
+    /**
+     * Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+     *
+     * @param stack
+     */
+    @Override
+    public boolean isItemValid(ItemStack stack) {
+        boolean flag = false;
+        for (Item baseItem : validItems) {
+            flag = stack.getItem().getClass() == baseItem.getClass() ? true : flag;
+        }
+        return flag && stack.stackSize == 1;
+    }
 }

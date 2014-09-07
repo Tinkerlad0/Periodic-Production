@@ -10,7 +10,7 @@
         <option name="myLocal" value="false" />
         <coding_rule class="AM_CREATES_EMPTY_JAR_FILE_ENTRY" level="MAJOR" enabled="true" />
         <coding_rule class="AM_CREATES_EMPTY_ZIP_FILE_ENTRY" level="MAJOR" enabled="true" />
-        <coding_rule class="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" level="CRITICAL" enabled="false" />
+        <coding_rule class="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" level="CRITICAL" enabled="true" />
         <coding_rule class="AbstractClassNameCheck" level="MAJOR" enabled="false">
           <param name="ignoreModifier" value="false" />
           <param name="ignoreName" value="false" />
@@ -29,16 +29,16 @@
           <param name="allowStaticMemberImports" value="false" />
         </coding_rule>
         <coding_rule class="AvoidStaticImportCheck" level="MAJOR" enabled="false" />
-        <coding_rule class="BAC_BAD_APPLET_CONSTRUCTOR" level="MAJOR" enabled="false" />
+        <coding_rule class="BAC_BAD_APPLET_CONSTRUCTOR" level="MAJOR" enabled="true" />
         <coding_rule class="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" level="MAJOR" enabled="true" />
         <coding_rule class="BC_BAD_CAST_TO_CONCRETE_COLLECTION" level="CRITICAL" enabled="true" />
         <coding_rule class="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS" level="CRITICAL" enabled="true" />
         <coding_rule class="BC_IMPOSSIBLE_CAST" level="BLOCKER" enabled="true" />
-        <coding_rule class="BC_IMPOSSIBLE_DOWNCAST" level="MAJOR" enabled="false" />
-        <coding_rule class="BC_IMPOSSIBLE_DOWNCAST_OF_TOARRAY" level="MAJOR" enabled="false" />
+        <coding_rule class="BC_IMPOSSIBLE_DOWNCAST" level="MAJOR" enabled="true" />
+        <coding_rule class="BC_IMPOSSIBLE_DOWNCAST_OF_TOARRAY" level="MAJOR" enabled="true" />
         <coding_rule class="BC_IMPOSSIBLE_INSTANCEOF" level="CRITICAL" enabled="true" />
         <coding_rule class="BC_UNCONFIRMED_CAST" level="CRITICAL" enabled="true" />
-        <coding_rule class="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" level="CRITICAL" enabled="false" />
+        <coding_rule class="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" level="CRITICAL" enabled="true" />
         <coding_rule class="BC_VACUOUS_INSTANCEOF" level="CRITICAL" enabled="true" />
         <coding_rule class="BIT_ADD_OF_SIGNED_BYTE" level="CRITICAL" enabled="true" />
         <coding_rule class="BIT_AND" level="CRITICAL" enabled="true" />
@@ -51,7 +51,7 @@
         <coding_rule class="BX_BOXING_IMMEDIATELY_UNBOXED" level="MAJOR" enabled="true" />
         <coding_rule class="BX_BOXING_IMMEDIATELY_UNBOXED_TO_PERFORM_COERCION" level="MAJOR" enabled="true" />
         <coding_rule class="BX_UNBOXED_AND_COERCED_FOR_TERNARY_OPERATOR" level="MAJOR" enabled="true" />
-        <coding_rule class="BX_UNBOXING_IMMEDIATELY_REBOXED" level="CRITICAL" enabled="false" />
+        <coding_rule class="BX_UNBOXING_IMMEDIATELY_REBOXED" level="CRITICAL" enabled="true" />
         <coding_rule class="BasicAvoidBranchingStatementAsLastInLoop" level="MAJOR" enabled="false" />
         <coding_rule class="BasicAvoidDecimalLiteralsInBigDecimalConstructor" level="MAJOR" enabled="true" />
         <coding_rule class="BasicAvoidMultipleUnaryOperators" level="MAJOR" enabled="false" />
@@ -88,13 +88,13 @@
         <coding_rule class="BracesIfElseStmtsMustUseBraces" level="MAJOR" enabled="true" />
         <coding_rule class="BracesIfStmtsMustUseBraces" level="MAJOR" enabled="true" />
         <coding_rule class="BracesWhileLoopsMustUseBraces" level="MAJOR" enabled="true" />
-        <coding_rule class="CD_CIRCULAR_DEPENDENCY" level="MAJOR" enabled="false" />
+        <coding_rule class="CD_CIRCULAR_DEPENDENCY" level="MAJOR" enabled="true" />
         <coding_rule class="CI_CONFUSED_INHERITANCE" level="MINOR" enabled="true" />
         <coding_rule class="CN_IDIOM" level="MAJOR" enabled="true" />
         <coding_rule class="CN_IDIOM_NO_SUPER_CALL" level="MAJOR" enabled="true" />
         <coding_rule class="CN_IMPLEMENTS_CLONE_BUT_NOT_CLONEABLE" level="MAJOR" enabled="true" />
         <coding_rule class="CO_ABSTRACT_SELF" level="MAJOR" enabled="true" />
-        <coding_rule class="CO_COMPARETO_RESULTS_MIN_VALUE" level="CRITICAL" enabled="false" />
+        <coding_rule class="CO_COMPARETO_RESULTS_MIN_VALUE" level="CRITICAL" enabled="true" />
         <coding_rule class="CO_SELF_NO_OBJECT" level="MAJOR" enabled="true" />
         <coding_rule class="ClassDataAbstractionCouplingCheck" level="MAJOR" enabled="false" />
         <coding_rule class="ClassFanOutComplexityCheck" level="MAJOR" enabled="false" />
@@ -152,7 +152,7 @@
         <coding_rule class="DLS_DEAD_LOCAL_STORE" level="CRITICAL" enabled="true" />
         <coding_rule class="DLS_DEAD_LOCAL_STORE_IN_RETURN" level="CRITICAL" enabled="true" />
         <coding_rule class="DLS_DEAD_LOCAL_STORE_OF_NULL" level="CRITICAL" enabled="true" />
-        <coding_rule class="DLS_DEAD_LOCAL_STORE_SHADOWS_FIELD" level="CRITICAL" enabled="false" />
+        <coding_rule class="DLS_DEAD_LOCAL_STORE_SHADOWS_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="DLS_DEAD_STORE_OF_CLASS_LITERAL" level="CRITICAL" enabled="true" />
         <coding_rule class="DLS_OVERWRITTEN_INCREMENT" level="CRITICAL" enabled="true" />
         <coding_rule class="DL_SYNCHRONIZATION_ON_BOOLEAN" level="CRITICAL" enabled="true" />
@@ -160,17 +160,17 @@
         <coding_rule class="DL_SYNCHRONIZATION_ON_SHARED_CONSTANT" level="CRITICAL" enabled="true" />
         <coding_rule class="DL_SYNCHRONIZATION_ON_UNSHARED_BOXED_PRIMITIVE" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_ANNOTATION_IS_NOT_VISIBLE_TO_REFLECTION" level="MAJOR" enabled="true" />
-        <coding_rule class="DMI_ARGUMENTS_WRONG_ORDER" level="CRITICAL" enabled="false" />
+        <coding_rule class="DMI_ARGUMENTS_WRONG_ORDER" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_BAD_MONTH" level="CRITICAL" enabled="true" />
-        <coding_rule class="DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE" level="CRITICAL" enabled="false" />
+        <coding_rule class="DMI_BIGDECIMAL_CONSTRUCTED_FROM_DOUBLE" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_BLOCKING_METHODS_ON_URL" level="BLOCKER" enabled="true" />
         <coding_rule class="DMI_CALLING_NEXT_FROM_HASNEXT" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_COLLECTIONS_SHOULD_NOT_CONTAIN_THEMSELVES" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_COLLECTION_OF_URLS" level="BLOCKER" enabled="true" />
         <coding_rule class="DMI_CONSTANT_DB_PASSWORD" level="BLOCKER" enabled="true" />
-        <coding_rule class="DMI_DOH" level="CRITICAL" enabled="false" />
+        <coding_rule class="DMI_DOH" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_EMPTY_DB_PASSWORD" level="CRITICAL" enabled="true" />
-        <coding_rule class="DMI_ENTRY_SETS_MAY_REUSE_ENTRY_OBJECTS" level="CRITICAL" enabled="false" />
+        <coding_rule class="DMI_ENTRY_SETS_MAY_REUSE_ENTRY_OBJECTS" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_FUTILE_ATTEMPT_TO_CHANGE_MAXPOOL_SIZE_OF_SCHEDULED_THREAD_POOL_EXECUTOR" level="MINOR" enabled="true" />
         <coding_rule class="DMI_HARDCODED_ABSOLUTE_FILENAME" level="CRITICAL" enabled="true" />
         <coding_rule class="DMI_INVOKING_HASHCODE_ON_ARRAY" level="CRITICAL" enabled="true" />
@@ -189,7 +189,7 @@
         <coding_rule class="DM_BOOLEAN_CTOR" level="MAJOR" enabled="true" />
         <coding_rule class="DM_BOXED_PRIMITIVE_TOSTRING" level="MAJOR" enabled="true" />
         <coding_rule class="DM_CONVERT_CASE" level="INFO" enabled="true" />
-        <coding_rule class="DM_DEFAULT_ENCODING" level="CRITICAL" enabled="false" />
+        <coding_rule class="DM_DEFAULT_ENCODING" level="CRITICAL" enabled="true" />
         <coding_rule class="DM_EXIT" level="MAJOR" enabled="true" />
         <coding_rule class="DM_FP_NUMBER_CTOR" level="MAJOR" enabled="true" />
         <coding_rule class="DM_GC" level="MAJOR" enabled="true" />
@@ -266,7 +266,7 @@
         <coding_rule class="DesignUseVarargs" level="MAJOR" enabled="false" />
         <coding_rule class="EC_ARRAY_AND_NONARRAY" level="CRITICAL" enabled="true" />
         <coding_rule class="EC_BAD_ARRAY_COMPARE" level="CRITICAL" enabled="true" />
-        <coding_rule class="EC_INCOMPATIBLE_ARRAY_COMPARE" level="MAJOR" enabled="false" />
+        <coding_rule class="EC_INCOMPATIBLE_ARRAY_COMPARE" level="MAJOR" enabled="true" />
         <coding_rule class="EC_NULL_ARG" level="CRITICAL" enabled="true" />
         <coding_rule class="EC_UNRELATED_CLASS_AND_INTERFACE" level="CRITICAL" enabled="true" />
         <coding_rule class="EC_UNRELATED_INTERFACES" level="CRITICAL" enabled="true" />
@@ -281,7 +281,7 @@
         <coding_rule class="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" level="MAJOR" enabled="true" />
         <coding_rule class="EQ_COMPARETO_USE_OBJECT_EQUALS" level="CRITICAL" enabled="true" />
         <coding_rule class="EQ_COMPARING_CLASS_NAMES" level="MAJOR" enabled="true" />
-        <coding_rule class="EQ_DOESNT_OVERRIDE_EQUALS" level="MAJOR" enabled="false" />
+        <coding_rule class="EQ_DOESNT_OVERRIDE_EQUALS" level="MAJOR" enabled="true" />
         <coding_rule class="EQ_DONT_DEFINE_EQUALS_FOR_ENUM" level="MAJOR" enabled="true" />
         <coding_rule class="EQ_GETCLASS_AND_CLASS_CONSTANT" level="CRITICAL" enabled="true" />
         <coding_rule class="EQ_OTHER_NO_OBJECT" level="MAJOR" enabled="true" />
@@ -314,8 +314,8 @@
         <coding_rule class="EqualsHashCodeCheck" level="MAJOR" enabled="true" />
         <coding_rule class="ExecutableStatementCountCheck" level="MAJOR" enabled="false" />
         <coding_rule class="ExplicitInitializationCheck" level="MAJOR" enabled="false" />
-        <coding_rule class="FB_MISSING_EXPECTED_WARNING" level="CRITICAL" enabled="false" />
-        <coding_rule class="FB_UNEXPECTED_WARNING" level="CRITICAL" enabled="false" />
+        <coding_rule class="FB_MISSING_EXPECTED_WARNING" level="CRITICAL" enabled="true" />
+        <coding_rule class="FB_UNEXPECTED_WARNING" level="CRITICAL" enabled="true" />
         <coding_rule class="FE_FLOATING_POINT_EQUALITY" level="CRITICAL" enabled="true" />
         <coding_rule class="FE_TEST_IF_EQUAL_TO_NOT_A_NUMBER" level="CRITICAL" enabled="true" />
         <coding_rule class="FI_EMPTY" level="MAJOR" enabled="true" />
@@ -359,7 +359,7 @@
         <coding_rule class="ICAST_BAD_SHIFT_AMOUNT" level="CRITICAL" enabled="true" />
         <coding_rule class="ICAST_IDIV_CAST_TO_DOUBLE" level="CRITICAL" enabled="true" />
         <coding_rule class="ICAST_INTEGER_MULTIPLY_CAST_TO_LONG" level="CRITICAL" enabled="true" />
-        <coding_rule class="ICAST_INT_2_LONG_AS_INSTANT" level="CRITICAL" enabled="false" />
+        <coding_rule class="ICAST_INT_2_LONG_AS_INSTANT" level="CRITICAL" enabled="true" />
         <coding_rule class="ICAST_INT_CAST_TO_DOUBLE_PASSED_TO_CEIL" level="CRITICAL" enabled="true" />
         <coding_rule class="ICAST_INT_CAST_TO_FLOAT_PASSED_TO_ROUND" level="CRITICAL" enabled="true" />
         <coding_rule class="ICAST_QUESTIONABLE_UNSIGNED_RIGHT_SHIFT" level="CRITICAL" enabled="true" />
@@ -374,12 +374,12 @@
         <coding_rule class="IL_CONTAINER_ADDED_TO_ITSELF" level="CRITICAL" enabled="true" />
         <coding_rule class="IL_INFINITE_LOOP" level="CRITICAL" enabled="true" />
         <coding_rule class="IL_INFINITE_RECURSIVE_LOOP" level="CRITICAL" enabled="true" />
-        <coding_rule class="IMA_INEFFICIENT_MEMBER_ACCESS" level="MAJOR" enabled="false" />
+        <coding_rule class="IMA_INEFFICIENT_MEMBER_ACCESS" level="MAJOR" enabled="true" />
         <coding_rule class="IMSE_DONT_CATCH_IMSE" level="MAJOR" enabled="true" />
         <coding_rule class="IM_AVERAGE_COMPUTATION_COULD_OVERFLOW" level="CRITICAL" enabled="true" />
         <coding_rule class="IM_BAD_CHECK_FOR_ODD" level="CRITICAL" enabled="true" />
         <coding_rule class="IM_MULTIPLYING_RESULT_OF_IREM" level="CRITICAL" enabled="true" />
-        <coding_rule class="INT_BAD_COMPARISON_WITH_INT_VALUE" level="CRITICAL" enabled="false" />
+        <coding_rule class="INT_BAD_COMPARISON_WITH_INT_VALUE" level="CRITICAL" enabled="true" />
         <coding_rule class="INT_BAD_COMPARISON_WITH_NONNEGATIVE_VALUE" level="CRITICAL" enabled="true" />
         <coding_rule class="INT_BAD_COMPARISON_WITH_SIGNED_BYTE" level="CRITICAL" enabled="true" />
         <coding_rule class="INT_BAD_REM_BY_1" level="CRITICAL" enabled="true" />
@@ -422,8 +422,8 @@
         <coding_rule class="J2EE_STORE_OF_NON_SERIALIZABLE_OBJECT_INTO_SESSION" level="CRITICAL" enabled="true" />
         <coding_rule class="JCIP_FIELD_ISNT_FINAL_IN_IMMUTABLE_CLASS" level="MINOR" enabled="true" />
         <coding_rule class="JLM_JSR166_LOCK_MONITORENTER" level="CRITICAL" enabled="true" />
-        <coding_rule class="JLM_JSR166_UTILCONCURRENT_MONITORENTER" level="CRITICAL" enabled="false" />
-        <coding_rule class="JML_JSR166_CALLING_WAIT_RATHER_THAN_AWAIT" level="CRITICAL" enabled="false" />
+        <coding_rule class="JLM_JSR166_UTILCONCURRENT_MONITORENTER" level="CRITICAL" enabled="true" />
+        <coding_rule class="JML_JSR166_CALLING_WAIT_RATHER_THAN_AWAIT" level="CRITICAL" enabled="true" />
         <coding_rule class="JUnitJUnitAssertionsShouldIncludeMessage" level="MAJOR" enabled="false" />
         <coding_rule class="JUnitJUnitSpelling" level="MAJOR" enabled="false" />
         <coding_rule class="JUnitJUnitStaticSuite" level="MAJOR" enabled="false" />
@@ -452,7 +452,7 @@
         <coding_rule class="JavadocStyleCheck" level="MAJOR" enabled="false" />
         <coding_rule class="JavadocTypeCheck" level="MAJOR" enabled="false" />
         <coding_rule class="JavadocVariableCheck" level="MAJOR" enabled="false" />
-        <coding_rule class="LG_LOST_LOGGER_DUE_TO_WEAK_REFERENCE" level="MAJOR" enabled="false" />
+        <coding_rule class="LG_LOST_LOGGER_DUE_TO_WEAK_REFERENCE" level="MAJOR" enabled="true" />
         <coding_rule class="LI_LAZY_INIT_STATIC" level="CRITICAL" enabled="true" />
         <coding_rule class="LI_LAZY_INIT_UPDATE_STATIC" level="CRITICAL" enabled="true" />
         <coding_rule class="LeftCurlyCheck" level="INFO" enabled="false" />
@@ -472,7 +472,7 @@
         <coding_rule class="MS_OOI_PKGPROTECT" level="MAJOR" enabled="true" />
         <coding_rule class="MS_PKGPROTECT" level="MAJOR" enabled="true" />
         <coding_rule class="MS_SHOULD_BE_FINAL" level="MAJOR" enabled="true" />
-        <coding_rule class="MS_SHOULD_BE_REFACTORED_TO_BE_FINAL" level="CRITICAL" enabled="false" />
+        <coding_rule class="MS_SHOULD_BE_REFACTORED_TO_BE_FINAL" level="CRITICAL" enabled="true" />
         <coding_rule class="MTIA_SUSPECT_SERVLET_INSTANCE_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="MTIA_SUSPECT_STRUTS_INSTANCE_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="MWN_MISMATCHED_NOTIFY" level="CRITICAL" enabled="true" />
@@ -516,17 +516,17 @@
         <coding_rule class="MultipleStringLiteralsCheck" level="MAJOR" enabled="false" />
         <coding_rule class="MultipleVariableDeclarationsCheck" level="MAJOR" enabled="false" />
         <coding_rule class="MutableExceptionCheck" level="MAJOR" enabled="false" />
-        <coding_rule class="NM_BAD_EQUAL" level="MAJOR" enabled="false" />
-        <coding_rule class="NM_CLASS_NAMING_CONVENTION" level="MAJOR" enabled="false" />
+        <coding_rule class="NM_BAD_EQUAL" level="MAJOR" enabled="true" />
+        <coding_rule class="NM_CLASS_NAMING_CONVENTION" level="MAJOR" enabled="true" />
         <coding_rule class="NM_CLASS_NOT_EXCEPTION" level="MAJOR" enabled="true" />
         <coding_rule class="NM_CONFUSING" level="MAJOR" enabled="true" />
-        <coding_rule class="NM_FIELD_NAMING_CONVENTION" level="MAJOR" enabled="false" />
+        <coding_rule class="NM_FIELD_NAMING_CONVENTION" level="MAJOR" enabled="true" />
         <coding_rule class="NM_FUTURE_KEYWORD_USED_AS_IDENTIFIER" level="MAJOR" enabled="true" />
         <coding_rule class="NM_FUTURE_KEYWORD_USED_AS_MEMBER_IDENTIFIER" level="MAJOR" enabled="true" />
-        <coding_rule class="NM_LCASE_HASHCODE" level="MAJOR" enabled="false" />
-        <coding_rule class="NM_LCASE_TOSTRING" level="MAJOR" enabled="false" />
+        <coding_rule class="NM_LCASE_HASHCODE" level="MAJOR" enabled="true" />
+        <coding_rule class="NM_LCASE_TOSTRING" level="MAJOR" enabled="true" />
         <coding_rule class="NM_METHOD_CONSTRUCTOR_CONFUSION" level="MAJOR" enabled="true" />
-        <coding_rule class="NM_METHOD_NAMING_CONVENTION" level="MAJOR" enabled="false" />
+        <coding_rule class="NM_METHOD_NAMING_CONVENTION" level="MAJOR" enabled="true" />
         <coding_rule class="NM_SAME_SIMPLE_NAME_AS_INTERFACE" level="MAJOR" enabled="true" />
         <coding_rule class="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" level="MAJOR" enabled="true" />
         <coding_rule class="NM_VERY_CONFUSING" level="MAJOR" enabled="true" />
@@ -534,24 +534,24 @@
         <coding_rule class="NM_WRONG_PACKAGE" level="MAJOR" enabled="true" />
         <coding_rule class="NM_WRONG_PACKAGE_INTENTIONAL" level="MAJOR" enabled="true" />
         <coding_rule class="NN_NAKED_NOTIFY" level="CRITICAL" enabled="true" />
-        <coding_rule class="NOISE_FIELD_REFERENCE" level="MAJOR" enabled="false" />
-        <coding_rule class="NOISE_METHOD_CALL" level="MAJOR" enabled="false" />
-        <coding_rule class="NOISE_NULL_DEREFERENCE" level="MAJOR" enabled="false" />
-        <coding_rule class="NOISE_OPERATION" level="MAJOR" enabled="false" />
+        <coding_rule class="NOISE_FIELD_REFERENCE" level="MAJOR" enabled="true" />
+        <coding_rule class="NOISE_METHOD_CALL" level="MAJOR" enabled="true" />
+        <coding_rule class="NOISE_NULL_DEREFERENCE" level="MAJOR" enabled="true" />
+        <coding_rule class="NOISE_OPERATION" level="MAJOR" enabled="true" />
         <coding_rule class="NO_NOTIFY_NOT_NOTIFYALL" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_ALWAYS_NULL" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_ALWAYS_NULL_EXCEPTION" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_ARGUMENT_MIGHT_BE_NULL" level="MAJOR" enabled="true" />
         <coding_rule class="NP_BOOLEAN_RETURN_NULL" level="MAJOR" enabled="true" />
         <coding_rule class="NP_CLONE_COULD_RETURN_NULL" level="CRITICAL" enabled="true" />
-        <coding_rule class="NP_CLOSING_NULL" level="MAJOR" enabled="false" />
+        <coding_rule class="NP_CLOSING_NULL" level="MAJOR" enabled="true" />
         <coding_rule class="NP_DEREFERENCE_OF_READLINE_VALUE" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_GUARANTEED_DEREF" level="BLOCKER" enabled="true" />
         <coding_rule class="NP_GUARANTEED_DEREF_ON_EXCEPTION_PATH" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_IMMEDIATE_DEREFERENCE_OF_READLINE" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_LOAD_OF_KNOWN_NULL_VALUE" level="CRITICAL" enabled="true" />
-        <coding_rule class="NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" level="CRITICAL" enabled="false" />
+        <coding_rule class="NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_NONNULL_PARAM_VIOLATION" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_NONNULL_RETURN_VIOLATION" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_NULL_INSTANCEOF" level="BLOCKER" enabled="true" />
@@ -566,8 +566,8 @@
         <coding_rule class="NP_STORE_INTO_NONNULL_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="NP_SYNC_AND_NULL_CHECK_FIELD" level="MAJOR" enabled="true" />
         <coding_rule class="NP_TOSTRING_COULD_RETURN_NULL" level="CRITICAL" enabled="true" />
-        <coding_rule class="NP_UNWRITTEN_FIELD" level="MAJOR" enabled="false" />
-        <coding_rule class="NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="false" />
+        <coding_rule class="NP_UNWRITTEN_FIELD" level="MAJOR" enabled="true" />
+        <coding_rule class="NP_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="NPathComplexityCheck" level="MAJOR" enabled="false" />
         <coding_rule class="NS_DANGEROUS_NON_SHORT_CIRCUIT" level="CRITICAL" enabled="true" />
         <coding_rule class="NS_NON_SHORT_CIRCUIT" level="MAJOR" enabled="true" />
@@ -602,8 +602,8 @@
         <coding_rule class="NoFinalizerCheck" level="MAJOR" enabled="false" />
         <coding_rule class="NoWhitespaceAfterCheck" level="INFO" enabled="false" />
         <coding_rule class="NoWhitespaceBeforeCheck" level="INFO" enabled="false" />
-        <coding_rule class="OBL_UNSATISFIED_OBLIGATION" level="CRITICAL" enabled="false" />
-        <coding_rule class="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" level="CRITICAL" enabled="false" />
+        <coding_rule class="OBL_UNSATISFIED_OBLIGATION" level="CRITICAL" enabled="true" />
+        <coding_rule class="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" level="CRITICAL" enabled="true" />
         <coding_rule class="ODR_OPEN_DATABASE_RESOURCE" level="CRITICAL" enabled="true" />
         <coding_rule class="ODR_OPEN_DATABASE_RESOURCE_EXCEPTION_PATH" level="CRITICAL" enabled="true" />
         <coding_rule class="OS_OPEN_STREAM" level="CRITICAL" enabled="true" />
@@ -625,10 +625,10 @@
         <coding_rule class="OuterTypeFilenameCheck" level="INFO" enabled="false" />
         <coding_rule class="OuterTypeNumberCheck" level="MAJOR" enabled="false" />
         <coding_rule class="PS_PUBLIC_SEMAPHORES" level="CRITICAL" enabled="true" />
-        <coding_rule class="PT_ABSOLUTE_PATH_TRAVERSAL" level="CRITICAL" enabled="false" />
-        <coding_rule class="PT_RELATIVE_PATH_TRAVERSAL" level="CRITICAL" enabled="false" />
+        <coding_rule class="PT_ABSOLUTE_PATH_TRAVERSAL" level="CRITICAL" enabled="true" />
+        <coding_rule class="PT_RELATIVE_PATH_TRAVERSAL" level="CRITICAL" enabled="true" />
         <coding_rule class="PZLA_PREFER_ZERO_LENGTH_ARRAYS" level="MAJOR" enabled="true" />
-        <coding_rule class="PZ_DONT_REUSE_ENTRY_OBJECTS_IN_ITERATORS" level="CRITICAL" enabled="false" />
+        <coding_rule class="PZ_DONT_REUSE_ENTRY_OBJECTS_IN_ITERATORS" level="CRITICAL" enabled="true" />
         <coding_rule class="PackageAnnotationCheck" level="MAJOR" enabled="false" />
         <coding_rule class="PackageDeclarationCheck" level="MAJOR" enabled="false">
           <param name="ignoreDirectoryName" value="false" />
@@ -646,8 +646,8 @@
         <coding_rule class="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE" level="CRITICAL" enabled="true" />
         <coding_rule class="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" level="CRITICAL" enabled="true" />
         <coding_rule class="RC_REF_COMPARISON" level="CRITICAL" enabled="true" />
-        <coding_rule class="RC_REF_COMPARISON_BAD_PRACTICE" level="MAJOR" enabled="false" />
-        <coding_rule class="RC_REF_COMPARISON_BAD_PRACTICE_BOOLEAN" level="MAJOR" enabled="false" />
+        <coding_rule class="RC_REF_COMPARISON_BAD_PRACTICE" level="MAJOR" enabled="true" />
+        <coding_rule class="RC_REF_COMPARISON_BAD_PRACTICE_BOOLEAN" level="MAJOR" enabled="true" />
         <coding_rule class="REC_CATCH_EXCEPTION" level="MAJOR" enabled="true" />
         <coding_rule class="RE_BAD_SYNTAX_FOR_REGULAR_EXPRESSION" level="CRITICAL" enabled="true" />
         <coding_rule class="RE_CANT_USE_FILE_SEPARATOR_AS_REGULAR_EXPRESSION" level="CRITICAL" enabled="true" />
@@ -659,17 +659,17 @@
         <coding_rule class="RV_01_TO_INT" level="MAJOR" enabled="true" />
         <coding_rule class="RV_ABSOLUTE_VALUE_OF_HASHCODE" level="CRITICAL" enabled="true" />
         <coding_rule class="RV_ABSOLUTE_VALUE_OF_RANDOM_INT" level="CRITICAL" enabled="true" />
-        <coding_rule class="RV_CHECK_COMPARETO_FOR_SPECIFIC_RETURN_VALUE" level="CRITICAL" enabled="false" />
+        <coding_rule class="RV_CHECK_COMPARETO_FOR_SPECIFIC_RETURN_VALUE" level="CRITICAL" enabled="true" />
         <coding_rule class="RV_CHECK_FOR_POSITIVE_INDEXOF" level="MINOR" enabled="true" />
         <coding_rule class="RV_DONT_JUST_NULL_CHECK_READLINE" level="MAJOR" enabled="true" />
         <coding_rule class="RV_EXCEPTION_NOT_THROWN" level="CRITICAL" enabled="true" />
-        <coding_rule class="RV_NEGATING_RESULT_OF_COMPARETO" level="CRITICAL" enabled="false" />
+        <coding_rule class="RV_NEGATING_RESULT_OF_COMPARETO" level="CRITICAL" enabled="true" />
         <coding_rule class="RV_REM_OF_HASHCODE" level="CRITICAL" enabled="true" />
         <coding_rule class="RV_REM_OF_RANDOM_INT" level="CRITICAL" enabled="true" />
         <coding_rule class="RV_RETURN_VALUE_IGNORED" level="MINOR" enabled="true" />
         <coding_rule class="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" level="MAJOR" enabled="true" />
-        <coding_rule class="RV_RETURN_VALUE_IGNORED_INFERRED" level="CRITICAL" enabled="false" />
-        <coding_rule class="RV_RETURN_VALUE_OF_PUTIFABSENT_IGNORED" level="MAJOR" enabled="false" />
+        <coding_rule class="RV_RETURN_VALUE_IGNORED_INFERRED" level="CRITICAL" enabled="true" />
+        <coding_rule class="RV_RETURN_VALUE_OF_PUTIFABSENT_IGNORED" level="MAJOR" enabled="true" />
         <coding_rule class="RedundantImportCheck" level="INFO" enabled="false" />
         <coding_rule class="RedundantModifierCheck" level="INFO" enabled="true" />
         <coding_rule class="RedundantThrowsCheck" level="INFO" enabled="true" />
@@ -707,12 +707,12 @@
         <coding_rule class="SA_FIELD_SELF_COMPUTATION" level="CRITICAL" enabled="true" />
         <coding_rule class="SA_LOCAL_DOUBLE_ASSIGNMENT" level="CRITICAL" enabled="true" />
         <coding_rule class="SA_LOCAL_SELF_ASSIGNMENT" level="CRITICAL" enabled="true" />
-        <coding_rule class="SA_LOCAL_SELF_ASSIGNMENT_INSTEAD_OF_FIELD" level="CRITICAL" enabled="false" />
+        <coding_rule class="SA_LOCAL_SELF_ASSIGNMENT_INSTEAD_OF_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="SA_LOCAL_SELF_COMPARISON" level="CRITICAL" enabled="true" />
         <coding_rule class="SA_LOCAL_SELF_COMPUTATION" level="CRITICAL" enabled="true" />
         <coding_rule class="SBSC_USE_STRINGBUFFER_CONCATENATION" level="CRITICAL" enabled="true" />
         <coding_rule class="SC_START_IN_CTOR" level="CRITICAL" enabled="true" />
-        <coding_rule class="SE_BAD_FIELD" level="MINOR" enabled="false" />
+        <coding_rule class="SE_BAD_FIELD" level="MINOR" enabled="true" />
         <coding_rule class="SE_BAD_FIELD_INNER_CLASS" level="MINOR" enabled="true" />
         <coding_rule class="SE_BAD_FIELD_STORE" level="CRITICAL" enabled="true" />
         <coding_rule class="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" level="MAJOR" enabled="true" />
@@ -729,14 +729,14 @@
         <coding_rule class="SE_READ_RESOLVE_MUST_RETURN_OBJECT" level="MAJOR" enabled="true" />
         <coding_rule class="SE_TRANSIENT_FIELD_NOT_RESTORED" level="MAJOR" enabled="true" />
         <coding_rule class="SE_TRANSIENT_FIELD_OF_NONSERIALIZABLE_CLASS" level="MAJOR" enabled="true" />
-        <coding_rule class="SF_DEAD_STORE_DUE_TO_SWITCH_FALLTHROUGH" level="MAJOR" enabled="false" />
-        <coding_rule class="SF_DEAD_STORE_DUE_TO_SWITCH_FALLTHROUGH_TO_THROW" level="MAJOR" enabled="false" />
-        <coding_rule class="SF_SWITCH_FALLTHROUGH" level="MAJOR" enabled="false" />
-        <coding_rule class="SF_SWITCH_NO_DEFAULT" level="MAJOR" enabled="false" />
+        <coding_rule class="SF_DEAD_STORE_DUE_TO_SWITCH_FALLTHROUGH" level="MAJOR" enabled="true" />
+        <coding_rule class="SF_DEAD_STORE_DUE_TO_SWITCH_FALLTHROUGH_TO_THROW" level="MAJOR" enabled="true" />
+        <coding_rule class="SF_SWITCH_FALLTHROUGH" level="MAJOR" enabled="true" />
+        <coding_rule class="SF_SWITCH_NO_DEFAULT" level="MAJOR" enabled="true" />
         <coding_rule class="SIC_INNER_SHOULD_BE_STATIC" level="MAJOR" enabled="true" />
         <coding_rule class="SIC_INNER_SHOULD_BE_STATIC_ANON" level="MAJOR" enabled="true" />
         <coding_rule class="SIC_INNER_SHOULD_BE_STATIC_NEEDS_THIS" level="MAJOR" enabled="true" />
-        <coding_rule class="SIC_THREADLOCAL_DEADLY_EMBRACE" level="MAJOR" enabled="false" />
+        <coding_rule class="SIC_THREADLOCAL_DEADLY_EMBRACE" level="MAJOR" enabled="true" />
         <coding_rule class="SIO_SUPERFLUOUS_INSTANCEOF" level="CRITICAL" enabled="true" />
         <coding_rule class="SI_INSTANCE_BEFORE_FINALS_ASSIGNED" level="CRITICAL" enabled="true" />
         <coding_rule class="SP_SPIN_ON_FIELD" level="MAJOR" enabled="true" />
@@ -794,13 +794,13 @@
         <coding_rule class="SuppressWarningsCheck" level="MAJOR" enabled="false" />
         <coding_rule class="TLW_TWO_LOCK_WAIT" level="MAJOR" enabled="true" />
         <coding_rule class="TQ_ALWAYS_VALUE_USED_WHERE_NEVER_REQUIRED" level="CRITICAL" enabled="true" />
-        <coding_rule class="TQ_COMPARING_VALUES_WITH_INCOMPATIBLE_TYPE_QUALIFIERS" level="CRITICAL" enabled="false" />
+        <coding_rule class="TQ_COMPARING_VALUES_WITH_INCOMPATIBLE_TYPE_QUALIFIERS" level="CRITICAL" enabled="true" />
         <coding_rule class="TQ_EXPLICIT_UNKNOWN_SOURCE_VALUE_REACHES_ALWAYS_SINK" level="CRITICAL" enabled="true" />
         <coding_rule class="TQ_EXPLICIT_UNKNOWN_SOURCE_VALUE_REACHES_NEVER_SINK" level="CRITICAL" enabled="true" />
         <coding_rule class="TQ_MAYBE_SOURCE_VALUE_REACHES_ALWAYS_SINK" level="CRITICAL" enabled="true" />
         <coding_rule class="TQ_MAYBE_SOURCE_VALUE_REACHES_NEVER_SINK" level="CRITICAL" enabled="true" />
         <coding_rule class="TQ_NEVER_VALUE_USED_WHERE_ALWAYS_REQUIRED" level="CRITICAL" enabled="true" />
-        <coding_rule class="TQ_UNKNOWN_VALUE_USED_WHERE_ALWAYS_STRICTLY_REQUIRED" level="CRITICAL" enabled="false" />
+        <coding_rule class="TQ_UNKNOWN_VALUE_USED_WHERE_ALWAYS_STRICTLY_REQUIRED" level="CRITICAL" enabled="true" />
         <coding_rule class="ThrowsCountCheck" level="MAJOR" enabled="false" />
         <coding_rule class="TodoCommentCheck" level="INFO" enabled="false" />
         <coding_rule class="TrailingCommentCheck" level="INFO" enabled="false" />
@@ -821,17 +821,17 @@
         <coding_rule class="UM_UNNECESSARY_MATH" level="CRITICAL" enabled="true" />
         <coding_rule class="UPM_UNCALLED_PRIVATE_METHOD" level="CRITICAL" enabled="true" />
         <coding_rule class="URF_UNREAD_FIELD" level="MAJOR" enabled="true" />
-        <coding_rule class="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="false" />
+        <coding_rule class="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="UR_UNINIT_READ" level="MAJOR" enabled="true" />
-        <coding_rule class="UR_UNINIT_READ_CALLED_FROM_SUPER_CONSTRUCTOR" level="MAJOR" enabled="false" />
-        <coding_rule class="USM_USELESS_ABSTRACT_METHOD" level="MAJOR" enabled="false" />
-        <coding_rule class="USM_USELESS_SUBCLASS_METHOD" level="MAJOR" enabled="false" />
+        <coding_rule class="UR_UNINIT_READ_CALLED_FROM_SUPER_CONSTRUCTOR" level="MAJOR" enabled="true" />
+        <coding_rule class="USM_USELESS_ABSTRACT_METHOD" level="MAJOR" enabled="true" />
+        <coding_rule class="USM_USELESS_SUBCLASS_METHOD" level="MAJOR" enabled="true" />
         <coding_rule class="UUF_UNUSED_FIELD" level="MAJOR" enabled="true" />
-        <coding_rule class="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="false" />
-        <coding_rule class="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" level="MAJOR" enabled="false" />
+        <coding_rule class="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="true" />
+        <coding_rule class="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" level="MAJOR" enabled="true" />
         <coding_rule class="UWF_NULL_FIELD" level="CRITICAL" enabled="true" />
-        <coding_rule class="UWF_UNWRITTEN_FIELD" level="MAJOR" enabled="false" />
-        <coding_rule class="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="false" />
+        <coding_rule class="UWF_UNWRITTEN_FIELD" level="MAJOR" enabled="true" />
+        <coding_rule class="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD" level="CRITICAL" enabled="true" />
         <coding_rule class="UW_UNCOND_WAIT" level="MAJOR" enabled="true" />
         <coding_rule class="UncommentedMainCheck" level="MAJOR" enabled="false" />
         <coding_rule class="UnnecessaryParenthesesCheck" level="INFO" enabled="false" />
@@ -855,16 +855,16 @@
         <coding_rule class="VA_FORMAT_STRING_BAD_CONVERSION" level="CRITICAL" enabled="true" />
         <coding_rule class="VA_FORMAT_STRING_BAD_CONVERSION_FROM_ARRAY" level="MAJOR" enabled="true" />
         <coding_rule class="VA_FORMAT_STRING_BAD_CONVERSION_TO_BOOLEAN" level="MAJOR" enabled="true" />
-        <coding_rule class="VA_FORMAT_STRING_EXPECTED_MESSAGE_FORMAT_SUPPLIED" level="MAJOR" enabled="false" />
+        <coding_rule class="VA_FORMAT_STRING_EXPECTED_MESSAGE_FORMAT_SUPPLIED" level="MAJOR" enabled="true" />
         <coding_rule class="VA_FORMAT_STRING_EXTRA_ARGUMENTS_PASSED" level="MAJOR" enabled="true" />
         <coding_rule class="VA_FORMAT_STRING_ILLEGAL" level="CRITICAL" enabled="true" />
         <coding_rule class="VA_FORMAT_STRING_MISSING_ARGUMENT" level="CRITICAL" enabled="true" />
         <coding_rule class="VA_FORMAT_STRING_NO_PREVIOUS_ARGUMENT" level="CRITICAL" enabled="true" />
-        <coding_rule class="VA_FORMAT_STRING_USES_NEWLINE" level="CRITICAL" enabled="false" />
+        <coding_rule class="VA_FORMAT_STRING_USES_NEWLINE" level="CRITICAL" enabled="true" />
         <coding_rule class="VA_PRIMITIVE_ARRAY_PASSED_TO_OBJECT_VARARG" level="CRITICAL" enabled="true" />
-        <coding_rule class="VO_VOLATILE_INCREMENT" level="CRITICAL" enabled="false" />
+        <coding_rule class="VO_VOLATILE_INCREMENT" level="CRITICAL" enabled="true" />
         <coding_rule class="VO_VOLATILE_REFERENCE_TO_ARRAY" level="MAJOR" enabled="true" />
-        <coding_rule class="VR_UNRESOLVABLE_REFERENCE" level="MAJOR" enabled="false" />
+        <coding_rule class="VR_UNRESOLVABLE_REFERENCE" level="MAJOR" enabled="true" />
         <coding_rule class="VisibilityModifierCheck" level="MAJOR" enabled="true" />
         <coding_rule class="WA_AWAIT_NOT_IN_LOOP" level="CRITICAL" enabled="true" />
         <coding_rule class="WA_NOT_IN_LOOP" level="CRITICAL" enabled="true" />
@@ -916,6 +916,7 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.7" />
   </component>
   <component name="CopyrightManager" default="" />
   <component name="DependencyValidationManager">
@@ -930,6 +931,23 @@
     <option name="effort" value="default" />
     <option name="priority" value="Medium" />
     <option name="excludeFilter" value="" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="E:/Program Files(x86)/Gradle/gradle-1.12" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
   </component>
   <component name="GradleUISettings">
     <setting name="root" />
@@ -955,6 +973,137 @@
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
   </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+  </component>
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
+      </value>
+    </option>
+    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default (1)" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Periodic-Production.iml" filepath="$PROJECT_DIR$/Periodic-Production.iml" />
@@ -970,48 +1119,7 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <UIState>
-          <splitter-proportions>
-            <SplitterProportionsDataImpl />
-          </splitter-proportions>
-          <settings />
-        </UIState>
-      </state>
-      <state key="Copyright.UI">
-        <UIState>
-          <splitter-proportions>
-            <SplitterProportionsDataImpl />
-          </splitter-proportions>
-        </UIState>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <UIState>
-          <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
-          </splitter-proportions>
-          <last-edited>1.6</last-edited>
-        </UIState>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <UIState>
-          <splitter-proportions>
-            <SplitterProportionsDataImpl />
-          </splitter-proportions>
-          <settings />
-        </UIState>
-      </state>
-    </states>
+    <mapping directory="" vcs="Git" />
   </component>
 </project>
 

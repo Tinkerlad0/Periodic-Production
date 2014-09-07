@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface RegisterBlock {
 
-	String blockName() default "[defaultBlock]";
+    String blockName() default "[defaultBlock]";
 }

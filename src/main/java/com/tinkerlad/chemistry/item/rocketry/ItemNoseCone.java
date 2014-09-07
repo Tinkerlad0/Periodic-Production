@@ -5,8 +5,8 @@ import com.tinkerlad.chemistry.item.rocketry.base.BaseModule;
 
 public class ItemNoseCone extends BaseModule {
 
-	public ItemNoseCone(String itemName) {
-		super(itemName);
-		this.setCreativeTab(CreativeTab.ROCKETRY_TAB);
-	}
+    public ItemNoseCone(String itemName) {
+        super(itemName);
+        this.setCreativeTab(CreativeTab.ROCKETRY_TAB);
+    }
 }

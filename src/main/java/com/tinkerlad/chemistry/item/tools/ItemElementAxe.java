@@ -9,20 +9,20 @@ import net.minecraft.item.ItemStack;
 
 public class ItemElementAxe extends ItemAxe {
 
-	protected ElementToolPart TOOLPART;
+    protected ElementToolPart TOOLPART;
 
-	public ItemElementAxe(ElementToolPart toolPart) {
-		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
-		setCreativeTab(null);
-		setUnlocalizedName(toolPart.getUnlocalisedName() + "_axe");
-		setTextureName(Chemistry.MODID + ":axe");
-		TOOLPART = toolPart;
-		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Axe");
-	}
+    public ItemElementAxe(ElementToolPart toolPart) {
+        super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
+        setCreativeTab(null);
+        setUnlocalizedName(toolPart.getUnlocalisedName() + "_axe");
+        setTextureName(Chemistry.MODID + ":axe");
+        TOOLPART = toolPart;
+        Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Axe");
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
-		return TOOLPART.getColor();
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
+        return TOOLPART.getColor();
+    }
 }

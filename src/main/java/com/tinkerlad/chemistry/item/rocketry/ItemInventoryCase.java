@@ -5,8 +5,8 @@ import com.tinkerlad.chemistry.item.rocketry.base.BaseModule;
 
 public class ItemInventoryCase extends BaseModule {
 
-	public ItemInventoryCase(String itemName) {
-		super(itemName);
-		this.setCreativeTab(CreativeTab.ROCKETRY_TAB);
-	}
+    public ItemInventoryCase(String itemName) {
+        super(itemName);
+        this.setCreativeTab(CreativeTab.ROCKETRY_TAB);
+    }
 }

@@ -6,18 +6,18 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 
 public class Ticker {
 
-	protected int ticks;
+    protected int ticks;
 
-	public Ticker() {
-		FMLCommonHandler.instance().bus().register(this);
-	}
+    public Ticker() {
+        FMLCommonHandler.instance().bus().register(this);
+    }
 
-	public int getTicks() {
-		return ticks;
-	}
+    public int getTicks() {
+        return ticks;
+    }
 
-	@SubscribeEvent
-	public void tick(TickEvent event) {
-		ticks++;
-	}
+    @SubscribeEvent
+    public void tick(TickEvent event) {
+        ticks++;
+    }
 }

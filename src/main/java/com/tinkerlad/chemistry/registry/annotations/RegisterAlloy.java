@@ -9,11 +9,11 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface RegisterAlloy {
 
-	String alloyName() default "[defaultAlloy]";
+    String alloyName() default "[defaultAlloy]";
 
-	CraftingType type() default CraftingType.Shapeless;
+    CraftingType type() default CraftingType.Shapeless;
 
-	enum CraftingType {
-		Shapeless, Shaped
-	}
+    enum CraftingType {
+        Shapeless, Shaped
+    }
 }

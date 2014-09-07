@@ -9,20 +9,20 @@ import net.minecraft.item.ItemStack;
 
 public class ItemElementHoe extends ItemHoe {
 
-	protected ElementToolPart TOOLPART;
+    protected ElementToolPart TOOLPART;
 
-	public ItemElementHoe(ElementToolPart toolPart) {
-		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
-		setCreativeTab(null);
-		setUnlocalizedName(toolPart.getUnlocalisedName() + "_hoe");
-		setTextureName(Chemistry.MODID + ":hoe");
-		TOOLPART = toolPart;
-		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Hoe");
-	}
+    public ItemElementHoe(ElementToolPart toolPart) {
+        super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
+        setCreativeTab(null);
+        setUnlocalizedName(toolPart.getUnlocalisedName() + "_hoe");
+        setTextureName(Chemistry.MODID + ":hoe");
+        TOOLPART = toolPart;
+        Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Hoe");
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
-		return TOOLPART.getColor();
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
+        return TOOLPART.getColor();
+    }
 }

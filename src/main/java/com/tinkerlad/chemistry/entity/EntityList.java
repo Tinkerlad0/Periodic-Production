@@ -6,7 +6,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class EntityList {
 
-	public static void init() {
-		EntityRegistry.registerModEntity(EntityBasicRocket.class, "Basic Rocket", 0, Chemistry.instance, 100, 3, true);
-	}
+    public static void init() {
+        EntityRegistry.registerModEntity(EntityBasicRocket.class, "Basic Rocket", 0, Chemistry.instance, 100, 3, true);
+    }
 }

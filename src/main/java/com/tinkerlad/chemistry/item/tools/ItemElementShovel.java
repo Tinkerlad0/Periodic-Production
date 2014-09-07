@@ -9,20 +9,20 @@ import net.minecraft.item.ItemStack;
 
 public class ItemElementShovel extends ItemSpade {
 
-	protected ElementToolPart TOOLPART;
+    protected ElementToolPart TOOLPART;
 
-	public ItemElementShovel(ElementToolPart toolPart) {
-		super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
-		setCreativeTab(null);
-		setUnlocalizedName(toolPart.getUnlocalisedName() + "_shovel");
-		setTextureName(Chemistry.MODID + ":shovel");
-		TOOLPART = toolPart;
-		Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Shovel");
-	}
+    public ItemElementShovel(ElementToolPart toolPart) {
+        super(Chemistry.ELEMENT_MATERIALS.getMaterialFromToolPart(toolPart));
+        setCreativeTab(null);
+        setUnlocalizedName(toolPart.getUnlocalisedName() + "_shovel");
+        setTextureName(Chemistry.MODID + ":shovel");
+        TOOLPART = toolPart;
+        Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), toolPart.getName() + " Shovel");
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
-		return TOOLPART.getColor();
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getColorFromItemStack(ItemStack itemStack, int renderPass) {
+        return TOOLPART.getColor();
+    }
 }
