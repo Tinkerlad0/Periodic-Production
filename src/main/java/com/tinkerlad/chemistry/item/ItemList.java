@@ -2,13 +2,75 @@ package com.tinkerlad.chemistry.item;
 
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
+import com.tinkerlad.chemistry.item.tool.*;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.registry.annotations.RegisterItem;
+import net.minecraft.item.Item;
 
 public class ItemList {
 
     @RegisterItem(itemName = "debug")
     public static ItemDebug DEBUG = new ItemDebug();
+
+    @RegisterItem(itemName = "pick1")
+    public static ItemElementPickaxe PICK1 = new ItemElementPickaxe(Item.ToolMaterial.WOOD);
+
+    @RegisterItem(itemName = "pick2")
+    public static ItemElementPickaxe PICK2 = new ItemElementPickaxe(Item.ToolMaterial.STONE);
+
+    @RegisterItem(itemName = "pick3")
+    public static ItemElementPickaxe PICK3 = new ItemElementPickaxe(Item.ToolMaterial.IRON);
+
+    @RegisterItem(itemName = "pick4")
+    public static ItemElementPickaxe PICK4 = new ItemElementPickaxe(Item.ToolMaterial.EMERALD);
+
+    @RegisterItem(itemName = "axe1")
+    public static ItemElementAxe AXE1 = new ItemElementAxe(Item.ToolMaterial.WOOD);
+
+    @RegisterItem(itemName = "axe2")
+    public static ItemElementAxe AXE2 = new ItemElementAxe(Item.ToolMaterial.STONE);
+
+    @RegisterItem(itemName = "axe3")
+    public static ItemElementAxe AXE3 = new ItemElementAxe(Item.ToolMaterial.IRON);
+
+    @RegisterItem(itemName = "axe4")
+    public static ItemElementAxe AXE4 = new ItemElementAxe(Item.ToolMaterial.EMERALD);
+
+    @RegisterItem(itemName = "shovel1")
+    public static ItemElementShovel SHOVEL1 = new ItemElementShovel(Item.ToolMaterial.WOOD);
+
+    @RegisterItem(itemName = "shovel2")
+    public static ItemElementShovel SHOVEL2 = new ItemElementShovel(Item.ToolMaterial.STONE);
+
+    @RegisterItem(itemName = "shovel3")
+    public static ItemElementShovel SHOVEL3 = new ItemElementShovel(Item.ToolMaterial.IRON);
+
+    @RegisterItem(itemName = "shovel4")
+    public static ItemElementShovel SHOVEL4 = new ItemElementShovel(Item.ToolMaterial.EMERALD);
+
+    @RegisterItem(itemName = "hoe1")
+    public static ItemElementHoe HOE1 = new ItemElementHoe(Item.ToolMaterial.WOOD);
+
+    @RegisterItem(itemName = "hoe2")
+    public static ItemElementHoe HOE2 = new ItemElementHoe(Item.ToolMaterial.STONE);
+
+    @RegisterItem(itemName = "hoe3")
+    public static ItemElementHoe HOE3 = new ItemElementHoe(Item.ToolMaterial.IRON);
+
+    @RegisterItem(itemName = "hoe4")
+    public static ItemElementHoe HOE4 = new ItemElementHoe(Item.ToolMaterial.EMERALD);
+
+    @RegisterItem(itemName = "sword1")
+    public static ItemElementSword SWORD1 = new ItemElementSword(Item.ToolMaterial.WOOD);
+
+    @RegisterItem(itemName = "sword2")
+    public static ItemElementSword SWORD2 = new ItemElementSword(Item.ToolMaterial.STONE);
+
+    @RegisterItem(itemName = "sword3")
+    public static ItemElementSword SWORD3 = new ItemElementSword(Item.ToolMaterial.IRON);
+
+    @RegisterItem(itemName = "sword4")
+    public static ItemElementSword SWORD4 = new ItemElementSword(Item.ToolMaterial.EMERALD);
 
     //Gas Elements
 

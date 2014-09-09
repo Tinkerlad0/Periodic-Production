@@ -8,7 +8,7 @@ public class LogHelper {
     public static Logger logger;
 
     private static void log(Level level, String message) {
-        logger.log(level, message);
+        logger.log(level, "[tnkchem]" + message);
     }
 
     public static void info(String message) {

@@ -1,5 +1,6 @@
 package com.tinkerlad.chemistry.recipe.alloy;
 
+import com.tinkerlad.chemistry.logging.LogHelper;
 import com.tinkerlad.chemistry.recipe.backend.RecipeSorter;
 import com.tinkerlad.chemistry.recipe.backend.ShapedRecipes;
 import com.tinkerlad.chemistry.recipe.backend.ShapelessRecipes;
@@ -27,7 +28,7 @@ public class AlloyCraftingManager {
         //This is where your recipes will go
 
         Collections.sort(this.recipes, new RecipeSorter(this));
-        System.out.println(this.recipes.size() + " recipes");
+        LogHelper.info(this.recipes.size() + " recipes");
     }
 
     public static final AlloyCraftingManager getInstance() {
@@ -41,7 +42,7 @@ public class AlloyCraftingManager {
         int var6 = 0;
 
         if (par2ArrayOfObj[var4] instanceof String[]) {
-            String[] var7 = (String[]) ((String[]) par2ArrayOfObj[var4++]);
+            String[] var7 = (String[]) par2ArrayOfObj[var4++];
 
             for (int var8 = 0; var8 < var7.length; ++var8) {
                 String var9 = var7[var8];

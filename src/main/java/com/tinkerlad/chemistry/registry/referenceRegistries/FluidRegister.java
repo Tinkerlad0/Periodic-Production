@@ -3,6 +3,7 @@ package com.tinkerlad.chemistry.registry.referenceRegistries;
 import com.tinkerlad.chemistry.block.fluid.BlockGenericFluid;
 import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.logging.LogHelper;
+import com.tinkerlad.chemistry.reference.Enums;
 import com.tinkerlad.chemistry.reference.dataTypes.Alloy;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -25,7 +26,7 @@ public class FluidRegister {
         FluidRegistry.registerFluid(fluid);
         elementFluidHashMap.put(element, fluid);
 
-        fluid.setGaseous(element.STATE == Element.State.GAS);
+        fluid.setGaseous(element.STATE == Enums.State.GAS);
 
         BlockGenericFluid fluidBlock = new BlockGenericFluid(fluid, Material.coral, element.COLOR);
         GameRegistry.registerBlock(fluidBlock, element.NAME);

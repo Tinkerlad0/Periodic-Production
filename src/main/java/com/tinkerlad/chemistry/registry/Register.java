@@ -13,8 +13,11 @@ import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.logging.LogFile;
 import com.tinkerlad.chemistry.logging.LogHelper;
+import com.tinkerlad.chemistry.recipe.alloy.AlloyCraftingManager;
 import com.tinkerlad.chemistry.reference.AlloyList;
+import com.tinkerlad.chemistry.reference.Enums;
 import com.tinkerlad.chemistry.reference.dataTypes.Alloy;
+import com.tinkerlad.chemistry.reference.dataTypes.AlloyComponent;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import com.tinkerlad.chemistry.registry.annotations.RegisterAlloy;
 import com.tinkerlad.chemistry.registry.annotations.RegisterBlock;
@@ -32,6 +35,8 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.fluids.Fluid;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class Register {
@@ -51,7 +56,7 @@ public class Register {
         Map<Element, ItemElementBase> elementBaseMap = ElementRegister.elementBaseMap;
 
         for (Map.Entry<Element, ItemElementBase> entry : elementBaseMap.entrySet()) {
-            if (entry.getKey().getState() != Element.State.SOLID) {
+            if (entry.getKey().getState() != Enums.State.SOLID) {
                 Fluid fluid = new Fluid(entry.getKey().NAME);
                 FluidRegister.addFluid(entry.getKey(), fluid);
             }
@@ -211,6 +216,15 @@ public class Register {
     public static void registerAlloyDust(Alloy alloy) {
         ItemAlloyDust alloyDust = new ItemAlloyDust(alloy, alloy.getNAME());
         if (Chemistry.ALLOY_REGISTRY.addAlloyDust(alloy, alloyDust)) {
+            List<AlloyComponent> components = alloy.getCOMPONENTS();
+            List<ItemStack> componentStacks = new ArrayList<>();
+
+            for (AlloyComponent component : components) {
+                componentStacks.add(new ItemStack(ElementRegister.elementBaseMap.get(component.ELEMENT), component.AMOUNT));
+            }
+
+            AlloyCraftingManager.getInstance().addShapelessRecipe(new ItemStack(alloyDust), componentStacks);
+
             GameRegistry.registerItem(alloyDust, alloy.getNAME());
             return;
         }

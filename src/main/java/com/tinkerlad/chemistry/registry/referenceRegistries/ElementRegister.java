@@ -5,7 +5,6 @@ import com.tinkerlad.chemistry.block.element.OreElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementBase;
 import com.tinkerlad.chemistry.item.element.ItemElementIngot;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
-import com.tinkerlad.chemistry.reference.dataTypes.ElementToolPart;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +15,6 @@ public class ElementRegister {
     public static Map<Element, OreElementBase> oreElementBaseMap = new HashMap<Element, OreElementBase>();
     public static Map<Element, BlockElementBase> blockElementBaseMap = new HashMap<Element, BlockElementBase>();
     public static Map<Element, ItemElementIngot> elementIngotMap = new HashMap<Element, ItemElementIngot>();
-    public static Map<Element, ElementToolPart> elementToolPartMap = new HashMap<Element, ElementToolPart>();
 
     public ItemElementBase getBaseItemFromElement(Element element) {
         return elementBaseMap.get(element);

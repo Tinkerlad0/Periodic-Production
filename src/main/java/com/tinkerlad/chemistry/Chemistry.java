@@ -2,6 +2,7 @@ package com.tinkerlad.chemistry;
 
 import com.tinkerlad.chemistry.block.BlockList;
 import com.tinkerlad.chemistry.block.machine.alloyMaker.TileEntityAlloyMaker;
+import com.tinkerlad.chemistry.command.DeveloperCommand;
 import com.tinkerlad.chemistry.config.ConfigHandler;
 import com.tinkerlad.chemistry.gui.GUIHandler;
 import com.tinkerlad.chemistry.item.ItemList;
@@ -13,6 +14,7 @@ import com.tinkerlad.chemistry.reference.AlloyList;
 import com.tinkerlad.chemistry.reference.ElementList;
 import com.tinkerlad.chemistry.registry.DynamicLocalisations;
 import com.tinkerlad.chemistry.registry.Register;
+import com.tinkerlad.chemistry.registry.ToolRegister;
 import com.tinkerlad.chemistry.registry.referenceRegistries.AlloyRegister;
 import com.tinkerlad.chemistry.registry.referenceRegistries.ElementRegister;
 import com.tinkerlad.chemistry.utils.DevUtils;
@@ -24,6 +26,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -81,6 +84,8 @@ public class Chemistry {
 
         Recipes.initRecipes();
 
+        ToolRegister.init();
+
         ORE_GEN.populateDefaultOres();
 
         GameRegistry.registerWorldGenerator(ORE_GEN, 0);
@@ -98,5 +103,10 @@ public class Chemistry {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         DevUtils.dumpBlockNames();
+    }
+
+    @EventHandler
+    public void serverStart(FMLServerStartingEvent event) {
+        event.registerServerCommand(new DeveloperCommand());
     }
 }

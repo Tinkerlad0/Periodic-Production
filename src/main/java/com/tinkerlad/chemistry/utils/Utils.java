@@ -48,4 +48,30 @@ public class Utils {
         }
         return subscript;
     }
+
+    public static double getHardnessModifier(int baseHardness) {
+        double multiplier = 25.0 / 142.0;
+        double translation = 2.0 / 21.0;
+        double x = Math.pow(3, baseHardness / 6.0);
+
+        return multiplier * x - translation;
+    }
+
+    public static double getDensityHardnessModifier(int baseHardness, double density) {
+        return getHardnessModifier(baseHardness) * density;
+    }
+
+    public static int getHarvestLevel(int hardness, double density) {
+        double level = hardness * density;
+        if (level >= 45) {
+            return 3;
+        } else if (level >= 5.9) {
+            return 2;
+        } else if (level >= 2) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+    }
 }

@@ -1,67 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c694f5fa-0eab-4dd3-a4da-5baaa1780c19" name="Default" comment="-Added the beginnings of Fluids.&#10;-Giving myself a backstop before new(incompatible) version :/">
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\component\BlockCanister.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\launchpad\basic\BlockLaunchpadBase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\launchpad\basic\ContainerLaunchpadBase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\launchpad\basic\GuiLaunchpadBase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\launchpad\basic\SlotLaunchpad.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\launchpad\basic\TileEntityLaunchpadBase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\launchpad\basic\TileEntityLaunchpadBasic.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\rocketMaker\BlockRocketMaker.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\rocketMaker\ContainerRocketMaker.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\rocketMaker\GuiRocketMaker.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\rocketMaker\SlotCraftingRocketry.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\rocketMaker\SlotRocketry.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\rocketMaker\TileEntityRocketMaker.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\siphon\BlockElementSiphon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\siphon\ContainerSiphon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\siphon\GuiSiphon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\siphon\SlotSiphonOutput.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\siphon\TESRSiphon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\block\machine\siphon\TileEntitySiphon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\entity\EntityElementItem.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\entity\EntityList.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\entity\rockets\EntityBasicRocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\entity\rockets\RenderBasicRocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\ItemBasicRocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\ItemCanister.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\ItemCustomRocket.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\ItemFin.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\ItemInventoryCase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\ItemNoseCone.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\base\BaseCanister.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\base\BaseFin.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\rocketry\base\BaseModule.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\tools\ItemElementAxe.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\tools\ItemElementHoe.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\tools\ItemElementPickaxe.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\tools\ItemElementShovel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\item\tools\ItemElementSword.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\recipe\backend\RecipeSiphon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\recipe\backend\RecipesSiphon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\recipe\backend\WrappedStack.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\recipe\rocketry\RocketCraftingManager.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\reference\ElementMaterials.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\reference\ElementTools.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/BlockList.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/BlockList.java" />
+    <list default="true" id="c694f5fa-0eab-4dd3-a4da-5baaa1780c19" name="Default" comment="Major Version Update.&#10;-Most backend stiff changing.&#10;-Crafting of">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/command/DeveloperCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementAxe.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementHoe.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementPickaxe.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementShovel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementSword.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/ToolRegister.java" />
+      <change type="DELETED" beforePath="C:\Development\Periodic-Production\src\main\java\com\tinkerlad\chemistry\reference\dataTypes\ElementToolPart.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/alloy/AlloyCraftingManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/alloy/AlloyCraftingManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/Chemistry.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/Chemistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/proxies/ClientProxy.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/proxies/ClientProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/creativetab/CreativeTab.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/creativetab/CreativeTab.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/gui/GUIHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/gui/GUIHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/GuiID.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/GuiID.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/machine/alloyMaker/ContainerAlloyMaker.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/machine/alloyMaker/ContainerAlloyMaker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/Element.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/Element.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/ElementList.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/ElementList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/ElementRegister.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/ElementRegister.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/Enums.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/Enums.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/FluidRegister.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/FluidRegister.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementBase.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementIngot.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementIngot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemList.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/logging/LogHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/logging/LogHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/world/OreGen.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/world/OreGen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/element/OreElementBase.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/element/OreElementBase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Periodic-Production.ipr" afterPath="$PROJECT_DIR$/Periodic-Production.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Periodic-Production.iws" afterPath="$PROJECT_DIR$/Periodic-Production.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/backend/RecipeSorter.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/backend/RecipeSorter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/Recipes.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/Recipes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/Register.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/Register.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/Utils.java" />
     </list>
     <ignored path="Periodic-Production.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +37,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Periodic-Production$Minecraft_Client.coverage" NAME="Minecraft Client Coverage Results" MODIFIED="1409136083283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Periodic-Production$Minecraft_Client.coverage" NAME="Minecraft Client Coverage Results" MODIFIED="1410067032062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -123,11 +87,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RecipeSorter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/backend/RecipeSorter.java">
+      <file leaf-file-name="Chemistry.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/Chemistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12878788" vertical-offset="0" max-vertical-offset="459">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.36713287" vertical-offset="567" max-vertical-offset="1343">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -712,24 +676,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/entity/EntityList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/launchpad/basic/SlotLaunchpad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/fluid/ElementFluidList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/Element.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/FluidRegister.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/annotations/RegisterFluid.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/fluid/BlockGenericFluid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemDebug.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/DevUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/ElementList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tools/ItemNBTPickaxe.java" />
         <option value="$PROJECT_DIR$/build.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/world/OreGen.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/ElementMaterials.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/Register.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/logging/LogHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/Chemistry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementIngot.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/proxies/ClientProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/gui/GUIHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/GuiID.java" />
@@ -738,6 +692,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/creativetab/CreativeTab.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/Recipes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/backend/RecipeSorter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/AlloyRegister.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/machine/alloyMaker/ContainerAlloyMaker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/ElementRegister.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/Enums.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/Element.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/Register.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/ElementList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/FluidRegister.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/element/OreElementBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementIngot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/Chemistry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/logging/LogHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/alloy/AlloyCraftingManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementSword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementShovel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementPickaxe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementHoe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementAxe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/command/DeveloperCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/ToolRegister.java" />
       </list>
     </option>
   </component>
@@ -748,12 +725,23 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
-    <option name="height" value="780" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
-      <profile-state />
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -767,7 +755,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="PackagesPane" proportions="" version="1">
@@ -823,7 +811,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.tinkerlad.chemistry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.tinkerlad.chemistry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="reference" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.tinkerlad.chemistry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reference" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataTypes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -917,7 +963,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="creativetab" />
+              <option name="myItemId" value="item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.tinkerlad.chemistry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="item" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="element" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.tinkerlad.chemistry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -936,6 +1026,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.tinkerlad.chemistry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="machine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Periodic-Production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.tinkerlad.chemistry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="element" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -977,7 +1111,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.lastSelected" value="settings.xslt" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1232,7 +1366,15 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Periodic-Production" />
       <envs />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1288,52 +1430,60 @@
       <workItem from="1409613800510" duration="563000" />
       <workItem from="1409790752530" duration="427000" />
       <workItem from="1410048157216" duration="1390000" />
-      <workItem from="1410049549747" duration="1332000" />
+      <workItem from="1410049549747" duration="19282000" />
+      <workItem from="1410077912653" duration="5570000" />
+      <workItem from="1410159940036" duration="8320000" />
+      <workItem from="1410218285662" duration="129000" />
+      <workItem from="1410218422788" duration="2017000" />
     </task>
     <task id="LOCAL-00001" summary="-Added the beginnings of Fluids.&#10;-Giving myself a backstop before new(incompatible) version :/">
       <created>1410049150626</created>
       <updated>1410049150626</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Stripped back to basics for major overhaul. Code was just too convoluted and an absolute mess :/">
+      <created>1410050928076</created>
+      <updated>1410050928076</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36435000" />
+    <option name="totallyTimeSpent" value="70421000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3964111" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3266564" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20333838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20272315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34910277" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819724" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1353,166 +1503,26 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="-Added the beginnings of Fluids.&#10;-Giving myself a backstop before new(incompatible) version :/" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Added the beginnings of Fluids.&#10;-Giving myself a backstop before new(incompatible) version :/" />
+    <MESSAGE value="Stripped back to basics for major overhaul. Code was just too convoluted and an absolute mess :/" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stripped back to basics for major overhaul. Code was just too convoluted and an absolute mess :/" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="7" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/entity/projectile/EntityArrow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3213" max-vertical-offset="10251">
-          <caret line="189" column="122" selection-start-line="187" selection-start-column="12" selection-end-line="189" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/entity/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="44387">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding>
-            <element signature="e#7659#7671#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/entity/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7927461" vertical-offset="0" max-vertical-offset="45203">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="e#7659#7671#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/vector/Vector3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222038" vertical-offset="226" max-vertical-offset="10897">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/util/MathHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222038" vertical-offset="396" max-vertical-offset="6800">
-          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/entity/projectile/EntityArrow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2535" max-vertical-offset="9537">
-          <caret line="189" column="122" selection-start-line="187" selection-start-column="12" selection-end-line="189" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/config/ConfigHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62460065" vertical-offset="0" max-vertical-offset="697">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/annotations/RegisterAlloy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/potion/PotionEffect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.110929854" vertical-offset="0" max-vertical-offset="4318">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2656" vertical-offset="973" max-vertical-offset="1615">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraftforge/fluids/Fluid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9444444" vertical-offset="1734" max-vertical-offset="4675">
-          <caret line="148" column="13" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/ElementRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="986">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/AlloyRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <caret line="42" column="5" selection-start-line="12" selection-start-column="3" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/annotations/RegisterFluid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66341466" vertical-offset="0" max-vertical-offset="410">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/fluid/ElementFluidList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1088" vertical-offset="0" max-vertical-offset="625">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/FluidRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2176" vertical-offset="0" max-vertical-offset="663">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/alloy/BlockAlloyBricks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4888179" vertical-offset="0" max-vertical-offset="626">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/AlloyList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94390243" vertical-offset="446" max-vertical-offset="969">
-          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/fluid/BlockGenericFluid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07804878" vertical-offset="512" max-vertical-offset="1003">
-          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemDebug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2805873" vertical-offset="576" max-vertical-offset="1224">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/java/io/FileWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5654952" vertical-offset="938" max-vertical-offset="1598">
@@ -1527,34 +1537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/DevUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34824282" vertical-offset="156" max-vertical-offset="1275">
-          <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/ElementList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8633441" vertical-offset="449" max-vertical-offset="1122">
-          <caret line="61" column="120" selection-start-line="61" selection-start-column="120" selection-end-line="61" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="407">
           <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21864952" vertical-offset="119" max-vertical-offset="969">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1562,75 +1548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1360">
           <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/logging/LogHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33251834" vertical-offset="0" max-vertical-offset="409">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/machine/alloyMaker/ContainerAlloyMaker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40131578" vertical-offset="1711" max-vertical-offset="2363">
-          <caret line="124" column="89" selection-start-line="124" selection-start-column="89" selection-end-line="124" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="3621">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0273752" vertical-offset="782" max-vertical-offset="3570">
-          <caret line="80" column="48" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/Enums.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0547504" vertical-offset="0" max-vertical-offset="621">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/Chemistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33223686" vertical-offset="240" max-vertical-offset="1785">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66748166" vertical-offset="424" max-vertical-offset="833">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementIngot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66748166" vertical-offset="339" max-vertical-offset="748">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1638,7 +1555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41564792" vertical-offset="0" max-vertical-offset="409">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1646,7 +1562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16625917" vertical-offset="0" max-vertical-offset="409">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1654,9 +1569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5012225" vertical-offset="203" max-vertical-offset="612">
           <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1664,25 +1576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20782396" vertical-offset="85" max-vertical-offset="3672">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/creativetab/CreativeTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79217607" vertical-offset="33" max-vertical-offset="476">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/Recipes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2236842" vertical-offset="0" max-vertical-offset="1598">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1690,6 +1583,307 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12878788" vertical-offset="0" max-vertical-offset="459">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemDebug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25822785" vertical-offset="238" max-vertical-offset="1207">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/alloy/ItemAlloyDust.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9166667" vertical-offset="221" max-vertical-offset="697">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/AlloyRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38808373" vertical-offset="65" max-vertical-offset="782">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/AlloyComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0547504" vertical-offset="0" max-vertical-offset="621">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/Alloy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16425121" vertical-offset="0" max-vertical-offset="1887">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/AlloyList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7809984" vertical-offset="348" max-vertical-offset="969">
+          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/machine/BlockMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_67/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="1479" max-vertical-offset="9911">
+          <caret line="118" column="8" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/backend/ShapelessRecipes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.625" vertical-offset="833" max-vertical-offset="1241">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl/2.9.1/ccedb5b6f96913c6f78bc10249e747ded90baa51/lwjgl-2.9.1-sources.jar!/org/lwjgl/opengl/WindowsContextImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6147309" vertical-offset="1194" max-vertical-offset="1547">
+          <caret line="121" column="31" selection-start-line="121" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/machine/alloyMaker/ContainerAlloyMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28328612" vertical-offset="1855" max-vertical-offset="2397">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/Recipes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56373936" vertical-offset="855" max-vertical-offset="1513">
+          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/logging/LogFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1088" vertical-offset="0" max-vertical-offset="625">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/dataTypes/Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04136253" vertical-offset="85" max-vertical-offset="1462">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/ElementRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37226278" vertical-offset="0" max-vertical-offset="969">
+          <caret line="16" column="104" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/ElementList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4538835" vertical-offset="17" max-vertical-offset="1173">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33252427" vertical-offset="84" max-vertical-offset="646">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/DevUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9456" vertical-offset="361" max-vertical-offset="1054">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/referenceRegistries/FluidRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="663">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/block/BlockObsidian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16545013" vertical-offset="0" max-vertical-offset="425">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/init/Blocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33243242" vertical-offset="846" max-vertical-offset="3128">
+          <caret line="84" column="34" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/block/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34170854" vertical-offset="37978" max-vertical-offset="40035">
+          <caret line="2499" column="28" selection-start-line="2499" selection-start-column="28" selection-end-line="2499" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/block/element/OreElementBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.703163" vertical-offset="0" max-vertical-offset="1836">
+          <caret line="34" column="89" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/element/ItemElementIngot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.703163" vertical-offset="0" max-vertical-offset="561">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/logging/LogHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33090025" vertical-offset="0" max-vertical-offset="411">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/item/crafting/CraftingManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90933335" vertical-offset="2634" max-vertical-offset="5729">
+          <caret line="186" column="13" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/recipe/alloy/AlloyCraftingManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.703163" vertical-offset="238" max-vertical-offset="2822">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/item/ItemSword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41708544" vertical-offset="514" max-vertical-offset="1938">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1208/forgeSrc-1.7.10-10.13.0.1208-sources.jar!/net/minecraft/entity/EntityLivingBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.37988827" vertical-offset="12631" max-vertical-offset="37111">
+          <caret line="829" column="19" selection-start-line="829" selection-start-column="19" selection-end-line="829" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33153638" vertical-offset="1747" max-vertical-offset="3723">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/creativetab/CreativeTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="476">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementShovel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18103448" vertical-offset="175" max-vertical-offset="884">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementHoe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="765">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/ItemList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1536388" vertical-offset="0" max-vertical-offset="4726">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementAxe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1913747" vertical-offset="0" max-vertical-offset="884">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/command/DeveloperCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.606469" vertical-offset="948" max-vertical-offset="1819">
+          <caret line="94" column="52" selection-start-line="94" selection-start-column="52" selection-end-line="94" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementSword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18328841" vertical-offset="255" max-vertical-offset="901">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/item/tool/ItemElementPickaxe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6334232" vertical-offset="258" max-vertical-offset="884">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/reference/Enums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="425">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#487#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7088949" vertical-offset="672" max-vertical-offset="1411">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/registry/ToolRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80244756" vertical-offset="2363" max-vertical-offset="3213">
+          <caret line="183" column="171" selection-start-line="183" selection-start-column="171" selection-end-line="183" selection-end-column="171" />
+          <folding>
+            <element signature="method#initSwords#0;class#ToolRegister#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tinkerlad/chemistry/Chemistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.36713287" vertical-offset="567" max-vertical-offset="1343">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1709,7 +1903,17 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="Copyright.UI" />
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
           <last-edited>No facets are configured</last-edited>

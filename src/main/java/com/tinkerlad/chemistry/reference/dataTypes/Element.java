@@ -1,23 +1,28 @@
 package com.tinkerlad.chemistry.reference.dataTypes;
 
+import com.tinkerlad.chemistry.reference.Enums;
+
+import static com.tinkerlad.chemistry.reference.Enums.ElementType;
+import static com.tinkerlad.chemistry.reference.Enums.Hardness;
+
 public class Element {
 
     public String NAME;
     public String SYMBOL;
     public float DENSITY;
-    public Type TYPE;
+    public ElementType ElementTYPE;
     public int COLOR;
     public int SERIES;
     public Hardness HARDNESS;
     public int ATOMIC_NUMBER;
-    public State STATE;
+    public Enums.State STATE;
 
-    public Element(String name, String symbol, float density, Type type, int color, int series, Hardness hardness,
+    public Element(String name, String symbol, float density, ElementType elementType, int color, int series, Hardness hardness,
                    int atomicNumber) {
         NAME = name;
         SYMBOL = symbol;
         DENSITY = density;
-        TYPE = type;
+        ElementTYPE = elementType;
         COLOR = color;
         SERIES = series;
         HARDNESS = hardness;
@@ -25,12 +30,12 @@ public class Element {
         getState();
     }
 
-    public Element(String name, String symbol, float density, Type type, int color, int series, Hardness hardness,
-                   int atomicNumber, State state) {
+    public Element(String name, String symbol, float density, ElementType elementType, int color, int series, Hardness hardness,
+                   int atomicNumber, Enums.State state) {
         NAME = name;
         SYMBOL = symbol;
         DENSITY = density;
-        TYPE = type;
+        ElementTYPE = elementType;
         COLOR = color;
         SERIES = series;
         HARDNESS = hardness;
@@ -38,11 +43,11 @@ public class Element {
         STATE = state;
     }
 
-    public Element(String name, String symbol, float density, Type type, int color, int series, int atomicNumber) {
+    public Element(String name, String symbol, float density, ElementType elementType, int color, int series, int atomicNumber) {
         NAME = name;
         SYMBOL = symbol;
         DENSITY = density;
-        TYPE = type;
+        ElementTYPE = elementType;
         COLOR = color;
         SERIES = series;
         HARDNESS = Hardness.NA;
@@ -50,12 +55,12 @@ public class Element {
         getState();
     }
 
-    public Element(String name, String symbol, float density, Type type, int color, int series, int atomicNumber,
-                   State state) {
+    public Element(String name, String symbol, float density, ElementType elementType, int color, int series, int atomicNumber,
+                   Enums.State state) {
         NAME = name;
         SYMBOL = symbol;
         DENSITY = density;
-        TYPE = type;
+        ElementTYPE = elementType;
         COLOR = color;
         SERIES = series;
         HARDNESS = Hardness.NA;
@@ -63,31 +68,13 @@ public class Element {
         STATE = state;
     }
 
-    public State getState() {
-        if ((TYPE == Type.GAS || TYPE == Type.NOBLE_GAS || TYPE == Type.HALOGEN)) {
-            STATE = State.GAS;
+    public Enums.State getState() {
+        if ((ElementTYPE == ElementType.GAS || ElementTYPE == ElementType.NOBLE_GAS || ElementTYPE == ElementType.HALOGEN)) {
+            STATE = Enums.State.GAS;
         } else {
-            STATE = State.SOLID;
+            STATE = Enums.State.SOLID;
         }
         return STATE;
     }
-
-    public enum Type {ALKALINE_METAL, EARTH_METAL, TRANSITION, NON_METAL, METALLOID, GAS, HALOGEN, NOBLE_GAS}
-
-    public enum State {SOLID, LIQUID, GAS}
-
-    ;
-
-    public enum Hardness {
-        NA(0), LOW(1), MEDIUM(2), HIGH(5), EXTREME(10);
-        private int value;
-
-        private Hardness(int value) {
-            this.value = value;
-        }
-
-        int getValue() {
-            return value;
-        }
-    }
 }
+

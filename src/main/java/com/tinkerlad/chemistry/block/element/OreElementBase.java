@@ -3,7 +3,9 @@ package com.tinkerlad.chemistry.block.element;
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.block.BlockGeneric;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
+import com.tinkerlad.chemistry.reference.Enums;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
+import com.tinkerlad.chemistry.utils.Utils;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -30,6 +32,7 @@ public class OreElementBase extends BlockGeneric {
         this.setHardness(ELEMENT.DENSITY);
         Chemistry.LOCALISATIONS.addLocalisation(this.getUnlocalizedName(), element.NAME + " Ore");
         setTickRandomly(true);
+        this.setHarvestLevel("pickaxe", Utils.getHarvestLevel(element.HARDNESS.getValue(), element.DENSITY));
     }
 
     @Override
@@ -59,7 +62,7 @@ public class OreElementBase extends BlockGeneric {
 
     @Override
     public boolean canDropFromExplosion(Explosion explosion) {
-        switch (ELEMENT.TYPE) {
+        switch (ELEMENT.ElementTYPE) {
 
             case ALKALINE_METAL:
                 return explosion.isFlaming ? false : true;
@@ -93,7 +96,7 @@ public class OreElementBase extends BlockGeneric {
         ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
         drops.clear();
         drops.add(new ItemStack(Chemistry.ELEMENT_REGISTRY.getOreFromElement(ELEMENT)));
-        if (Chemistry.RANDOM.nextInt(40 / (fortune > 1 ? fortune - 1 : 1)) == 0 && ELEMENT.STATE != Element.State.GAS
+        if (Chemistry.RANDOM.nextInt(40 / (fortune > 1 ? fortune - 1 : 1)) == 0 && ELEMENT.STATE != Enums.State.GAS
                 && metadata == 1) {
             drops.add(new ItemStack(Chemistry.ELEMENT_REGISTRY.getBaseItemFromElement(ELEMENT)));
         }
@@ -103,7 +106,7 @@ public class OreElementBase extends BlockGeneric {
 
     @Override
     public void onBlockExploded(World world, int x, int y, int z, Explosion explosion) {
-        if (ELEMENT.TYPE == Element.Type.ALKALINE_METAL) {
+        if (ELEMENT.ElementTYPE == Enums.ElementType.ALKALINE_METAL) {
             world.createExplosion(explosion.exploder, x, y, z, 1.5F * ELEMENT.SERIES, ELEMENT.SERIES > 4);
             world.setBlockToAir(x, y, z);
         }

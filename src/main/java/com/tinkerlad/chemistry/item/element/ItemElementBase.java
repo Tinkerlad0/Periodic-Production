@@ -2,6 +2,7 @@ package com.tinkerlad.chemistry.item.element;
 
 import com.tinkerlad.chemistry.Chemistry;
 import com.tinkerlad.chemistry.creativetab.CreativeTab;
+import com.tinkerlad.chemistry.reference.Enums;
 import com.tinkerlad.chemistry.reference.dataTypes.Element;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -20,7 +21,7 @@ public class ItemElementBase extends Item {
         this.ELEMENT = element;
         this.setUnlocalizedName(element.NAME);
         this.setCreativeTab(CreativeTab.ELEMENTS_TAB);
-        if (element.STATE == Element.State.SOLID) {
+        if (element.STATE == Enums.State.SOLID) {
             this.setTextureName(Chemistry.MODID + ":dust");
         } else {
             this.setTextureName(Chemistry.MODID + ":phial");
